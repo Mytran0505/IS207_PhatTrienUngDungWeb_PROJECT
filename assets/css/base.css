@@ -1,0 +1,127 @@
+:root {
+    --black-color: #222;
+    --primary-color: #79a206;
+    --white-color: #fff;
+    --text-color: #232323;
+    --header-height: 676px;
+    --navbar-height: 38px;
+    --slider-height: calc(var(--header-height) - var(--navbar-height));
+    --size-image: 87px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 100%;
+}
+
+/* Common */
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+.mr-36 {
+    margin-right: 36px;
+}
+
+.item-primary {
+    color: var(--primary-color);
+}
+
+.box-shadow {
+    box-shadow: 0 3px 11px 0 rgb(0 0 0 / 10%);
+}
+
+/* animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes paxscroll {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.transition-primary {
+    transition: color 0.3s ease;
+}
+
+.transition-primary:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+/* Width */
+
+.wdt-200 {
+    width: 200%;
+}
+
+.wdt-36 {
+    width: 36%;
+}
+
+/* Z-index */
+
+.z-1 {
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.z-3 {
+    z-index: 3;
+}
+
+/* Button */
+.btn--arrow {
+    font-size: 3rem;
+    visibility: hidden;
+    transition-duration: 200ms;
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+    transform-origin: right center;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.region-hover-btn:hover .btn--arrow{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+/* Use for JS */
+
+.height-0 {
+    height: 0;
+}
+
+
+

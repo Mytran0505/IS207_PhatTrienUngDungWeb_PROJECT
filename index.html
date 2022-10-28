@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trees-Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,500&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item navbar__item--subnav transition-primary item-primary">
+                        HOME
+                        <i class="navbar__arrow fa-solid fa-angle-down"></i>
+
+                        <div class="subnav box-shadow">
+                            <ul class="subnav__list">
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Home Shop 1
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Home Shop 2
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Home Shop 3
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Home Shop 4
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Home Shop 5
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="navbar__item navbar__item--subnav-shop">
+                        <span class="transition-primary">
+                            SHOP
+                            <i class="navbar__arrow fa-solid fa-angle-down"></i>
+                        </span>
+                        
+                        <div class="subnav z-1 wdt-200 box-shadow">
+                            <ul class="subnav__head">
+                                <li class="subnav__head-item">
+                                    <h3>
+                                        <a href="" class="transition-primary">
+                                            Shop Layouts
+                                        </a>
+                                    </h3>
+                                    <ul class="subnav__list-2">
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Full Width</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Full Width List</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Right Sidebar</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Right Sidebar List</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">List View</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="subnav__head-item">
+                                    <h3>
+                                        <a href="" class="transition-primary">
+                                            Other Pages
+                                        </a>
+                                    </h3>
+                                    <ul class="subnav__list-2">
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Cart</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Wishlist</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Checkout</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">My Account</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Error 404</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="subnav__head-item">
+                                    <h3>
+                                        <a href="" class="transition-primary">
+                                            Product Types
+                                        </a>
+                                    </h3>
+                                    <ul class="subnav__list-2">
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Product Details</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Product Sidebar</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Product Grouped</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="" class="subnav__item-link-2">Product Variabler</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="navbar__item navbar__item--subnav transition-primary">
+                        BLOG
+                        <i class="navbar__arrow fa-solid fa-angle-down"></i>
+
+                        <div class="subnav subnav--blog box-shadow z-2">
+                            <ul class="subnav__list">
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Blog Details
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Blog Fullwidth
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Blog Sidebar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="navbar__item navbar__item--subnav transition-primary">
+                        PAGES
+                        <i class="navbar__arrow fa-solid fa-angle-down"></i>
+
+                        <div class="subnav subnav--pages box-shadow z-3">
+                            <ul class="subnav__list">
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Frequently Questions
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Contact
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Login
+                                    </a>
+                                </li>
+                                <li class="subnav__item">
+                                    <a href="" class="subnav__item-link transition-primary">
+                                        Error 404
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="navbar__item transition-primary">CONTACT US</li>
+                </ul>
+
+                <div class="navbar__logo">
+                    <img src="./assets/img/Logo/logo.jpg" alt="" class="navbar__logo-img">
+                </div>
+
+                <div class="navbar__access">
+                    <div class="navbar__input">
+                        <input type="text" class="navbar__input-search" placeholder="Search product...">
+                        <i class="navbar__icon transition-primary fa-solid fa-magnifying-glass"></i>
+                    </div>
+    
+                    <div class="navbar__icon-list">
+                        <div class="navbar__menu-user transition-primary ">
+                            <i class="navbar__icon fa-solid fa-user-group"></i>
+                            
+                            <ul class="menu-user__list">
+                                <li class="menu-user__item">
+                                    <a href="" class="menu-user__item-link transition-primary">Checkout</a>
+                                </li>
+
+                                <li class="menu-user__item">
+                                    <a href="" class="menu-user__item-link transition-primary">My Account</a>
+                                </li>
+
+                                <li class="menu-user__item">
+                                    <a href="" class="menu-user__item-link transition-primary">Shopping Cart</a>
+                                </li>
+
+                                <li class="menu-user__item">
+                                    <a href="" class="menu-user__item-link transition-primary">Wishlist</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <i class="navbar__icon transition-primary fa-solid fa-heart"></i>
+
+                        <div class="navbar__bag-wrap transition-primary">
+                            <i class="navbar__icon fa-solid fa-bag-shopping"></i>
+                            <span class="navbar__bag-quantity">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="checkbox" hidden name="" id="nav__input">
+
+                <label for="nav__input" class="menu__overlay"></label>
+
+                <label for="nav__input" class="navbar__menu l-0 transition-primary">
+                    <i class="navbar__menu-icon fa-solid fa-bars"></i>
+                </label>
+
+                <div class="navbar__category">
+                    <label class="navbar__category-icon" for="nav__input">
+                        <i class="fa-sharp fa-solid fa-xmark"></i>
+                    </label>
+                    <ul class="category__list">
+                        <li class="category__item transition-primary">
+                            <p>Home</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </li>
+                        <ul class="category__sub-list sub-0">
+                            <li class="category__sub-item transition-primary">Home 1</li>
+                            <li class="category__sub-item transition-primary">Home 2</li>
+                            <li class="category__sub-item transition-primary">Home 3</li>
+                            <li class="category__sub-item transition-primary">Home 4</li>
+                            <li class="category__sub-item transition-primary">Home 5</li>
+                        </ul>
+                        <li class="category__item transition-primary">
+                            <p>Shop</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </li>
+                        <ul class="category__sub-list sub-1">
+                            <li class="category__sub-item transition-primary">Shop Layouts</li>
+                            <li class="category__sub-item transition-primary">Other Pages</li>
+                            <li class="category__sub-item transition-primary">Product Types</li>
+                        </ul>
+
+                        <li class="category__item transition-primary">
+                            <p>Blog</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </li>
+                        <ul class="category__sub-list sub-2">
+                            <li class="category__sub-item transition-primary">Blog</li>
+                            <li class="category__sub-item transition-primary">Blog Details</li>
+                            <li class="category__sub-item transition-primary">Blog Fullwidth</li>
+                            <li class="category__sub-item transition-primary">Blog Sidebar</li>
+                        </ul>
+
+                        <li class="category__item transition-primary">
+                            <p>Pages</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </li>
+                        <ul class="category__sub-list sub-3">
+                            <li class="category__sub-item transition-primary">About Us</li>
+                            <li class="category__sub-item transition-primary">Services 2</li>
+                            <li class="category__sub-item transition-primary">Frequently Questions</li>
+                            <li class="category__sub-item transition-primary">Contact</li>
+                            <li class="category__sub-item transition-primary">Login</li>
+                            <li class="category__sub-item transition-primary">Error 404</li>
+                        </ul>
+
+                        <li class="category__item transition-primary">
+                            <p>My Account</p>
+                        </li>
+
+                        <li class="category__item transition-primary">
+                            <p>About Us</p>
+                        </li>
+
+                        <li class="category__item transition-primary">
+                            <p>Contact Us</p>
+                        </li>
+
+                    </ul>
+                    <div class="category__social">
+                        <a href="#" class="category__social-email transition-primary">
+                            <i class="fa-solid fa-envelope"></i>
+                            demo@example.com
+                        </a>
+                        <div class="category__social-list">
+                            <a href="#" class="category__social-item item-0">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="category__social-item item-1">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="category__social-item item-2">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </a>
+                            <a href="#" class="category__social-item item-3">
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </a>
+                            <a href="#" class="category__social-item">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header__slider">
+                <div class="wrap-slider">
+                    <div class="slider__left">
+                        <i class="btn--slide slide-left transition-primary fa-solid fa-chevron-left"></i>
+    
+                        <div class="slider__content">
+                            <header class="slider__head">AMAZING FROM Lukani</header>
+                            <span class="slider__mid">
+                                <p>CACTUS</p> 
+                                DECORATION
+                            </span>
+                            <p class="slider__discount">Discount 20% Off For Lukani Members</p>
+                        
+                            <button class="slider__btn">DISCOVER NOW</button>
+                        </div>
+                    </div>
+    
+                    <i class="btn--slide slide-right transition-primary fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>  
+
+        <div class="container">
+            <div class="container__store">
+                <div class="container__store-bgr">
+                    <h3 class="store__header">Lukani Store</h3>
+                    <p class="store__descript">
+                        Commodo sociosqu venenatis cras dolor sagittis integer luctus sem primis eget maecenas sedurna malesuada consectetuer.
+                    </p>
+                </div>
+
+                <div class="store__benefit">
+                    <div class="store__benefit-container">
+                        <div class="store__benefit-wrap">
+                            <img src="./assets/img/Logo/shipping1.webp" alt="" class="store__benefit-img">
+                        </div>
+    
+                        <div class="store__benefit-info">
+                            <p class="store__benefit-title">Free Delivery</p>
+                            <p class="store__benefit-descrp">Free shipping around the world for all orders over $120</p>
+                        </div>
+                    </div>
+
+                    <div class="store__benefit-container">
+                        <div class="store__benefit-wrap store__benefit--separate">
+                            <img src="./assets/img/Logo/shipping2.webp" alt="" class="store__benefit-img">
+                        </div>
+    
+                        <div class="store__benefit-info">
+                            <p class="store__benefit-title">Safe Payment</p>
+                            <p class="store__benefit-descrp">With our payment gateway, don’t worry about your information</p>
+                        </div>
+                    </div>
+
+                    <div class="store__benefit-container">
+                        <div class="store__benefit-wrap store__benefit--separate">
+                            <img src="./assets/img/Logo/shipping3.webp" alt="" class="store__benefit-img">
+                        </div>
+    
+                        <div class="store__benefit-info">
+                            <p class="store__benefit-title">Friendly Services</p>
+                            <p class="store__benefit-descrp">You have 30-day return guarantee for every single order</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__products">
+                <h3 class="store__header">Featured Products</h3>
+
+                <div class="products grid">                   
+                    <div class="row row-js data-1"></div>       
+                </div>
+            </div>
+
+            <div class="container__review container__products">
+                <h3 class="store__header">What Our Customers Says ?</h3>
+                <div class="container__review-wrap region-hover-btn">
+                    <i class="btn--arrow transition-primary fa-solid fa-chevron-left"></i>
+
+                    <div class="container__comment">
+                        <img src="./assets/img/background/testimonials-icon.jpg" alt="" class="container__comment-img">
+                        <p class="container__comment-content">
+                            " When a beautiful design is combined with powerful technology, it truly is an artwork. I love how my website operates and looks with this theme. Thank you for the awesome product."
+                        </p>
+                        <img src="./assets/img/Logo/testimonial1.jpg" alt="" class="container__comment-img-representative">
+                        <p class="container__comment-descrp">
+                            <a href="#" class="transition-primary">REBECKA FILSON</a> / CEO OF CSC
+                        </p>
+                    </div>
+
+                    <i class="btn--arrow transition-primary fa-solid fa-chevron-right"></i>
+
+                </div>
+
+                <div class="container__review-medal region-hover-btn">
+                    <i class="btn--arrow transition-primary fa-solid fa-chevron-left"></i>
+                    <div class="container__medal-list">
+                        <img src="./assets/img/Medallist/brand1.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand2.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand3.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand4.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand5.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand3.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand1.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand2.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand3.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand4.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand5.webp" alt="" class="container__medal-item">
+                        <img src="./assets/img/Medallist/brand3.webp" alt="" class="container__medal-item">
+                    </div>
+                    <i class="btn--arrow transition-primary fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="container__offer container__products">
+                <h3 class="container__offer-heading store__header ">
+                    Get <span>20% Off</span> Your Next Order
+                </h3>
+
+                <div class="container__offer-fill-email">
+                    <i class="container__offer-icon fa-solid fa-envelope"></i>
+                    <input type="text" class="container__offer-input" placeholder="Enter your email">
+                    <span class="container__offer-text transition-primary">SUBSCRIBE</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__border f-1"></div>        
+        <div class="footer">
+            <div class="footer__information-border grid wide">
+                <div class="footer__information row">
+                    <div class="footer__inform-wrap col l-2 m-4 c-12">
+                        <h3 class="footer__inform-head">OPENING TIME</h3>
+                        <div class="footer__inform-content-wrap">
+                            <p class="footer__inform-content">Mon - Fri: 8AM - 10PM</p>
+                            <p class="footer__inform-content">Sat: 9AM-8PM</p>
+                            <p class="footer__inform-content">Suns: 14hPM-18hPM</p>
+                        </div>
+                        <p class="footer__inform-status">We Work All The Holidays</p>
+                    </div>
+    
+                    <div class="footer__inform-wrap col l-2 m-4 c-12">
+                        <h3 class="footer__inform-head">INFORMATION</h3>
+                        <div class="footer__inform-content-wrap">
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">About Us</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Checkout</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Contact</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Frequently Questions</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Wishlist</p>
+                            </a>
+    
+                        </div>
+                    </div>
+    
+                    <div class="footer__inform-link col l-4 m-4 c-12">
+                        <img src="./assets/img/Logo/logo.jpg" alt="" class="footer__inform-link-logo">
+                    
+                        <div class="footer__inform-contact">
+                            <a href="" class="footer__inform-contact-link transition-primary">Payment</a>
+                            <a href="" class="footer__inform-contact-link transition-primary">Affiliates</a>
+                            <a href="" class="footer__inform-contact-link transition-primary">Contact</a>
+                            <a href="" class="footer__inform-contact-link transition-primary">Internet</a>
+                        </div>
+    
+                        <div class="footer__inform-icon">
+                            <a href="">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+    
+                        <div class="footer__inform-apps">
+                            <a href="">
+                                <img src="./assets/img/Apps/icon-app.webp" alt="" class="footer__inform-app">
+                            </a>
+                            <a href="">
+                                <img src="./assets/img/Apps/icon1-app.webp" alt="" class="footer__inform-app">
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__inform-wrap col l-2 m-4 c-12">
+                        <h3 class="footer__inform-head">MY ACCOUNT</h3>
+                        <div class="footer__inform-content-wrap">
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">My Account</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Contact</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Shopping Cart</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Checkout</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Shop</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Order History</p>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__inform-wrap col l-2 m-4 c-12">
+                        <h3 class="footer__inform-head">CUSTOMER SERVICE</h3>
+                        <div class="footer__inform-content-wrap">
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Contact Us</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Terms of use</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Privacy Policy</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Site Map</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">My Account</p>
+                            </a>
+    
+                            <a href="">
+                                <p class="footer__inform-content transition-primary">Returns</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__border f-2"></div>
+            <div class="footer__payment">
+                <p>©
+                    <span id="year-js">2021</span>
+                    <span class="footer__name">Lukani</span>.
+                    Made with <i class="fa-solid fa-heart"></i>
+                    By <span class="footer__name">HasThemes</span>
+                </p>
+
+                <img src="./assets/img/Footer/payment.webp" alt="" class="footer__payment-card">
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="slide-up" class="slide-up">
+        <i class="slide-up-icon fa-solid fa-angles-up"></i>
+    </a>
+
+    <div class="overlay">
+        <div class="cart">
+            <div class="cart-contain">
+                <div class="cart-title">
+                    <p>Cart</p>
+                    <i class="cart-close close transition-primary fa-solid fa-xmark"></i>
+                </div>
+    
+                <ul class="cart-list">
+                    
+                </ul>
+
+                <div class="cart-footer">
+                    <div class="cart__sub-total cart__total-price">
+                        <p>Sub total:</p>
+                        <span>$0</span>
+                    </div>
+                    <div class="cart__total cart__total-price">
+                        <p>Total:</p>
+                        <span>$0</span>
+                    </div>
+                    
+                    <div class="btn-cart__contain">
+                        <a href="#" class="btn-cart btn--view">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            VIEW CART
+                        </a>
+                        <a href="#" class="btn-cart btn--checkout">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            CHECKOUT
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+    <script src="constants.js" type="module"></script>
+</body>
+</html>

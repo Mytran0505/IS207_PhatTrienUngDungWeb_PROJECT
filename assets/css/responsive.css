@@ -1,0 +1,394 @@
+/* tablet and mobile */
+@media (max-width: 1023px) {
+    html {
+        font-size: 45%;
+    }
+
+    .navbar {
+        margin: 0;
+        background-color: var(--white-color);
+    }
+    .navbar__menu {
+        border: 1px solid var(--black-color);
+        padding: 0.6rem 1.2rem;
+    }
+
+    .navbar__menu-icon {
+        font-size: 4rem;
+    }
+
+    .navbar__logo {
+        margin-right: 165px;
+    }
+
+    .navbar__list {
+        display: none;
+    }
+
+    .navbar__input {
+        display: none;
+    }
+
+    .navbar__menu {
+        transition: all 0.3s ;
+    }
+
+    .navbar__menu:hover {
+        border-color: var(--primary-color);
+        cursor: pointer;
+    }
+
+    .header__slider {
+        min-height: unset;
+        height: 400px;
+        background: url(../img/banner/slider4.jpg) no-repeat center/cover;
+        margin-top: 75px;
+    }
+
+    .wrap-slider {
+        margin: 0 16px;
+    }
+
+    .slider__content {
+        height: unset;
+        margin-left: 12px;
+    }
+
+    .slider__btn {
+        margin: 0;
+        height: unset;
+        width: unset;
+        padding: 14px 18px;
+        font-size: 1.9rem;
+    }
+
+    .slider__head {
+        font-size: 2rem;
+        width: 116px;
+    }
+
+    i.btn--slide {
+        bottom: 10px;
+        font-size: 4rem;
+    }
+
+    .slider__mid {
+        margin: 18px 0;
+        font-size: 5.8rem;  
+    }
+    .slider__discount {
+        margin: 0 0 29px 0;
+        font-size: 2.4rem;
+    }
+
+    .store__descript {
+        font-size: 2rem;
+        padding: 0 15rem;
+        line-height: 1.5;
+    }
+
+    .store__benefit {
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: unset;
+    }
+
+    .store__benefit-title {
+        font-size: 1.8rem;
+    }
+
+    .store__benefit-descrp {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    .store__benefit-container {
+        width: 364px;
+    }
+
+    .store__benefit-container:last-child {
+        margin-top: 48px;
+    }
+
+    .store__benefit-container .store__benefit--separate::before {
+        content: "";
+        height: 0;
+    }
+
+    .product__star-icon {
+        font-size: 2.2rem;
+    }
+
+    .product__name {
+        font-size: 1.8rem;
+    }
+
+    .product__price-1 {
+        font-size: 2.1rem;
+    }
+
+    .product__photo span {
+        font-size: 2rem;
+    }
+
+    .product__price-2 {
+        font-size: 1.8rem;
+    }
+    .product__inter-icon {
+        font-size: 2.4rem;
+    }
+
+    i.btn--arrow {
+        display: none;
+    }
+
+    .container__offer-icon {
+        margin-right: 12px;
+        font-size: 2.4rem;
+    }
+
+    .container__offer-input,
+    .container__offer-text {
+        font-size: 1.7rem;
+    }
+
+    .footer {
+        margin-top: 80px;
+    }
+
+    .container__products {
+        margin-top: 60px;
+    }
+
+    .footer {
+        margin: 0;
+    }
+
+    .footer__payment p {
+        font-size: 2rem;
+    }
+
+    .footer__payment  {
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+
+    .footer__inform-icon i {
+        font-size: 2rem;
+    }
+
+    .footer__inform-wrap:nth-child(4),
+    .footer__inform-wrap:nth-child(5) {
+        margin-top: 8rem;
+    }
+
+    .menu-user__item-link {
+        font-size: 1.8rem;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 739px) {
+    .navbar__icon {
+        font-size: 20px;
+    }
+
+    .navbar__access {
+        min-width: unset;
+    }
+
+    .navbar__icon-list {
+        justify-content: space-evenly;
+    }
+
+    .navbar__logo {
+        margin: 0;
+        position: relative;
+        top: 2px;
+    }
+
+    .navbar__logo-img {
+        width: 99px;
+    }
+
+    .menu-user__list {
+        min-width: 125px;
+    }
+
+    
+
+    .slider__content {
+        margin-left: 29px;
+    }
+
+    .slider__head {
+        font-size: 1.8rem;
+        width: 106px;
+    }
+
+    .slider__mid {
+        font-size: 5rem;
+    }
+
+    .store__descript {
+        padding: 0 3rem;
+    }
+
+    .store__benefit {
+        justify-content: center;
+    }
+
+    .store__benefit-container + .store__benefit-container {
+        margin-top: 25px;
+    }
+
+    .slide-up {
+        bottom: 28px;
+    }
+
+    .store__header {
+        font-size: 20px;
+    }
+
+    .container__review-medal {
+        margin: 62px 0 0 0;
+    }
+
+    .container__medal-item:first-child {
+        margin-left: 12px;
+    }
+
+    .container__offer-fill-email {
+        width: 330px;
+    }
+
+    .container__review-wrap {
+        margin: 0;
+    }
+
+    .container__comment-img {
+        margin-top: 50px;
+    }
+
+    .container__comment-content {
+        margin-top: 30px;
+        font-size: 1.9rem;
+    }
+
+    .container__comment-descrp {
+        font-size: 1.8rem;
+    }
+
+    .footer__payment-card {
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .footer__payment {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer__information {
+        padding: 60px 0;
+    }
+
+    .footer__inform-wrap {
+        text-align: center;
+    }
+
+    .footer__inform-content-wrap {
+        margin: 0;
+    }
+
+    .footer__inform-head,
+    .footer__inform-content,
+    .footer__inform-contact-link {
+        font-size: 2rem;
+    }
+
+    .footer__inform-status {
+        font-size: 2rem;    
+        margin: 2rem 0 8rem ;
+    }
+
+    .footer__inform-link {
+        margin-top: 8rem;
+    }    
+
+    .footer__inform-head::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* tablet */ 
+@media (min-width: 740px) and (max-width: 1023px) {
+    .navbar__icon {
+        font-size: 22px;
+    }
+
+    .store__header {
+        font-size: 4.8rem;
+        margin: 0;
+    }
+
+    .product__figure.data-9 {
+        display: none;
+    }
+
+    .container__store-bgr {
+        padding: 60px 0;
+        margin-top: 13px;
+    }
+
+    .container__review-medal {
+        margin: 62px 106px 0;
+    }
+
+    .container__comment-content {
+        font-size: 2.2rem;  
+        margin-top: 30px;
+        line-height: 2;
+    }
+
+    .container__review-wrap {
+        margin: 0;
+        padding: 0 22rem;
+    }
+
+    .container__comment-descrp {
+        font-size: 1.9rem;
+    }
+
+    .footer__inform-head,
+    .footer__inform-content,
+    .footer__inform-contact-link {
+        font-size: 1.9rem;
+    }
+
+    .footer__inform-status {
+        font-size: 1.9rem;
+        margin: 30px 0 0 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    i.navbar__menu-icon {
+        display: none;
+    }
+}
+
+/* High tablet */
+@media (min-width: 1024px) and (max-width: 1113px) {
+    
+        .navbar__logo {
+            margin: 0 35px;
+        }
+    
+        .store__descript {
+            padding: 0;
+        }
+
+}

@@ -8,9 +8,9 @@ import products from "./products.js";
 
 //Prepare variables
 const slides = [
-  "assets/img/banner/slider4.jpg",
-  "assets/img/banner/slider5.jpg",
-  "assets/img/banner/slider6.jpg",
+  "assets/img/banner/slider_1.webp",
+  "assets/img/banner/slider_4.webp",
+  "assets/img/banner/slider_5.webp",
 ];
 
 
@@ -171,8 +171,8 @@ const programing = {
                       <p class="product__name">${product.name}</p>
           
                       <div class="product__price">
-                          <span class="product__price-1">£${product.priceCurrent.toFixed(2)}</span>
-                          <span class="product__price-2">£${product.priceOld.toFixed(2)}</span>
+                          <span class="product__price-1">${product.priceCurrent.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}₫</span>
+                          <span class="product__price-2">${product.priceOld.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}₫</span>
                       </div>
                   </div>
               </div>

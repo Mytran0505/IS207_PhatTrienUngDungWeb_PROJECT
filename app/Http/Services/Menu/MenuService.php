@@ -24,9 +24,7 @@ class MenuService {
                 'name' => (string) $request->input('name'),
                 'parent_id' => (int) $request->input('parent_id'),
                 'description' => (string) $request->input('description'),
-                'content' => (string) $request->input('content'),
-                'active' => (string) $request->input('active'),
-                'slug' => Str::slug($request->input('name'), '-')
+                'active' => (string) $request->input('active')
             ]);
 
             Session::flash('success', 'Tạo danh mục thành công');

@@ -23,13 +23,8 @@
       </div>
 
       <div class="form-group">
-        <label>Mô tả</label>
-        <textarea name="description" class="form-control"></textarea>
-      </div>
-
-      <div class="form-group">
         <label>Mô tả chi tiết</label>
-        <textarea name="content" class="form-control"></textarea>
+        <textarea name="description" class="form-control"></textarea>
       </div>
 
       <div class="form-group">
@@ -58,6 +53,6 @@
 
 @section('footer')
     <script>
-        CKEDITOR.replace('content');
+        CKEDITOR.replace('description');
     </script>
 @endsection

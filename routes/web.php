@@ -4,11 +4,11 @@ use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UploadController;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\Users\LoginController;
 use App\Http\Services\UploadService;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 Route::get('admin/users/login', [LoginController::class, 'index']) -> name('login');
 
@@ -49,5 +49,8 @@ Route::middleware(['auth']) -> group(function (){
         // Upload
         Route::post('upload/services', [UploadController::class, 'store']);
     });
+
 });
+
+Route::get('/', [App\Http\Controllers\MainController::class, 'index']);
 

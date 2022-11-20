@@ -13,8 +13,6 @@ class Menu extends Model
         'name',
         'parent_id',
         'description',
-        'content',
-        'slug',
         'active'
     ];
 }

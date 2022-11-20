@@ -49,7 +49,7 @@
                     @csrf
             </form>
 
-            <div class="social-auth-links text-center mb-3">
+            {{-- <div class="social-auth-links text-center mb-3">
                 <p>- OR -</p>
                 <a href="#" class="btn btn-block btn-primary">
                 <i class="fab fa-facebook mr-2"></i> Đăng nhập với Facebook
@@ -57,9 +57,10 @@
                 <a href="#" class="btn btn-block btn-danger">
                 <i class="fab fa-google-plus mr-2"></i> Đăng nhập với Google+
                 </a>
-            </div>
+            </div> --}}
+
             <!-- /.social-auth-links -->
-            <div class="row">
+            {{-- <div class="row">
                 <p class="col-8 mt-2">
                     <a href="forgot-password.html">Quên mật khẩu</a>
                 </p>
@@ -67,7 +68,7 @@
                     <a href="/admin/users/register" class="text-center btn btn-primary btn-block">Đăng ký</a>
                 </p>
             </div>
-        </div>
+        </div> --}}
     <!-- /.login-card-body -->
   </div>
 </div>

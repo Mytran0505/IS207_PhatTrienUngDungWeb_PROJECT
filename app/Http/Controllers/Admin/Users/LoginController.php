@@ -61,4 +61,11 @@ class LoginController extends Controller
         return redirect()->route('login')->with('success', 'Đăng ký thành công, mời đăng nhập');
     }
 
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('login');
+    }
+
 }

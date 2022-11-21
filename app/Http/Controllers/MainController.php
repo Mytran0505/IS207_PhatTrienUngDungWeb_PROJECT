@@ -11,4 +11,5 @@ class MainController extends Controller
             'title' => 'Trang chu'
         ]);
     }
+    
 }

@@ -1,0 +1,12 @@
+_Animation: admin
+_Trái tim: hủy
+_Thêm trái tim vào list
+_Logo trang chủ chạy lên cho mượt
+_Load more(trang mới)
+_Search: đẩy ra ngang hàng
+_Đổi chủ đề(slide)
+_Delete sản phẩm trong giỏ hàng(dấu xóa trên góc phải)
+_gửi mail khi mua hàng
+_Đưa chuột vô hình ảnh sản phẩm ra hình ảnh khác
+_Reset những thông tin đã bấm trc đó khi đã ra ngoài
+_Tạo link cho các logo

@@ -5,7 +5,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UploadController;
 use App\Http\Controllers\Admin\Users\LoginController;
-use App\Http\Services\UploadService;
+use App\Http\Controllers\Admin\SliderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -46,9 +46,9 @@ Route::middleware(['auth']) -> group(function (){
 
         // Slider
         Route::prefix('sliders')->group(function() {
-            Route::get('add', [ProductController::class, 'create']);
+            Route::get('add', [SliderController::class, 'create']);
 
-            Route::get('list', [ProductController::class, 'index']);
+            Route::get('list', [SliderController::class, 'index']);
         });
 
         // Upload

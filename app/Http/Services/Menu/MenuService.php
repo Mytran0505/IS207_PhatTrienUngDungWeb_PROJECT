@@ -4,18 +4,19 @@
 namespace App\Http\Services\Menu;
 
 use App\Models\Menu;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+
 class MenuService {
 
     public function getParent()
     {
-        return Menu::
-            where('parent_id', 0)->get();
+        return Menu::where('parent_id', 0)->get();
     }
 
     public function getAll(){
-        return Menu::orderbyDesc('id')->paginate(20);
+        return Menu::orderbyDesc('menu_id')->paginate(20);
     }
 
     public function create($request){
@@ -47,10 +48,10 @@ class MenuService {
     }
 
     public function destroy($request) {
-        $id = (int) $request->input('id');
-        $menu = Menu::where('id', $request->input('id'))->first();
+        $id = (int) $request->input('menu_id');
+        $menu = Menu::where('menu_id', $request->input('menu_id'))->first();
         if($menu) {
-            return Menu::where('id', $id)->orWhere('parent_id', $id)->delete();
+            return Menu::where('menu_id', $id)->orWhere('parent_id', $id)->delete();
         }
         return false;
     }

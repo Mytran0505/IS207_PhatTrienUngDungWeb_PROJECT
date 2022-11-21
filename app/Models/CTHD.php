@@ -13,4 +13,7 @@ class CTHD extends Model
         'product_id',
         'amount'
     ];
+
+    protected $primaryKey = 'bill_id, product_id';
+    protected $table = 'menu';
 }

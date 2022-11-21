@@ -21,7 +21,10 @@ class Product extends Model
         'image'
     ];
 
+    protected $primaryKey = 'product_id';
+    protected $table = 'product';
+
     public function menu(){
-        return $this->hasOne(Menu::class, 'id', 'menu_id');
+        return $this->hasOne(Menu::class, 'product_id', 'menu_id');
     }
 }

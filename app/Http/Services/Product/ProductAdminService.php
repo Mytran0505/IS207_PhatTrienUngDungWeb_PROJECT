@@ -45,7 +45,7 @@ class ProductAdminService {
     }
 
     public function get() {
-        return Product::with('menu')->orderByDesc('id')->paginate();
+        return Product::with('menu')->orderByDesc('product_id')->paginate(10);
     }
 
     public function update($request, $product) {
@@ -67,7 +67,7 @@ class ProductAdminService {
     }
 
     public function delete($request) {
-        $product = Product::where('id', $request->input('id'))->first();
+        $product = Product::where('product_id', $request->input('product_id'))->first();
         if($product) {
             $product->delete();
             return true;

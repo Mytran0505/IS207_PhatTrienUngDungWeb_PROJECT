@@ -20,7 +20,7 @@
                         <label>Danh Mục</label>
                         <select class="form-control" name="menu_id">
                             @foreach($menus as $menu)
-                                <option value="{{ $menu->id }}" {{ $product->menu_id == $menu->id ? 'selected' : '' }}>{{ $menu->name }}</option>
+                                <option value="{{ $menu->menu_id }}" {{ $product->menu_id == $menu->menu_id ? 'selected' : '' }}>{{ $menu->name }}</option>
                             @endforeach
                         </select>
                     </div>

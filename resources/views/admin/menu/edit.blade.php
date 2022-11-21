@@ -15,7 +15,7 @@
                 Danh mục cha
             </option>
             @foreach ($menus as $menuParent)
-                <option value="{{ $menuParent->id }}" {{ $menu->parent_id == $menuParent->id ? 'selected' : ''}}>
+                <option value="{{ $menuParent->id }}" {{ $menu->parent_id == $menuParent->menu_id ? 'selected' : ''}}>
                     {{ $menuParent->name }}
                 </option>
             @endforeach

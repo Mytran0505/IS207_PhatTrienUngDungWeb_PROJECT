@@ -13,4 +13,7 @@ class Bill_khachhang extends Model
         'total_money',
         'customer_id'
     ];
+
+    protected $primaryKey = 'bill_id';
+    protected $table = 'bill_khachhang';
 }

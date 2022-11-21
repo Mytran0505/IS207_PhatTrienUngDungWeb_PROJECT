@@ -15,4 +15,7 @@ class Menu extends Model
         'description',
         'active'
     ];
+
+    protected $primaryKey = 'menu_id';
+    protected $table = 'menu';
 }

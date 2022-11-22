@@ -38,5 +38,5 @@
         </tbody>
     </table>
 
-    {!! $products->links() !!}
+    {!! $products->onEachSide(3)->links() !!}
 @endsection

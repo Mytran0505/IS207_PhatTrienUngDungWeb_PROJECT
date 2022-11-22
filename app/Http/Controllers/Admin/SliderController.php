@@ -16,12 +16,25 @@ class SliderController extends Controller
     }
 
     public function index(){
-
+        return view('admin.slider.list', [
+            'title' => 'Danh sách banner',
+            'sliders' => $this->slider->get()
+        ]);
     }
 
     public function create() {
         return view('admin.slider.add', [
-            'title' => 'Thêm slider'
+            'title' => 'Thêm Banner'
         ]);
+    }
+
+    public function store(Request $request) {
+        $this->validate($request, [
+            'name' => 'required',
+            'image' => 'required',
+            'url' => 'required'
+        ]);
+        $this->slider->insert($request);
+        return redirect()->back();
     }
 }

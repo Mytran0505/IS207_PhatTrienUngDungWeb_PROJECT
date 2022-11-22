@@ -86,7 +86,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-images"></i>
             <p>
-              Slider
+              Banner
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -94,13 +94,13 @@
             <li class="nav-item">
               <a href="/admin/sliders/add" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Thêm Slider</p>
+                <p>Thêm Banner</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="/admin/sliders/list" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Danh sách Slider</p>
+                <p>Danh sách Banner</p>
               </a>
             </li>
           </ul>

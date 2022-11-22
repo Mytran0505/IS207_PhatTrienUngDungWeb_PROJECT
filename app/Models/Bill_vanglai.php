@@ -14,7 +14,4 @@ class Bill_vanglai extends Model
         'total_money',
         'customer_phone_number'
     ];
-
-    protected $primaryKey = 'bill_id';
-    protected $table = 'bill_vanglai';
 }

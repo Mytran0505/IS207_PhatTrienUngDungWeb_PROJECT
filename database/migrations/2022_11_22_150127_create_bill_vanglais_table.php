@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bill_vanglai', function (Blueprint $table) {
-            $table->Increments('bill_id');
+        Schema::create('bill_vanglais', function (Blueprint $table) {
+            $table->id();
             $table->integer('total_money');
             $table->string('customer_phone_number', 50);
             $table->timestamps();
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bill_vanglai');
+        Schema::dropIfExists('bill_vanglais');
     }
 };

@@ -20,7 +20,7 @@
                         <label>Danh Mục</label>
                         <select class="form-control" name="menu_id">
                             @foreach($menus as $menu)
-                                <option value="{{ $menu->menu_id }}">{{ $menu->name }}</option>
+                                <option value="{{ $menu->id }}">{{ $menu->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -31,7 +31,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="menu">Giá Gốc</label>
-                        <input type="number" name="price" value="{{ old('price') }}"  class="form-control" >
+                        <input type="number" name="original_price" value="{{ old('original_price') }}"  class="form-control" >
                     </div>
                 </div>
 
@@ -57,7 +57,7 @@
                 <label for="menu">Ảnh Sản Phẩm</label>
                 <input type="file" name="file" class="form-control" id="upload">
                 <div id="image_show" class="mt-2">
-
+                        
                 </div>
                 <input type="hidden" name="image" id="image">
             </div>

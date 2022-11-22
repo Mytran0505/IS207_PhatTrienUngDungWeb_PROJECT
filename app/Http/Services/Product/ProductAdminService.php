@@ -15,12 +15,12 @@ class ProductAdminService {
     }
 
     protected function isValidPrice($request) {
-        if($request->input('price') !== 0 && $request->input('price_sale') !== 0
-            && $request->input('price_sale') >= $request->input('price')){
+        if($request->input('original_price') !== 0 && $request->input('price_sale') !== 0
+            && $request->input('price_sale') >= $request->input('original_price')){
                 Session::flash('error', 'Giá giảm phải nhỏ hơn giá gốc');
                 return false;
         }
-        if($request->input('price_sale') !== 0 && (int)$request->input('price') == 0) {
+        if($request->input('price_sale') !== 0 && (int)$request->input('original_price') == 0) {
             Session::flash('error', 'Vui lòng nhập giá gốc');
             return false;
         }
@@ -45,7 +45,7 @@ class ProductAdminService {
     }
 
     public function get() {
-        return Product::with('menu')->orderByDesc('product_id')->paginate(10);
+        return Product::with('menu')->orderByDesc('id')->paginate(10);
     }
 
     public function update($request, $product) {
@@ -67,7 +67,7 @@ class ProductAdminService {
     }
 
     public function delete($request) {
-        $product = Product::where('product_id', $request->input('product_id'))->first();
+        $product = Product::where('id', $request->input('id'))->first();
         if($product) {
             $product->delete();
             return true;

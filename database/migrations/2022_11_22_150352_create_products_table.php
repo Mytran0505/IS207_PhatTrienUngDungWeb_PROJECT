@@ -13,17 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('menu', function (Blueprint $table) {
-            $table->Increments('menu_id');
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
             $table->string('name', 255);
-            $table->integer('parent_id');
             $table->text('description');
+            $table->longText('content');
+            $table->integer('menu_id');
+            $table->integer('original_price');
+            $table->integer('price_sale');
             $table->integer('active');
+            $table->string('image', 255);
             $table->timestamps();
         });
     }
-
-    
 
     /**
      * Reverse the migrations.
@@ -32,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu');
+        Schema::dropIfExists('products');
     }
 };

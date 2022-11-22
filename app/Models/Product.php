@@ -14,17 +14,13 @@ class Product extends Model
         'description',
         'content',
         'menu_id',
-        'price',
+        'original_price',
         'price_sale',
         'active',
-        'views',
         'image'
     ];
 
-    protected $primaryKey = 'product_id';
-    protected $table = 'product';
-
     public function menu(){
-        return $this->hasOne(Menu::class, 'product_id', 'menu_id');
+        return $this->hasOne(Menu::class, 'id', 'menu_id');
     }
 }

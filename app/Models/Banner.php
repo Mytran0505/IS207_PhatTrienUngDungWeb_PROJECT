@@ -16,7 +16,4 @@ class Banner extends Model
         'sort_by',
         'active'
     ];
-
-    protected $primaryKey = 'banner_id';
-    protected $table = 'banner';
 }

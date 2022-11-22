@@ -11,17 +11,17 @@ class Helper {
             if($menu->parent_id == $parent_id) {
                 $html .= '
                     <tr>
-                        <td>'. $menu->menu_id .'</td>
+                        <td>'. $menu->id .'</td>
                         <td>'. $char . $menu->name .'</td>
                         <td>'. self::active($menu->active) .'</td>
                         <td>'. $menu->updated_at .'</td>
                         <td>
-                            <a class="btn btn-primary btn-sm" href="/admin/menus/edit/' . $menu->menu_id . '">
+                            <a class="btn btn-primary btn-sm" href="/admin/menus/edit/' . $menu->id . '">
                                 <i class="fas fa-edit"></i>
                             </a>
 
                             <a href="#" class="btn btn-danger btn-sm"
-                                onclick="removeRow(' . $menu->menu_id . ', \'/admin/menus/destroy\')">
+                                onclick="removeRow(' . $menu->id . ', \'/admin/menus/destroy\')">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </td>
@@ -30,7 +30,7 @@ class Helper {
 
                 unset($menu[$key]);
 
-                $html .= self::menu($menus, $menu ->menu_id, $char . '|--');
+                $html .= self::menu($menus, $menu ->id, $char . '|--');
             }
         }
         return $html;

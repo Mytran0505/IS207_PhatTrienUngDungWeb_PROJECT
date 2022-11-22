@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bill_khachhang', function (Blueprint $table) {
-            $table->Increments('bill_id');
-            $table->integer('total_money');
-            $table->integer('customer_id');
+        Schema::create('banners', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 255);
+            $table->string('url', 255);
+            $table->string('image', 255);
+            $table->integer('sort_by');
+            $table->integer('active');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bill_khachhang');
+        Schema::dropIfExists('banners');
     }
 };

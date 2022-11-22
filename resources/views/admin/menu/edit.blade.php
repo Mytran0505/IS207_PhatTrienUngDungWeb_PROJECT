@@ -1,5 +1,9 @@
 @extends('admin.main')
 
+@section('head')
+    <script src="/ckeditor/ckeditor.js"></script>
+@endsection
+
 @section('content')
 <form action="" method="POST">
     <div class="card-body">
@@ -15,7 +19,7 @@
                 Danh mục cha
             </option>
             @foreach ($menus as $menuParent)
-                <option value="{{ $menuParent->id }}" {{ $menu->parent_id == $menuParent->menu_id ? 'selected' : ''}}>
+                <option value="{{ $menuParent->id }}" {{ $menu->parent_id == $menuParent->id ? 'selected' : ''}}>
                     {{ $menuParent->name }}
                 </option>
             @endforeach
@@ -23,13 +27,8 @@
       </div>
 
       <div class="form-group">
-        <label>Mô tả</label>
-        <textarea name="description" class="form-control">{{ $menu->description }}</textarea>
-      </div>
-
-      <div class="form-group">
         <label>Mô tả chi tiết</label>
-        <textarea name="content" class="form-control">{{ $menu->content }}</textarea>
+        <textarea name="description" class="form-control">{{ $menu->description }}</textarea>
       </div>
 
       <div class="form-group">
@@ -56,4 +55,10 @@
     </div>
     @csrf
   </form>
+@endsection
+
+@section('footer')
+    <script>
+        CKEDITOR.replace('description');
+    </script>
 @endsection

@@ -16,7 +16,4 @@ class Customer extends Model
         'address',
         'spend'
     ];
-
-    protected $primaryKey = 'customer_id';
-    protected $table = 'customer';
 }

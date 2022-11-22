@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use App\Models\Menu;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Services\Menu\MenuService;
 use App\Http\Requests\Menu\CreateFormRequest;
-use App\Models\Menu;
 
 class MenuController extends Controller
 {
@@ -56,6 +56,8 @@ class MenuController extends Controller
                 'message' => 'Xoá thành công danh mục'
             ]);
         }
+        
+        dd($result);
 
         return response()->json([
             'error' => true

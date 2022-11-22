@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cthd', function (Blueprint $table) {
-            $table->Increments('bill_id');
-            $table->integer('product_id');
-            $table->integer('amount');
+        Schema::create('bill_khachhangs', function (Blueprint $table) {
+            $table->id();
+            $table->integer('total_money');
+            $table->integer('customer_id');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cthd');
+        Schema::dropIfExists('bill_khachhangs');
     }
 };

@@ -4,6 +4,7 @@ namespace App\Http\Services\Slider;
 
 use App\Models\Banner;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class SliderService 
 {
@@ -21,5 +22,29 @@ class SliderService
 
     public function get() {
         return Banner::orderByDesc('id')->paginate(10);
+    }
+
+    public function update($request, $slider) {
+        try {
+            $slider->fill($request->input());
+            $slider->save();
+            Session::flash('success', 'Cập nhật Banner thành công');
+        } catch (\Exception $err) {
+            Session::flash('error', 'Cập nhật Banner lỗi');
+            return false;
+        }
+        return true;
+    }
+
+    public function destroy($request) {
+        $slider = Banner::where('id', $request->input('id'))->first();
+        if($slider) {
+            $path = str_replace('storage', 'public', $slider->image);
+            Storage::delete($path);
+            $slider->delete();
+            return true;
+        }
+
+        return false;
     }
 }

@@ -31,7 +31,7 @@
 
             <div class="form-group">
                 <label for="menu">Sắp xếp</label>
-                <input type="text" name="sort_by" value="{{ old('url') }}" class="form-control">
+                <input type="text" name="sort_by" value="{{ old('sort_by') }}" class="form-control">
             </div>
 
             <div class="form-group">
@@ -49,7 +49,7 @@
         </div>
 
         <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Thêm Slider</button>
+            <button type="submit" class="btn btn-primary">Thêm Banner</button>
         </div>
         @csrf
     </form>

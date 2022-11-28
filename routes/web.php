@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UploadController;
 use App\Http\Controllers\Admin\Users\LoginController;
@@ -57,6 +58,10 @@ Route::middleware(['auth']) -> group(function (){
 
         // Upload
         Route::post('upload/services', [UploadController::class, 'store']);
+
+        //Cart
+        Route::get('customers', [OrderController::class, 'index']);
+        Route::get('customers/view/{customer}', [OrderController::class, 'show']);
     });
 
 });

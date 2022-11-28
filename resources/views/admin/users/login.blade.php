@@ -6,11 +6,12 @@
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-  <div class="login-logo">
-    <a href="#"><b>Đăng nhập</b></a>
-  </div>
+  
   <!-- /.login-logo -->
   <div class="card">
+    <div class="login-logo">
+        <a href="#"><b>Đăng nhập</b></a>
+      </div>
         <div class="card-body login-card-body">
             <p class="login-box-msg">Đăng nhập vào admin</p>
             @include('admin.alert')

@@ -34959,18 +34959,20 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 .login-logo,
 .register-logo {
   font-size: 2.1rem;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: .9rem;
   text-align: center;
 }
 
 .login-logo a,
 .register-logo a {
-  color: #495057;
+  /* color: #495057; */
+  color: #0029ff;
 }
 
 .login-page,
 .register-page {
+  background-image: linear-gradient(to right top,#FB0712,#124FEB);
   -ms-flex-align: center;
   align-items: center;
   background-color: #e9ecef;
@@ -34985,7 +34987,8 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .login-box,
 .register-box {
-  width: 450px;
+  width: 600px;
+  border-radius: 10px;
 }
 
 @media (max-width: 576px) {
@@ -35063,6 +35066,8 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   margin: 0;
   padding: 0 20px 20px;
   text-align: center;
+  color: #0029ff;
+  font-weight: 600;
 }
 
 .social-auth-links {
@@ -53009,4 +53014,5 @@ a.text-muted:hover {
 .dark-mode .border-dark {
   border-color: #4b545c !important;
 }
+
 /*# sourceMappingURL=adminlte.css.map */

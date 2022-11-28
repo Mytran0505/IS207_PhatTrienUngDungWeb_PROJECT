@@ -6,6 +6,7 @@
 <body> <!-- class="animsition"-->
 	
 	<!-- Header -->
+	@include('header')
 	@yield('content')
 	
 @include('footer')

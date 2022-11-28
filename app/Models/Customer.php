@@ -16,4 +16,12 @@ class Customer extends Model
         'address',
         'spend'
     ];
+
+    public function orders() {
+        return $this->hasMany(Bill_khachhang::class, 'customer_id', 'id');
+    }
+
+    public function cthd() {
+        return $this->hasManyThrough(CTHD::class, Bill_khachhang::class, 'customer_id', 'id', 'id', 'id');
+    }
 }

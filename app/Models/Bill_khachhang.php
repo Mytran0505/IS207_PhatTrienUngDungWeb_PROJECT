@@ -13,4 +13,8 @@ class Bill_khachhang extends Model
         'total_money',
         'customer_id'
     ];
+
+    // public function cthd() {
+    //     return $this->hasMany(CTHD::class, 'id' , 'id');
+    // }
 }

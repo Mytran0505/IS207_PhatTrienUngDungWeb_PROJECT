@@ -55,4 +55,22 @@ class MenuService {
         }
         return false;
     }
+
+    public function show(){
+        return Menu::select('name', 'id', 'image')
+        ->where('parent_id',0)
+        ->orderbyDesc('id')
+        ->get();
+    }
+
+    public function getId($id){
+        return Menu::where('id',$id)->where('active', 1)->firstOrFail();
+    }
+
+    public function getProduct($menu){
+        return $menu->products()->select('id', 'name', 'price_sale','image')
+        ->where('active',1)
+        ->orderbyDesc('id')
+        ->paginate(12);
+    }
 }

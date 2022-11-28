@@ -47,4 +47,8 @@ class SliderService
 
         return false;
     }
+
+    public function show(){
+        return Banner::where('active', 1)->orderByDesc('sort_by')->get();
+    }
 }

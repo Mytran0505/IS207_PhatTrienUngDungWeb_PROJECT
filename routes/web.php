@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UploadController;
 use App\Http\Controllers\Admin\Users\LoginController;
 use App\Http\Controllers\Admin\SliderController;
+//use App\Http\Controllers\MenuController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -61,4 +62,5 @@ Route::middleware(['auth']) -> group(function (){
 });
 
 Route::get('/', [App\Http\Controllers\MainController::class, 'index']);
-
+Route::post('/services/load-product', [App\Http\Controllers\MainController::class, 'loadProduct']);
+Route::get('danh-muc/{id}-{slug}.html', [App\Http\Controllers\MenuController::class, 'index']);

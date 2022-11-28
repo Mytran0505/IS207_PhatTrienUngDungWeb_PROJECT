@@ -13,6 +13,11 @@ class Menu extends Model
         'name',
         'parent_id',
         'description',
-        'active'
+        'active',
+        'image'
     ];
+
+    public function products(){
+        return $this->hasMany(Product::class, 'menu_id', 'id');
+    }
 }

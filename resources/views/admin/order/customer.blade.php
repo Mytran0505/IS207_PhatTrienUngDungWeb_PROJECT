@@ -4,28 +4,26 @@
     <table class="table" id="myTable" class="m-t-4">
         <thead>
         <tr>
-            <th style="width: 50px">ID</th>
-            <th>Tên Khách Hàng</th>
-            <th>Số điện thoại</th>
-            <th>Email</th>
+            <th>ID</th>
+            <th>Tình trạng đơn hàng</th>
+            <th>Tổng tiền</th>
             <th>Ngày Đặt Hàng</th>
             <th style="width: 100px">&nbsp;</th>
         </tr>
         </thead>
         <tbody>
-            @foreach($customers as $key => $customer)
+            @foreach($orders as $key => $order)
             <tr>
-                <td>{{ $customer->id }}</td>
-                <td>{{ $customer->name }}</td>
-                <td>{{ $customer->phone }}</td>
-                <td>{{ $customer->email }}</td>
-                <td>{{ $customer->created_at }}</td>
+                <td>{{ $order->id }}</td>
+                <td>{{ $order->status}}</td>
+                <td>{{ number_format($order->total_money, 0, '', '.') }}</td>
+                <td>{{ $order->created_at }}</td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href="/admin/customers/view/{{ $customer->id }}">
+                    <a class="btn btn-primary btn-sm" href="/admin/orders/view/{{ $order->id }}">
                         <i class="fas fa-eye"></i>
                     </a>
                     <a href="#" class="btn btn-danger btn-sm"
-                       onclick="removeRow({{ $customer->id }}, '/admin/customers/destroy')">
+                       onclick="removeRow({{ $order->id }}, '/admin/orders/destroy')">
                         <i class="fas fa-trash"></i>
                     </a>
                 </td>
@@ -34,5 +32,5 @@
         </tbody>
     </table>
 
-    {!! $customers->links() !!}
+    {!! $orders->links() !!}
 @endsection

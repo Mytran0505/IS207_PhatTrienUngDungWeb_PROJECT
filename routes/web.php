@@ -60,8 +60,9 @@ Route::middleware(['auth']) -> group(function (){
         Route::post('upload/services', [UploadController::class, 'store']);
 
         //Cart
-        Route::get('customers', [OrderController::class, 'index']);
-        Route::get('customers/view/{customer}', [OrderController::class, 'show']);
+        Route::get('orders', [OrderController::class, 'index']);
+        Route::get('orders/view/{order}', [OrderController::class, 'show']);
+        Route::get('print-order/{checkout_code}', [OrderController::class, 'printOrder']);
     });
 
 });

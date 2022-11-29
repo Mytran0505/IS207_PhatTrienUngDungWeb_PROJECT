@@ -1,11 +1,6 @@
-
 @extends('main')
 @section('content')
-@include('header')
 
-	<!-- Cart -->
-	
-	@include('cart')	
 
 	<!-- Slider -->
 	<section class="section-slide">

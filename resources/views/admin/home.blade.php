@@ -271,7 +271,7 @@
 <!-- overlayScrollbars -->
 <script src="/template/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="/template/admin/dist/js/demo.js"></script>
+{{-- <script src="/template/admin/dist/js/demo.js"></script> --}}
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/template/admin/dist/js/pages/dashboard.js"></script>
 @endsection

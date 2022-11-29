@@ -18,7 +18,7 @@ class Customer extends Model
     ];
 
     public function orders() {
-        return $this->hasMany(Bill_khachhang::class, 'customer_id', 'id');
+        return $this->hasOne(Bill_khachhang::class, 'customer_id', 'id');
     }
 
     public function cthd() {

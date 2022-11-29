@@ -11,10 +11,15 @@ class Bill_khachhang extends Model
 
     protected $fillable = [
         'total_money',
-        'customer_id'
+        'customer_id',
+        'status'
     ];
 
-    // public function cthd() {
-    //     return $this->hasMany(CTHD::class, 'id' , 'id');
-    // }
+    public function customer() {
+        return $this->belongsTo(Customer::class, 'customer_id');
+    }
+
+    public function cthd() {
+        return $this->hasMany(CTHD::class, 'id', 'id');
+    }
 }

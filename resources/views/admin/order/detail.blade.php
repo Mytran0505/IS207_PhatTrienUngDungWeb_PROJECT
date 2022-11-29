@@ -3,10 +3,12 @@
 @section('content')
     <div class="customer mt-3">
         <ul>
+            @foreach($customer as $key => $customer)
             <li>Tên khách hàng: <strong>{{ $customer->name }}</strong></li>
             <li>Số điện thoại: <strong>{{ $customer->phone }}</strong></li>
             <li>Địa chỉ: <strong>{{ $customer->address }}</strong></li>
             <li>Email: <strong>{{ $customer->email }}</strong></li>
+            @endforeach
         </ul>
     </div>
 
@@ -22,31 +24,29 @@
                 <th class="column-5">Thành tiền</th>
             </tr>
 
-            @foreach($orders as $key => $order)
-                @foreach($cthds as $key => $cthd)
-                    @php
-                    $total_money = $order->total_money * $cthd->amount;
-                    $total += $total_money;
-                    @endphp
+            @foreach($cthds as $key => $cthd)
+                @php
+                $total_money = $cthd->amount * $cthd->product->price_sale;
+                $total += $total_money;
+                @endphp
+            <tr>
+                <td class="column-1">
+                    <div class="how-itemcart1">
+                        <img src="{{ $cthd->product->image }}" alt="IMG" style="width: 100px">
+                    </div>
+                </td>
+                <td class="column-2">{{ $cthd->product->name }}</td>
+                <td class="column-3">{{ number_format($cthd->product->price_sale, 0, '', '.') }}</td>
+                <td class="column-4">{{ $cthd->amount }}</td>
+                <td class="column-5">{{ number_format($total_money, 0, '', '.') }}</td>
+            </tr>
+            @endforeach 
                 <tr>
-                    <td class="column-1">
-                        <div class="how-itemcart1">
-                            <img src="{{ $cthd->product->image }}" alt="IMG" style="width: 100px">
-                        </div>
-                    </td>
-                    <td class="column-2">{{ $cthd->product->name }}</td>
-                    <td class="column-3">{{ number_format($order->total_money, 0, '', '.') }}</td>
-                    <td class="column-4">{{ $cthd->amount }}</td>
-                    <td class="column-5">{{ number_format($total_money, 0, '', '.') }}</td>
-                </tr>
-                @endforeach 
-            @endforeach
-                <tr>
-                    <td colspan="4" class="text-right">Tổng Tiền</td>
+                    <td colspan="4" class="text-right">Tổng Tiền:</td>
                     <td>{{ number_format($total, 0, '', '.') }}</td>
                 </tr>
             </tbody>
         </table>
-        <a class="btn btn-primary" target="_blank" href="print-order/{{ $customer->id }}">In đơn hàng</a>
+        <a class="btn btn-primary" target="_blank" href="print-order/{{ $order->id }}">In đơn hàng</a>
     </div>
 @endsection

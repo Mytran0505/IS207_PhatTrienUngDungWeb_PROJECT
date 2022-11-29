@@ -7,7 +7,7 @@
 	<!-- Header -->
 	@include('header')
 	<!-- Cart -->
-	@include('cart')	
+	@include('cart')
 	@yield('content')
 	
 @include('footer')

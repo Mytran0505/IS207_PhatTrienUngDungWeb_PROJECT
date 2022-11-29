@@ -44,7 +44,7 @@
 								</span>
 
 								<span class="block1-info stext-102 trans-04">
-									HOT 2022
+									HOT SUMMER 2022
 								</span>
 							</div>
 

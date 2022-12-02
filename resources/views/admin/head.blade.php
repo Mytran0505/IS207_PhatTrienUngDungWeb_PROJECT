@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="/template/admin/dist/css/adminlte.min.css">
   {{-- CSS --}}
   <link rel="stylesheet" href="/template/admin/dist/css/adminlte.css">
+  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 

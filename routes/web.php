@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\OrderController;
@@ -25,6 +26,8 @@ Route::middleware(['auth']) -> group(function (){
     Route::prefix('admin')->group(function(){
         Route::get('/', [MainController::class, 'index']) -> name('admin');
         Route::get('/logout', [LoginController::class, 'logout']) -> name('logout');
+        Route::post('/filter-by-date', [MainController::class, 'filterByDate']);
+        Route::post('/days-order', [MainController::class, 'daysOrder']);
         // Category
         Route::prefix('menus')->group(function(){
             Route::get('add', [MenuController::class, 'create']);
@@ -58,11 +61,15 @@ Route::middleware(['auth']) -> group(function (){
 
         // Upload
         Route::post('upload/services', [UploadController::class, 'store']);
-
+        
         //Cart
         Route::get('orders', [OrderController::class, 'index']);
         Route::get('orders/view/{order}', [OrderController::class, 'show']);
         Route::get('print-order/{checkout_code}', [OrderController::class, 'printOrder']);
+
+        //Customer
+        Route::get('customers', [CustomerController::class, 'index']);
+        Route::get('customers/view/{customer}', [CustomerController::class, 'show']);
     });
 
 });

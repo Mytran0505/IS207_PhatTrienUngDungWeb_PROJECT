@@ -10,3 +10,6 @@ _gửi mail khi mua hàng
 _Đưa chuột vô hình ảnh sản phẩm ra hình ảnh khác
 _Reset những thông tin đã bấm trc đó khi đã ra ngoài
 _Tạo link cho các logo .
+_Làm link() (nút next back) video 40
+_Nút load more ngoài trang chủ chưa hoàn thành nên command lại sau làm tiếp..
+_Font chữ đang bị sai 

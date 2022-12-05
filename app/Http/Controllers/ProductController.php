@@ -9,15 +9,19 @@ class ProductController extends Controller
 {
     protected $productService;
 
-    public function __construct(ProductService $productService){
+    public function __construct(ProductService $productService)
+    {
         $this->productService = $productService;
     }
 
-    public function index($id= '', $slug = ''){
+    public function index($id= '', $slug = '')
+    {
         $product = $this->productService->show($id);
+        $productsMore = $this->productService->more($id);
         return view('products.content', [
             'title' => $product->name,
-            'product' => $product
+            'product' => $product,
+            'products' => $productsMore
         ]);
     }
 }

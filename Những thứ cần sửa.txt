@@ -16,3 +16,4 @@ _Font chữ đang bị sai
 _Hướng dẫn filter ở vid 40 phút thứ 5
 _Các vùng pointer vẫn còn nhỏ nên khó tương tác
 _Lỗi ở video 42 2 button next prev đang bị không khớp img
+_Bấm qua nam nữ nhưng vẫn hiện xanh ở trang chủ

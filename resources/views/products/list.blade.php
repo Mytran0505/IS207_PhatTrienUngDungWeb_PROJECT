@@ -1,5 +1,5 @@
 <div class="row isotope-grid">
-    @foreach ($products as $key => $product)
+    @foreach ($product as $key => $product)
     <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
         <!-- Block2 -->
         <div class="block2">
@@ -15,7 +15,7 @@
                     </a>
 
                     <span class="stext-105 cl3">
-                        {!! \App\Helpers\Helper::price($product->original_price,$product->price_sale)!!}
+                        {!! \App\Helpers\Helper::price($product->price,$product->price_sale)!!}
                     </span>
                 </div>
             </div>

@@ -13,3 +13,4 @@ _Tạo link cho các logo .
 _Làm link() (nút next back) video 40
 _Nút load more ngoài trang chủ chưa hoàn thành nên command lại sau làm tiếp..
 _Font chữ đang bị sai 
+abc

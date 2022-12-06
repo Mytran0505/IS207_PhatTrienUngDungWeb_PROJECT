@@ -67,10 +67,17 @@ class MenuService {
         return Menu::where('id',$id)->where('active', 1)->firstOrFail();
     }
 
-    public function getProduct($menu){
-        return $menu->products()->select('id', 'name', 'price_sale','image')
-        ->where('active',1)
-        ->orderbyDesc('id')
-        ->paginate(12);
+    public function getProduct($menu, $request){
+        $query = $menu->products()
+            ->select('id', 'name', 'price_sale','image')
+            ->where('active',1);
+
+        if ($request->input('price_sale')){
+            $query->orderBy('price_sale', $request->input('price_sale'));
+        }
+        return $query 
+            ->orderByDesc('id')    
+            ->paginate(12)
+            ->withQueryString();
     }
 }

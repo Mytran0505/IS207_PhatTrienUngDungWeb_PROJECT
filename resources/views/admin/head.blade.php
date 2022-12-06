@@ -17,6 +17,8 @@
 
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 
+  <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
 @yield('head')

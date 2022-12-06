@@ -20,8 +20,8 @@
                 <td>{{ $product->id }}</td>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->menu->name }}</td>
-                <td>{{ $product->original_price }}</td>
-                <td>{{ $product->price_sale }}</td>
+                <td>{{ number_format($product->original_price, 0, '', '.') }}</td>
+                <td>{{ number_format($product->price_sale, 0, '', '.') }}</td>
                 <td>{!! \App\Helpers\Helper::active($product->active) !!}</td>
                 <td>{{ $product->updated_at }}</td>
                 <td>
@@ -38,5 +38,5 @@
         </tbody>
     </table>
 
-    {!! $products->links() !!}
+    {{-- {!! $products->links() !!} --}}
 @endsection

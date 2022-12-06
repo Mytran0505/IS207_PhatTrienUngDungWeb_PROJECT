@@ -13,7 +13,8 @@
         <a href="#"><b>Đăng nhập</b></a>
       </div>
         <div class="card-body login-card-body">
-            <p class="login-box-msg">Đăng nhập vào admin</p>
+            {{-- <p class="login-box-msg">Đăng nhập vào admin</p> --}}
+            
             @include('admin.alert')
             <form action="/admin/users/login/store" method="post">
                     <div class="input-group mb-3">

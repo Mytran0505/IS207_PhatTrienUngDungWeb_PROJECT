@@ -11,7 +11,7 @@ class CustomerController extends Controller
     public function index() {
         return view('admin.customer.list', [
             'title' => 'Danh sách khách hàng',
-            'customers' => Customer::orderByDesc('created_at')->paginate(10)
+            'customers' => Customer::orderByDesc('created_at')->get()
         ]);
     }
 

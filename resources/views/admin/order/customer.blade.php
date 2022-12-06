@@ -32,5 +32,5 @@
         </tbody>
     </table>
 
-    {!! $orders->links() !!}
+    {{-- {!! $orders->links() !!} --}}
 @endsection

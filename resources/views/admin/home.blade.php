@@ -53,7 +53,21 @@
           <p class="title_thongke">Thống kê tổng sản phẩm đơn hàng</p>
             <div id="donut"></div>
         </div>
-
+        
+        <div class="col-md-4 col-xs-12">
+          <h4>Sản phầm được mua nhiều nhất</h4>
+          <ol class="list_views">
+            @foreach($cthd as $key => $pro)
+            <li>
+                <a target="_blank" href="admin/products/edit/{{ $pro->product_id }}"> 
+                  {{ $pro->product->name }}
+                  <span style="color:black">({{ $pro->sum }})</span>
+                </a> 
+            </li>
+            @endforeach
+          </ol>
+        </div>
+        
         <div class="col-md-4 col-xs-12">
           <h4>Khách hàng mua nhiều nhất</h4>
           <ol class="list_views">
@@ -67,6 +81,8 @@
             @endforeach
           </ol>
         </div>
+
+
       </div>
     </div>
     <!-- /.content -->

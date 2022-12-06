@@ -21,7 +21,7 @@ class SliderService
     }
 
     public function get() {
-        return Banner::orderByDesc('id')->paginate(10);
+        return Banner::orderByDesc('id')->get();
     }
 
     public function update($request, $slider) {
@@ -49,6 +49,6 @@ class SliderService
     }
 
     public function show(){
-        return Banner::where('active', 1)->orderByDesc('sort_by')->get();
+        return Banner::where('active', 1)->orderBy('sort_by')->get();
     }
 }

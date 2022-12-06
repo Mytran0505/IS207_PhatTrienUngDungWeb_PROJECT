@@ -22,7 +22,7 @@
                 <td>{{ $customer->email }}</td>
                 <td>{{ $customer->phone }}</td>
                 <td>{{ $customer->address }}</td>
-                <td>{{ $customer->spend }}</td>
+                <td>{{ number_format($customer->spend, 0, '', '.') }}</td>
                 <td>{{ $customer->created_at }}</td>
                 <td>
                     <a class="btn btn-primary btn-sm" href="/admin/customers/view/{{ $customer->id }}">
@@ -38,5 +38,5 @@
         </tbody>
     </table>
 
-    {!! $customers->links() !!}
+    {{-- {!! $customers->links() !!} --}}
 @endsection

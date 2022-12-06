@@ -10,6 +10,6 @@ use Illuminate\Support\Facades\Session;
 class OrderService 
 {
     public function getOrder() {
-        return Bill_khachhang::orderByDesc('created_at')->paginate(10);
+        return Bill_khachhang::orderByDesc('created_at')->get();
     }
 }

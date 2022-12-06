@@ -53014,5 +53014,8 @@ a.text-muted:hover {
 .dark-mode .border-dark {
   border-color: #4b545c !important;
 }
+.header-admin {
+  background-color: #003049;
+}
 
 /*# sourceMappingURL=adminlte.css.map */

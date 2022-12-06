@@ -8,6 +8,7 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Models\Bill_khachhang;
 use App\Http\Controllers\Controller;
+use App\Models\CTHD;
 
 class MainController extends Controller
 {
@@ -16,13 +17,18 @@ class MainController extends Controller
         $order = Bill_khachhang::all()->count();
         $customer = Customer::all()->count();
         $customer_spend = Customer::orderBy('spend', 'DESC')->take(20)->get();
+        $cthd = CTHD::with('product')->selectRaw('sum(amount) as sum, product_id')
+            ->groupBy('product_id')
+            ->orderBy('sum','DESC')
+            ->take(20)->get();
 
         return view('admin.home', [
             'title' => 'Trang quản trị Admin',
             'product' => $product,
             'order' => $order,
             'customer' => $customer,
-            'customer_spend' => $customer_spend
+            'customer_spend' => $customer_spend,
+            'cthd' => $cthd
         ]);
     }
 

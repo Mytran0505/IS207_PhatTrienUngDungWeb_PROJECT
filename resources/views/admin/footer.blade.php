@@ -10,6 +10,7 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 <script>
   $(document).ready(function() {
@@ -94,7 +95,34 @@
       ]
     });
   });
-  
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    if($('#myTable').length){
+      $('#myTable').DataTable({
+      "language": {
+            "lengthMenu": "Hiển thị _MENU_ kết quả theo trang",
+            "zeroRecords": "Không tìm thấy kết quả phù hợp",
+            "info": "Trang _PAGE_ trên tổng _PAGES_ trang",
+            "infoEmpty": "Không tìm thấy kết quả phù hợp",
+            "infoFiltered": "(Lọc theo _MAX_ trên tổng kết quả)",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "Hiển thị _MENU_ kết quả",
+            "loadingRecords": "Đang tìm kiếm...",
+            "processing":     "",
+            "search":         "Tìm kiếm:",
+            "paginate": {
+                "first":      "Đầu",
+                "last":       "Cuối",
+                "next":       "Trước",
+                "previous":   "Sau"
+            },
+          }
+      });
+    } 
+  });
 </script>
 
 @yield('footer')

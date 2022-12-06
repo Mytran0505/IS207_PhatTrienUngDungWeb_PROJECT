@@ -18,7 +18,7 @@ class MenuController extends Controller
         $products = $this->menuService->getProduct($menu, $request);
         return view('menu', [
             'title' =>$menu->name,
-            'product' => $products,
+            'products' => $products,
             'menu' => $menu
         ]);
     }

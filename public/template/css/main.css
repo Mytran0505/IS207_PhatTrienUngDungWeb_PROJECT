@@ -332,6 +332,10 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   max-height: 100%;
 }
 
+.logo-img {
+  width: 50px;
+}
+
 
 
 /*------------------------------------------------------------------

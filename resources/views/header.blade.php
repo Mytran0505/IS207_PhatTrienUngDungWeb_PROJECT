@@ -7,12 +7,7 @@
                 
                 <!-- Logo desktop -->		
                 <a href="#" class="logo">
-<<<<<<< HEAD
-                    {{-- <h2>Sport shop 4B</h2> --}}
-                    <img src="images/icons/logo-01.png" alt="IMG-LOGO">
-=======
-                    <img src="/template/images/icons/logo-01.png" alt="IMG-LOGO">
->>>>>>> 5c900c0efca0b28bc9d7627043678f177d8deb49
+                    <img class="logo-img" src="/template/images/icons/logo-01.png" alt="IMG-LOGO">
                 </a>
 
                 <!-- Menu desktop -->

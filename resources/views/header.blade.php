@@ -6,7 +6,7 @@
             <nav class="limiter-menu-desktop container">
                 
                 <!-- Logo desktop -->		
-                <a href="#" class="logo">
+                <a href="/" class="logo">
                     {{-- <h2>Sport shop 4B</h2> --}}
                     <img src="/template/images/icons/logo-01.png" alt="IMG-LOGO">
                 </a>

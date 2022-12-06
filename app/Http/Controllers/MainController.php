@@ -24,7 +24,7 @@ class MainController extends Controller
             'title' => 'Trang chu',
             'slider' => $this->slider->show(),
             'menu' => $this->menu->show(),
-            'product' => $this->product->get()
+            'products' => $this->product->get()
         ]);
     }
 

@@ -125,4 +125,12 @@
   });
 </script>
 
+<script>
+  $(function(){
+    $("#start_coupon").datepicker({dateFormat:"yy-mm-dd"});
+
+    $("#end_coupon").datepicker({dateFormat:"yy-mm-dd"});
+  });
+</script>
+
 @yield('footer')

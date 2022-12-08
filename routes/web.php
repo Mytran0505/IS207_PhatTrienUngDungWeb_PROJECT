@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\Admin\MenuController;
@@ -70,6 +71,12 @@ Route::middleware(['auth']) -> group(function (){
         //Customer
         Route::get('customers', [CustomerController::class, 'index']);
         Route::get('customers/view/{customer}', [CustomerController::class, 'show']);
+
+        //coupon
+        Route::prefix('coupons')->group(function() {
+            Route::get('add', [CouponController::class, 'create']);
+            Route::post('add', [CouponController::class, 'store']);
+        });
     });
 
 });

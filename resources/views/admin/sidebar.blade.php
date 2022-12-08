@@ -146,13 +146,13 @@
           </a>
           <ul class="nav nav-treeview">
               <li class="nav-item">
-                  <a href="/admin/menus/add" class="nav-link">
+                  <a href="/admin/coupons/add" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Thêm Khuyến Mãi</p>
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="/admin/menus/list" class="nav-link">
+                  <a href="/admin/coupons/list" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Danh Sách Khuyến Mãi</p>
                   </a>

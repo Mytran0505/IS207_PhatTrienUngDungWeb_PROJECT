@@ -15,5 +15,5 @@ _Nút load more ngoài trang chủ chưa hoàn thành nên command lại sau là
 _Font chữ đang bị sai 
 _Hướng dẫn filter ở vid 40 phút thứ 5
 _Các vùng pointer vẫn còn nhỏ nên khó tương tác
-_Lỗi ở video 42 2 button next prev đang bị không khớp img
 _Bấm qua nam nữ nhưng vẫn hiện xanh ở trang chủ
+_Product-detail: ảnh 2 với 3 css lại k cần mảng biến

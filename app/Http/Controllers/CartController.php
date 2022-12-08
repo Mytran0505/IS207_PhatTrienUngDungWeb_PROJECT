@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Http\Services\CartService;
 
 class CartController extends Controller
@@ -31,7 +32,13 @@ class CartController extends Controller
         $products = $this->cartService->getProduct();
         return view('carts.list', [
             'title' => 'Giỏ hàng',
-            'products' => $products
+            'products' => $products,
+            'carts' => Session::get('carts')
         ]);
+    }
+
+    public function update(Request $request){
+        $this->cartService->update($request);
+        return redirect('/carts');
     }
 }

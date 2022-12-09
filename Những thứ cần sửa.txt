@@ -17,3 +17,4 @@ _Hướng dẫn filter ở vid 40 phút thứ 5
 _Các vùng pointer vẫn còn nhỏ nên khó tương tác
 _Bấm qua nam nữ nhưng vẫn hiện xanh ở trang chủ
 _Product-detail: ảnh 2 với 3 css lại k cần mảng biến
+_Giỏ hàng trống cuối video 44

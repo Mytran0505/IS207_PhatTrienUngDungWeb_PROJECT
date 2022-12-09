@@ -18,6 +18,7 @@
 									<th class="column-3">Price</th>
 									<th class="column-4">Quantity</th>
 									<th class="column-5">Total</th>
+									<th class="column-6">&nbsp;</th>
 								</tr>
 								
 								@foreach($products as $key => $product)
@@ -51,6 +52,9 @@
 											</div>
 										</td>
 										<td class="column-5">{{number_format($priceEnd, 0, '', '.')}}</td>
+										<td class="p-r-15">
+											<a href="/carts/delete/{{$product->id}}">Xóa</a>
+										</td>
 									</tr>
 								@endforeach
 							</table>

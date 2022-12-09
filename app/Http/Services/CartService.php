@@ -61,4 +61,12 @@ class CartService{
         return true; 
 
     }
+
+    public function remove($id){
+        $carts = Session::get('carts');
+        unset($carts[$id]); //xoa roi cap nhat lai
+
+        Session::put('carts', $carts);
+        return true;
+    }
 }

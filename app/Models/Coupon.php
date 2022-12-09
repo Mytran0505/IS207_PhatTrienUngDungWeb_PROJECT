@@ -19,6 +19,15 @@ class Coupon extends Model
         'product_id',
         'active',
         'start_date',
-        'end_date'
+        'end_date',
+        'status'
     ];
+
+    public function menu(){
+        return $this->hasOne(Menu::class, 'id', 'menu_id');
+    }
+
+    public function product(){
+        return $this->hasOne(Product::class, 'id', 'product_id');
+    }
 }

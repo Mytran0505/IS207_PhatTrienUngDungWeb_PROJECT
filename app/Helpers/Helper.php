@@ -42,6 +42,14 @@ class Helper {
         : '<span class = "btn btn-success btn-sm"> <i class="fas fa-check"></i> </span>';
     }
 
+    public static function activeDate($active = 0, $end_date, $today) : string {
+        if($end_date < $today){
+            return '<span class = "btn btn-danger btn-sm"> <i class="fas fa-times"></i> </span>';
+        }
+        return $active == 0 ? '<span class = "btn btn-danger btn-sm"> <i class="fas fa-times"></i> </span>' 
+        : '<span class = "btn btn-success btn-sm"> <i class="fas fa-check"></i> </span>';
+    }
+
     public static function menus($menus, $parent_id = 0): string{
         $html = '';
         foreach($menus as $key => $menu){

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('active');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
+            $table->string('status', 20);;
         });
     }
 

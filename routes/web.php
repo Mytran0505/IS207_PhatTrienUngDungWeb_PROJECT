@@ -76,6 +76,9 @@ Route::middleware(['auth']) -> group(function (){
         Route::prefix('coupons')->group(function() {
             Route::get('add', [CouponController::class, 'create']);
             Route::post('add', [CouponController::class, 'store']);
+            Route::get('list', [CouponController::class, 'index']);
+            Route::get('edit/{coupon}', [CouponController::class, 'show']);
+            Route::post('edit/{coupon}', [CouponController::class, 'update']);
         });
     });
 

@@ -21,8 +21,11 @@ class CouponService {
         return true;
     }
 
+    public function get() {
+        return Coupon::with('menu')->orderByDesc('id')->get();
+    }
+
     public function insert($request) {
-        // dd($request->all());
         $isValidDate = $this->isValidDate($request);
         if($isValidDate === false) {
             return false;
@@ -33,6 +36,22 @@ class CouponService {
             Session::flash('success', 'Thêm khuyến mãi thành công');
         } catch (\Exception $err) {
             Session::flash('error', 'Thêm khuyến mãi lỗi');
+            return false;
+        }
+        return true;
+    }
+
+    public function update($request, $coupon) {
+        $isValidDate = $this->isValidDate($request);
+        if($isValidDate === false) {
+            return false;
+        }
+        try {
+            $coupon->fill($request->all());
+            $coupon->save();
+            Session::flash('success', 'Cập nhật khuyến mãi thành công');
+        } catch (\Exception $err) {
+            Session::flash('error', 'Cập nhật khuyến mãi lỗi');
             return false;
         }
         return true;

@@ -59,7 +59,7 @@ class MenuService {
     public function show(){
         return Menu::select('name', 'id', 'image')
         ->where('parent_id',0)
-        ->orderbyDesc('id')
+        ->orderBy('id')
         ->get();
     }
 

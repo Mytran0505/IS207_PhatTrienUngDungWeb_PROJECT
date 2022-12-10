@@ -272,12 +272,12 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .wrap-menu-desktop {
   position: fixed;
   z-index: 1100;
-  background-color: transparent;
+  background-color: #fff;
   width: 100%;
-  height: 84px;
-  top: 40px;
+  height: 70px;
+  top: 0px;
   left: 0px; 
-
+  box-shadow: 1px 1px 3px grey;
   -webkit-transition: height 0.3s, background-color 0.3s;
   -o-transition: height 0.3s, background-color 0.3s;
   -moz-transition: height 0.3s, background-color 0.3s;

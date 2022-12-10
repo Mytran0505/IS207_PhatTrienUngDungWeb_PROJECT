@@ -28895,6 +28895,65 @@ html.maximized-card {
   font-weight: 400;
 }
 
+.light-around{
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.light-around::before{
+  content: '';
+  position: absolute;
+  top: -168%;
+  left: -48%;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(0deg, transparent,
+  #ffcdfd, #ffcdfd);
+  transform-origin: bottom right;
+  animation: animate 3s linear infinite;
+}
+
+.light-around::after{
+  content: '';
+  position: absolute;
+  top: -168%;
+  left: -48%;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(0deg, transparent,
+  #c5ceff, #c5ceff);
+  transform-origin: bottom right;
+  animation: animate 3s linear infinite;
+  animation-delay: -1.5s;
+}
+
+.form{
+  position: relative;
+  z-index: 10;
+  height: 276px;
+  width: 610px;
+  left: 5px;
+  top: 5px;
+
+}
+
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  50%{
+    transform: rotate(180deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
+
 .todo-list {
   list-style: none;
   margin: 0;
@@ -34962,9 +35021,9 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   font-weight: 500;
   margin-bottom: .9rem;
   text-align: center;
+  margin-top: 15px;
 }
 
-.login-logo a,
 .register-logo a {
   /* color: #495057; */
   color: #0029ff;
@@ -35010,6 +35069,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   border-top: 0;
   color: #666;
   padding: 20px;
+  border-radius: 20px;
 }
 
 .login-card-body .input-group .form-control,

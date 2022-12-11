@@ -18,3 +18,6 @@ _Các vùng pointer vẫn còn nhỏ nên khó tương tác
 _Bấm qua nam nữ nhưng vẫn hiện xanh ở trang chủ
 _Product-detail: ảnh 2 với 3 css lại k cần mảng biến
 _Giỏ hàng trống cuối video 44
+_Xóa total trong giỏ hàng
+_Chuyển qua trang carts bằng view add thì k vào
+_

@@ -11,11 +11,11 @@
                 <i class="zmdi zmdi-close"></i>
             </div>
         </div>
-        
+        @if (count($products) > 0)
         <div class="header-cart-content flex-w js-pscroll">
             @php $sumPriceCart = 0; @endphp
             <ul class="header-cart-wrapitem w-full">
-                @if (count($products) > 0)
+                
                     @foreach($products as $key => $product)
                         @php 
                             $price = \App\Helpers\Helper::price($product->original_price, $product->price_sale); 
@@ -38,14 +38,11 @@
                                 </span>
                             </div></li>
                     @endforeach
-                @endif
+                
 
             </ul>
             
             <div class="w-full">
-                <div class="header-cart-total w-full p-tb-40">
-                    Total: {{number_format($sumPriceCart, 0, '', '.')}}
-                </div>
 
                 <div class="header-cart-buttons flex-w w-full">
                     <a href="/carts" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
@@ -58,5 +55,6 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
 </div>

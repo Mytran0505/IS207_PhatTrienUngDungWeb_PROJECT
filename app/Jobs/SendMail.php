@@ -9,6 +9,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Mail;
+use App\Mail\OrderShipped;
 
 class SendMail implements ShouldQueue
 {
@@ -34,7 +35,7 @@ class SendMail implements ShouldQueue
     public function handle()
     {
         // Mail::to($this->email)->send(new OrderShipped());
-        echo 123;
+        Mail::to($this->email)->send(new OrderShipped());
     }
     // chay bang php artisan que:work
     // Queue Connection(env) -> database chay lai cau lenh composer dump-autoload

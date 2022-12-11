@@ -116,6 +116,7 @@
 										<textarea class="stext-111 cl8 plh3 size-111 p-lr-15" name="content"></textarea>
 									</div>
 
+
 								</div>
 							</div>
 
@@ -127,7 +128,7 @@
 							</div>
 
 							<div class="size-209 p-t-1">
-								<span class="mtext-110 cl2">
+								<span class="mtext-110 cl2" name="spend">
 									{{number_format($total, 0, '', '.')}}
 								</span>
 							</div>

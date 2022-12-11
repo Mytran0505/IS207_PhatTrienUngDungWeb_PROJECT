@@ -8,8 +8,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Mail;
 use App\Mail\OrderShipped;
+use Mail;
 
 class SendMail implements ShouldQueue
 {
@@ -34,7 +34,6 @@ class SendMail implements ShouldQueue
      */
     public function handle()
     {
-        // Mail::to($this->email)->send(new OrderShipped());
         Mail::to($this->email)->send(new OrderShipped());
     }
     // chay bang php artisan que:work

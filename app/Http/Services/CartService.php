@@ -88,6 +88,7 @@ class CartService{
                 'phone'=> $request->input('phone'),
                 'address'=> $request->input('address'),
                 'content'=> $request->input('content'),
+                'spend'=> $request->input('total')
                 
             ]);
             $this->infoProductCart($carts, $customer->id);
@@ -101,7 +102,8 @@ class CartService{
             Session::forget('carts');
         }catch(\Exception $err) {
             DB::rollBack();
-            Session::flash('error', 'Đặt Hàng Không Thành Công, Vui lòng thử lại sau');
+            // Session::flash('error', 'Đặt Hàng Không Thành Công, Vui lòng thử lại sau');
+            Session::flash('error', $err->getMessage());
             return false;
         }
 

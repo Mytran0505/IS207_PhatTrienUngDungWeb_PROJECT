@@ -8,6 +8,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Session;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Jobs\SendMail;
 use Illuminate\Support\Facades\DB;
 
 class CartService{
@@ -93,11 +94,14 @@ class CartService{
 
             DB::commit();
             Session::flash('success', 'Đặt Hàng Thành Công');
+
+            #Queue
+            SendMail::dispatch($request->input('email'))->delay(now()->addSeconds(2));
+            // dispatch truyeen vao email khach hang
             Session::forget('carts');
         }catch(\Exception $err) {
             DB::rollBack();
-            // Session::flash('error', 'Đặt Hàng Không Thành Công, Vui lòng thử lại sau');
-            Session::flash('error', $err->getMessage());
+            Session::flash('error', 'Đặt Hàng Không Thành Công, Vui lòng thử lại sau');
             return false;
         }
 
@@ -120,7 +124,6 @@ class CartService{
                 'price' => $product->price_sale != 0 ? $product->price_sale : $product->price
             ];
         }
-
 
         return Cart::insert($data);
     }

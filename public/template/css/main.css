@@ -272,12 +272,11 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .wrap-menu-desktop {
   position: fixed;
   z-index: 1100;
-  background-color: #fff;
+  background-color: transparent;
   width: 100%;
   height: 70px;
   top: 0px;
   left: 0px; 
-  box-shadow: 1px 1px 3px grey;
   -webkit-transition: height 0.3s, background-color 0.3s;
   -o-transition: height 0.3s, background-color 0.3s;
   -moz-transition: height 0.3s, background-color 0.3s;
@@ -285,18 +284,18 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .header-v2 .wrap-menu-desktop {
-  background-color: #fff;
+  background-color: rgb(249, 249, 249);
   top: 0;
 }
 
 .header-v3 .wrap-menu-desktop {
   background-color: transparent;
   top: 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 2px solid rgba(255,255,255,0.1);
 }
 
 .header-v4 .wrap-menu-desktop {
-  background-color: #fff;
+  background-color: rgb(249, 249, 249);
 }
 
 
@@ -312,7 +311,25 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   background-color: transparent;
 }
 
+.b-r-20{
+  border-radius: 20px;
+}
 
+.limit-text-1{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.limit-text-2{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /*------------------------------------------------------------------
 [ Logo ]*/
@@ -554,6 +571,10 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   opacity: 1;
 }
 
+.b-shadow{
+  box-shadow: 1px 1px 5px 1px #cdcdcd;
+}
+
 .wrap-search-header {
   width: 960px;
   max-width: 100%;
@@ -619,7 +640,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .fix-menu-desktop .wrap-menu-desktop {
   height: 70px;
-  background-color: rgba(255,255,255,1);
+  background-color: rgb(249, 249, 249);
   box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);
   -moz-box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);

@@ -4,31 +4,31 @@
         <div class="row">
             <div class="col-sm-6 col-lg-3 p-b-50">
                 <h4 class="stext-301 cl0 p-b-30">
-                    Categories
+                    DANH MỤC SẢN PHẨM
                 </h4>
 
                 <ul>
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Women
+                            Thời Trang Nữ
                         </a>
                     </li>
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Men
+                            Thời Trang Nam
                         </a>
                     </li>
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Shoes
+                            Giày Thể Thao
                         </a>
                     </li>
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Watches
+                            Đồng Hồ Thể Thao
                         </a>
                     </li>
                 </ul>
@@ -36,31 +36,31 @@
 
             <div class="col-sm-6 col-lg-3 p-b-50">
                 <h4 class="stext-301 cl0 p-b-30">
-                    Help
+                    HỖ TRỢ
                 </h4>
 
                 <ul>
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Track Order
+                            Kiểm Tra Đơn Hàng
                         </a>
                     </li>
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Returns 
+                            Hoàn Trả
                         </a>
                     </li>
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Shipping
+                            Vận Chuyển
                         </a>
                     </li>
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            FAQs
+                            Các câu hỏi thường gặp
                         </a>
                     </li>
                 </ul>
@@ -68,14 +68,15 @@
 
             <div class="col-sm-6 col-lg-3 p-b-50">
                 <h4 class="stext-301 cl0 p-b-30">
-                    GET IN TOUCH
+                    LIÊN LẠC
                 </h4>
 
                 <p class="stext-107 cl7 size-201">
-                    Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                Nếu bạn có bất kỳ câu hỏi nào? Hãy cho chúng tôi biết tại cửa hàng ở tầng 12, 
+                Tòa Nhà E, Trường Đại Học Công Nghệ Thông Tin, ĐHQG-TPHCM hoặc gọi cho chúng tôi theo số (+84) 54 726 801
                 </p>
 
-                <div class="p-t-27">
+                <div class="p-t-0">
                     <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
                         <i class="fa fa-facebook"></i>
                     </a>
@@ -92,18 +93,18 @@
 
             <div class="col-sm-6 col-lg-3 p-b-50">
                 <h4 class="stext-301 cl0 p-b-30">
-                    Newsletter
+                    NHẬN THÔNG BÁO
                 </h4>
 
                 <form>
                     <div class="wrap-input1 w-full p-b-4">
-                        <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
+                        <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="hovaten@gmail.com">
                         <div class="focus-input1 trans-04"></div>
                     </div>
 
                     <div class="p-t-18">
                         <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-                            Subscribe
+                            Đăng Ký
                         </button>
                     </div>
                 </form>

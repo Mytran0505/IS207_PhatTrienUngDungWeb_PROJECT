@@ -4,7 +4,7 @@
     <div class="header-cart flex-col-l p-l-65 p-r-25">
         <div class="header-cart-title flex-w flex-sb-m p-b-8">
             <span class="mtext-103 cl2">
-                Your Cart
+                Giỏ Hàng Của Bạn
             </span>
 
             <div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
@@ -28,8 +28,8 @@
                                 <img src="{{$product->image}}" alt="IMG">
                             </div>
 
-                            <div class="header-cart-item-txt p-t-8">
-                                <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                            <div class="header-cart-item-txt p-t-8 limit-text 1">
+                                <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04 limit-text">
                                     {{$product->name}}
                                 </a>
 
@@ -46,12 +46,9 @@
 
                 <div class="header-cart-buttons flex-w w-full">
                     <a href="/carts" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-                        View Cart
+                        Thanh Toán
                     </a>
 
-                    <a href="/carts" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-                        Check Out
-                    </a>
                 </div>
             </div>
         </div>

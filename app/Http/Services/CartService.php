@@ -88,7 +88,7 @@ class CartService{
                 'phone'=> $request->input('phone'),
                 'address'=> $request->input('address'),
                 'content'=> $request->input('content'),
-                'spend'=> $request->input('total')
+                'spend'=> $request->input('spend')
                 
             ]);
             $this->infoProductCart($carts, $customer->id);

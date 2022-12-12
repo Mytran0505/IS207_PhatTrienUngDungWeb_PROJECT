@@ -80,7 +80,7 @@
 						
 							<div class="flex-w flex-r-m p-b-10">
 								<div class="size-204 flex-w flex-m respon6-next">
-									<form action="/add-cart" method="post">		
+									<form action="/add-cart" method="POST">		
 										@if ($product->original_price != NULL)
 											<div class="wrap-num-product flex-w m-r-20 m-tb-10">
 												<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
@@ -324,7 +324,5 @@
 				@include('products.list')
 		</div>
 	</section>
-
-	
 
 @endsection

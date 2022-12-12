@@ -316,6 +316,21 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   border-radius: 20px;
 }
 
+.b-r-30{
+  border-radius: 30px;
+}
+
+.b-r-40{
+  border-radius: 40px;
+}
+
+.b-r-50{
+  border-radius: 50px;
+  box-shadow: 1px 1px 1px 1px rgba(192, 192, 192, 0.2);
+
+}
+
+
 .limit-text-1{
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -331,6 +346,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 
 /*------------------------------------------------------------------
 [ Logo ]*/
@@ -1057,7 +1073,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .header-cart-item-name {
-  display: block;
+  /* display: block; */
   font-family: BeVietnamPro-Regular;
   font-size: 14px;
   color: #555;
@@ -2157,7 +2173,7 @@ input.num-product::-webkit-inner-spin-button {
 .cl1 {color: #717fe0;}
 .cl2 {color: #333;}
 .cl3 {color: #666;}
-.cl13{color: #f13939;}
+.cl13{color: #139b1e;}
 .cl4 {color: #999;}
 .cl14{color: #545454;}
 .cl5 {color: #222;}

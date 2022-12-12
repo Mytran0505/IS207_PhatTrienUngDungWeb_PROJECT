@@ -23,13 +23,13 @@
                         @endphp -->
                         <!-- Kiem tra gia giam != 0 thi lay gia giam con = 0 thi lay gia goc -->
                         <!-- Kiem tra gia ban != 0 thi lay gia ban con = 0 thi lay gia mua -->
-                        <li class="header-cart-item flex-w flex-t m-b-12">
-                            <div class="header-cart-item-img">
+                        <li class="header-cart-item flex-w flex-t m-b-20">
+                            <div class="header-cart-item-img p-t-2">
                                 <img src="{{$product->image}}" alt="IMG">
                             </div>
 
-                            <div class="header-cart-item-txt p-t-8 limit-text 1">
-                                <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04 limit-text">
+                            <div class="header-cart-item-txt">
+                                <a href="#" class="limit-text-2 header-cart-item-name m-b-10 hov-cl1 trans-04 ">
                                     {{$product->name}}
                                 </a>
 

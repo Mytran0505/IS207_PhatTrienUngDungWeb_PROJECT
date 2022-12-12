@@ -53078,4 +53078,8 @@ a.text-muted:hover {
   background-color: #003049;
 }
 
+.nav-sidebar .nav-item > .nav-link .active{
+  background-color: #85b4f2 !important;
+}
+
 /*# sourceMappingURL=adminlte.css.map */

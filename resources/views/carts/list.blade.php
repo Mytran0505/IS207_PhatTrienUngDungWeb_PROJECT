@@ -12,59 +12,64 @@
 							$total = 0;
 							@endphp
 							
-							@if (count($products)!=0)
 							<table class="table-shopping-cart">
-								<tr class="table_head">
-									<th class="column-1">Sản phẩm</th>
-									<th class="column-2"></th>
-									<th class="column-3">Giá</th>
-									<th class="column-4">Số lượng</th>
-									<th class="column-5">Tổng tiền</th>
-									<th class="column-6">&nbsp;</th>
-								</tr>
-								
-								@foreach($products as $key => $product)
+								</thead>
+									<tr class="table_head">
+										<th class="column-1">Sản phẩm</th>
+										<th class="column-2" style="width:140px"></th>
+										<th class="text-center">Giá</th>
+										<th class="text-center" style="width:140px">Số lượng</th>
+										<th class="column-5">Tổng tiền</th>
+										<th class="column-6">&nbsp;</th>
+									</tr>
+								</thead>
+								<tbody>
+								@if (count($products)!=0)
+									@foreach($products as $key => $product)
 
-									@php
-									$price = $product->price_sale != 0 ? $product->price_sale : $product->original_price;
-									$priceEnd = $price * $carts[$product->id];
-									$total += $priceEnd;
-									@endphp
-									<tr class="table_row">
-										<td class="column-1">
-											<div class="how-itemcart1">
-												<img src="{{$product->image}}" alt="IMG">
-											</div>
-										</td>
-										<td class="column-2">{{$product->name}}</td>
-										<td class="column-3">{{number_format($price, 0, '', '.')}}</td>
-										<!-- Khuc nay chua hieu price la ori_price hay la price ben Helper goc cua ngta la price -->
-										<td class="column-4">
-											<div class="wrap-num-product flex-w m-l-auto m-r-0">
-												<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-													<i class="fs-16 zmdi zmdi-minus"></i>
+										@php
+										$price = $product->price_sale != 0 ? $product->price_sale : $product->original_price;
+										$priceEnd = $price * $carts[$product->id];
+										$total += $priceEnd;
+										@endphp
+										<tr class="table_row">
+											<td class="column-1">
+												<div class="how-itemcart1">
+													<img src="{{$product->image}}" alt="IMG">
 												</div>
+											</td>
+											<td class="column-2">{{$product->name}}</td>
+											<td class="column-3">{{number_format($price, 0, '', '.')}}</td>
+											<!-- Khuc nay chua hieu price la ori_price hay la price ben Helper goc cua ngta la price -->
+											<td class="column-4">
+												<div class="wrap-num-product flex-w m-l-auto m-r-0">
+													<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+														<i class="fs-16 zmdi zmdi-minus"></i>
+													</div>
 
-												<input 	class="mtext-104 cl3 txt-center num-product" type="number"
-														name="num_product[{{$product->id}}]" value="{{$carts[$product->id]}}">
+													<input 	class="mtext-104 cl3 txt-center num-product" type="number"
+															name="num_product[{{$product->id}}]" value="{{$carts[$product->id]}}">
 
-												<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-													<i class="fs-16 zmdi zmdi-plus"></i>
+													<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+														<i class="fs-16 zmdi zmdi-plus"></i>
+													</div>
 												</div>
-											</div>
-										</td>
-										<td class="column-5">{{number_format($priceEnd, 0, '', '.')}}</td>
-										<td class="p-r-15">
-											<a href="/carts/delete/{{$product->id}}">Xóa</a>
+											</td>
+											<td class="column-5">{{number_format($priceEnd, 0, '', '.')}}</td>
+											<td class="p-r-15">
+												<a href="/carts/delete/{{$product->id}}">Xóa</a>
+											</td>
+										</tr>
+									@endforeach
+									@else
+									<tr>
+										<td colspan="5">
+											<img style="display: block; width: auto; height: 250px; margin-left: auto; margin-right: auto; " src="template/images/empty-cart.png">
 										</td>
 									</tr>
-								@endforeach
+									@endif
+								</tbody>
 							</table>
-							@else
-								<div class="text-center">
-									<h2>Giỏ hàng trống</h2>
-								</div>
-							@endif
 						</div>
 
 						
@@ -74,7 +79,7 @@
 								<input class="stext-104 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Mã khuyến mãi">
 									
 								<div class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
-									Mã khuyến mãi
+									Áp dụng
 								</div>
 							</div>
 

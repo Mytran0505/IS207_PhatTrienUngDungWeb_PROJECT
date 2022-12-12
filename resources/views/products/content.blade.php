@@ -97,7 +97,7 @@
 
 											<button type="submit" 
 													class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-												Add to cart
+												Thêm vào giỏ hàng
 											</button>
 											<input type="hidden" name="product_id" value="{{$product->id}}">
 										

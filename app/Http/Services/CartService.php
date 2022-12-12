@@ -43,7 +43,7 @@ class CartService{
         }
         
         $carts[$product_id] = $qty;
-        Session::put('carts', $carts); 
+        Session::put('carts', $carts);
             return true;
     }
 

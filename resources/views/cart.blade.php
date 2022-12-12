@@ -43,12 +43,16 @@
             </ul>
         </div>
         @else
-            Giỏ hàng trống 
+            <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="template/images/empty-cart.png">
+            <p>-Giỏ hàng chưa có sản phẩm-</p>
         @endif
         <div class="w-full">
                 
                 <div class="header-cart-buttons flex-w w-full">
                     <a href="/carts" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+                        Xem giỏ hàng
+                    </a>
+                    <a href="/carts" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-l-2 m-b-10">
                         Thanh Toán
                     </a>
 

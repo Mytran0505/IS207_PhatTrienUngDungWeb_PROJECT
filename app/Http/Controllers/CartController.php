@@ -23,7 +23,7 @@ class CartController extends Controller
             return redirect()->back();
         }
 
-        return redirect('/carts');
+        return redirect()->back();
         
     }
 

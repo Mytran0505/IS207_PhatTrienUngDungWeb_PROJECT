@@ -14,6 +14,7 @@ class Customer extends Model
         'email',
         'phone',
         'address',
+        'content',
         'spend'
     ];
 

@@ -3,14 +3,14 @@
     <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
         <!-- Block2 -->
         <div class="block2">
-            <div class="block2-pic hov-img0">
+            <div class="block2-pic hov-img0 b-r-20 b-shadow">
                 <img src="{{ $product->image }}" alt="{{ $product->name }}">
             </div>
 
             <div class="block2-txt flex-w flex-t p-t-14">
                 <div class="block2-txt-child1 flex-col-l ">
                     <a href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name),'-'}}.html" 
-                        class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 limit-text-2">
                         {{ $product->name }}
                     </a>
 

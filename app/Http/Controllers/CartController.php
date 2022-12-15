@@ -48,8 +48,8 @@ class CartController extends Controller
     }
 
     public function removeInHome($id){
-        $this->cartService->remove($id);
-        return redirect('');
+        $this->cartService->removeInHome($id);
+        return redirect()->back();
     }
 
     

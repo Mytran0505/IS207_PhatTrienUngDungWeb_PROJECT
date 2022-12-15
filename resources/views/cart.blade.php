@@ -10,7 +10,7 @@
                 <i class="zmdi zmdi-close"></i>
             </div>
         </div>
-        @if (count($products) < 0)
+        @if (count($products) != 0)
         <div class="header-cart-content flex-w js-pscroll">
             <!-- @php $sumPriceCart = 0; @endphp -->
             <ul class="header-cart-wrapitem w-full">
@@ -36,16 +36,15 @@
 
                                 <span class="header-cart-item-info">
                                     {{$price}}
+                                    <input class="quantity-cart" value="x3" disabled> 
                                 </span>
                             </div></li>
                     <!-- @endforeach -->
-                
-
             </ul>
         </div>
         @else
-            <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="template/images/empty-cart.png">
-            <p>-Giỏ hàng chưa có sản phẩm-</p>
+        <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="template/images/empty-cart.png">
+        <p>-Giỏ hàng chưa có sản phẩm-</p>
         @endif
         <div class="w-full">
                 

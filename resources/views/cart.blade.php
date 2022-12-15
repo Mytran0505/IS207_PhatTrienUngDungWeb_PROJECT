@@ -11,6 +11,10 @@
                 <i class="zmdi zmdi-close"></i>
             </div>
         </div>
+        @if (count($products) == 0)
+            <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="/template/images/empty-cart.png">
+            <p>-Giỏ hàng chưa có sản phẩm-</p>
+        @endif
         @if (count($products) > 0)
         <div class="header-cart-content flex-w js-pscroll">
             <!-- @php $sumPriceCart = 0; @endphp -->
@@ -42,9 +46,9 @@
 
             </ul>
         </div>
-        @else
-            <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="template/images/empty-cart.png">
-            <p>-Giỏ hàng chưa có sản phẩm-</p>
+        {{-- @else
+            <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="/template/images/empty-cart.png">
+            <p>-Giỏ hàng chưa có sản phẩm-</p> --}}
         @endif
         <div class="w-full">
                 

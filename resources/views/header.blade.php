@@ -14,7 +14,7 @@
                 <!-- Menu desktop -->
                 <div class="menu-desktop">
                     <ul class="main-menu">
-                        <li class="active-menu"><a href ="/">Trang chủ</a></li>
+                        <li class="category"><a href ="/">Trang chủ</a></li>
                         {!! $menusHtml !!}
                         <li>
                             <a href="contact.html">Liên hệ</a>
@@ -66,9 +66,9 @@
     <!-- Menu Mobile -->
     <div class="menu-mobile">
         <ul class="main-menu-m">
-            <li class="active-menu"><a href ="/">Trang chủ</a></li>
+            <li class="category"><a href ="/">Trang chủ</a></li>
             {!! $menusHtml !!}
-            <li>
+            <li class="category">
                 <a href="contact.html">Liên hệ</a>
             </li>
         </ul>
@@ -89,4 +89,6 @@
             </form>
         </div>
     </div>
+
+    
 </header>

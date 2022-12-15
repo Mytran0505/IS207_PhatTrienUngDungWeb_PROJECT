@@ -55,7 +55,7 @@ class Helper {
         foreach($menus as $key => $menu){
             if($menu -> parent_id == $parent_id){
                 $html .= '
-                    <li>
+                    <li class = "'.$menu->name.'">
                         <a href = "/danh-muc/'.$menu->id . '-'. Str::slug($menu -> name, '-').'.html">
                             '.$menu->name.'
                         </a>';

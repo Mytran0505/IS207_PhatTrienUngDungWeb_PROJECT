@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Session;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Jobs\SendMail;
+use App\Models\Bill_khachhang;
+use App\Models\Bill_vanglai;
+use App\Models\CTHD;
 use Illuminate\Support\Facades\DB;
 
 class CartService{
@@ -62,7 +65,7 @@ class CartService{
 
     public function update($request){
         Session::put('carts', $request->input('num_product'));
-        return true; 
+        return true;
 
     }
 
@@ -88,29 +91,29 @@ class CartService{
                 'phone'=> $request->input('phone'),
                 'address'=> $request->input('address'),
                 'content'=> $request->input('content'),
-                'spend'=> $request->input('spend')
+                'spend'=> $request->input('total')
                 
             ]);
-            $this->infoProductCart($carts, $customer->id);
+            $this->infoProductCart($carts, $customer->id, $request);
 
             DB::commit();
             Session::flash('success', 'Đặt Hàng Thành Công');
-
+            Session::forget('carts');
+            
             #Queue
             SendMail::dispatch($request->input('email'))->delay(now()->addSeconds(2));
             // dispatch truyeen vao email khach hang
-            Session::forget('carts');
         }catch(\Exception $err) {
             DB::rollBack();
-            // Session::flash('error', 'Đặt Hàng Không Thành Công, Vui lòng thử lại sau');
-            Session::flash('error', $err->getMessage());
+            Session::flash('error', 'Đặt Hàng Không Thành Công, Vui lòng thử lại sau');
+            // Session::flash('error', $err->getMessage());
             return false;
         }
 
         return true;
     }
 
-    protected function infoProductCart($carts, $customer_id){
+    protected function infoProductCart($carts, $customer_id, $request){
         $productId = array_keys($carts);
             $products = Product::select('id', 'name', 'original_price', 'price_sale', 'image')
                 ->where('active', 1)
@@ -118,15 +121,24 @@ class CartService{
                 ->get();
 
         $data = [];
+        $total = 0;
+        Bill_khachhang::create([
+            'customer_id' => $customer_id,
+            // 'price' => $product->price_sale != 0 ? $product->price_sale : $product->price
+            'total_money' =>$request->input('total'),
+            'status' => 'Chưa nhận đơn'
+        ]);
+        $bill_id = Bill_khachhang::select('id')->orderByDesc('id')->first();
         foreach ($products as $product){
-            $data[]= [
-                'customer_id' => $customer_id,
+            // $product->price_sale != 0 ? $total += $product->price_sale * $carts[$product->id] : $total += $product->original_price * $carts[$product->id];
+            $data[] = [
+                'id' => $bill_id->id,
                 'product_id' => $product->id,
-                'pty' => $carts[$product->id],
-                'price' => $product->price_sale != 0 ? $product->price_sale : $product->price
+                // 'pty' => $carts[$product->id],
+                'amount' => $carts[$product->id]
             ];
         }
-
-        return Cart::insert($data);
+        
+        CTHD::insert($data);
     }
 }

@@ -1,4 +1,13 @@
 @extends('main')
+
+@section('head')
+	<style>
+		.main-menu > li.category > a {
+			color: #6c7ae0;
+		}
+	</style>
+@endsection
+
 @section('content')
 
 

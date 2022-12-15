@@ -85,7 +85,7 @@
 
 							<input type="submit" value="Cập nhật giỏ hàng" formaction="/update-cart"
 								class="flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
-							@csrf	
+							@csrf
 						</div>
 					</div>
 				</div>
@@ -102,11 +102,11 @@
 									</span>
 
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="name" placeholder="Tên Khách Hàng" required>
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="name" placeholder="Tên Khách Hàng" >
 									</div>
 
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="phone" placeholder="Số Điện Thoại" required>
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="phone" placeholder="Số Điện Thoại" >
 									</div>
 
 									<div class="bor8 bg0 m-b-12">
@@ -132,10 +132,9 @@
 								</span>
 							</div>
 
-							<div class="size-209 p-t-1">
-								<span class="mtext-110 cl2" name="spend">
+							<div class="size-209 p-t-1" style="color: #333">
+								<input type="hidden" class="mtext-110 cl2" name="total" value="{{ $total }}">
 									{{number_format($total, 0, '', '.')}}
-								</span>
 							</div>
 						</div>
 

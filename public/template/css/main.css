@@ -1840,6 +1840,16 @@ button.mfp-close {
   overflow: hidden;
 }
 
+.wrap-num-product-in-cart {
+  width: 140px;
+  height: 45px;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  left: 12%;
+}
+
 .quantity-cart{
   position: absolute;
   display: inline-block;

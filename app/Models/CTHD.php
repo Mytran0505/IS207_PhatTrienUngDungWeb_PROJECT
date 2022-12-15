@@ -10,6 +10,7 @@ class CTHD extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'product_id',
         'amount'
     ];

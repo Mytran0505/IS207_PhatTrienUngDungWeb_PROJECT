@@ -25,7 +25,7 @@
                         <li class="header-cart-item flex-w flex-t m-b-20">
                             <a href="/delete/{{$product->id}}">
                             <div class="header-cart-item-img p-t-2">
-                                    <img src="{{$product->image}}" alt="IMG">
+                                    <img src="{{$product->image}}/item1.jpeg" alt="IMG">
                             </div>
                             </a>
                                 
@@ -36,14 +36,14 @@
 
                                 <span class="header-cart-item-info">
                                     {{$price}}
-                                    <input class="quantity-cart" value="x3" disabled> 
+                                    <input class="quantity-cart" value="x{{ $carts[$product->id] }}" disabled>
                                 </span>
                             </div></li>
                     <!-- @endforeach -->
             </ul>
         </div>
         @else
-        <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="template/images/empty-cart.png">
+        <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="/template/images/empty-cart.png">
         <p>-Giỏ hàng chưa có sản phẩm-</p>
         @endif
         <div class="w-full">

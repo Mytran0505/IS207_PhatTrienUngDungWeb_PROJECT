@@ -1,5 +1,13 @@
 @extends('main')
 
+@section('head')
+	<style>
+		.main-menu > li.{{ $menu->name }} > a {
+			color: #6c7ae0;
+		}
+	</style>
+@endsection
+
 @section('content')
 <div class="bg0 m-t-23 p-b-140 p-t-80">
 		<div class="container">

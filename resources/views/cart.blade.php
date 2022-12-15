@@ -39,6 +39,7 @@
 
                                 <span class="header-cart-item-info">
                                     {{$price}}
+                                    <input class="quantity-cart" value="x{{ $carts[$product->id] }}" disabled>
                                 </span>
                             </div></li>
                     <!-- @endforeach -->

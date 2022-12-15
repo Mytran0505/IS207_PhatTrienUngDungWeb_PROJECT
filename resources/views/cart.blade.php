@@ -1,6 +1,5 @@
 <div class="wrap-header-cart js-panel-cart">
     <div class="s-full js-hide-cart"></div>
-
     <div class="header-cart flex-col-l p-l-65 p-r-25">
         <div class="header-cart-title flex-w flex-sb-m p-b-8">
             <span class="mtext-103 cl2">
@@ -11,7 +10,7 @@
                 <i class="zmdi zmdi-close"></i>
             </div>
         </div>
-        @if (count($products) > 0)
+        @if (count($products) < 0)
         <div class="header-cart-content flex-w js-pscroll">
             <!-- @php $sumPriceCart = 0; @endphp -->
             <ul class="header-cart-wrapitem w-full">
@@ -24,10 +23,12 @@
                         <!-- Kiem tra gia giam != 0 thi lay gia giam con = 0 thi lay gia goc -->
                         <!-- Kiem tra gia ban != 0 thi lay gia ban con = 0 thi lay gia mua -->
                         <li class="header-cart-item flex-w flex-t m-b-20">
+                            <a href="/delete/{{$product->id}}">
                             <div class="header-cart-item-img p-t-2">
-                                <img src="{{$product->image}}" alt="IMG">
+                                    <img src="{{$product->image}}" alt="IMG">
                             </div>
-
+                            </a>
+                                
                             <div class="header-cart-item-txt">
                                 <a href="#" class="limit-text-2 header-cart-item-name m-b-10 hov-cl1 trans-04 ">
                                     {{$product->name}}
@@ -60,3 +61,4 @@
             </div>
     </div>
 </div>
+

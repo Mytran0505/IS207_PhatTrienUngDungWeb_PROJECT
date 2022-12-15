@@ -684,10 +684,13 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 /*---------------------------------------------*/
-.main-menu > li.active-menu > a {
+/* .main-menu > li.active-menu > a {
   color: #6c7ae0;
-}
+} */
 
+/* .active-menu:hover {
+  color: #38f923;
+} */
 
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

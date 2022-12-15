@@ -42,10 +42,17 @@ class CartController extends Controller
         return redirect('/carts');
     }
 
-    public function remove($id = 0){
+    public function remove($id){
         $this->cartService->remove($id);
         return redirect('/carts');
     }
+
+    public function removeInHome($id){
+        $this->cartService->remove($id);
+        return redirect('');
+    }
+
+    
 
     public function addCart(Request $request){
         $this->cartService->addCart($request);

@@ -18,7 +18,7 @@ class CartComposer
     {
         $carts = Session::get('carts');
         if (is_null($carts))
-            return [];
+            return [' '];
 
         $productId = array_keys($carts);
         $products = Product::select('id', 'name', 'original_price', 'price_sale', 'image')

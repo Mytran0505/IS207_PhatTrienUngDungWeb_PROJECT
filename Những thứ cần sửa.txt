@@ -1,23 +1,22 @@
 _Animation: admin
-_Trái tim: hủy
-_Thêm trái tim vào list
-_Logo trang chủ chạy lên cho mượt
 _Load more(trang mới)
 _Search: đẩy ra ngang hàng
 _Đổi chủ đề(slide)
-_Delete sản phẩm trong giỏ hàng(dấu xóa trên góc phải)
+_Delete sản phẩm trong giỏ hàng(dấu xóa trên góc phải) (làm rồi nhưng đang sai bấm xoá nhưng nhảy về trang chủ set mềm là nhảy về trang hiện tại)
 _gửi mail khi mua hàng
 _Đưa chuột vô hình ảnh sản phẩm ra hình ảnh khác
 _Reset những thông tin đã bấm trc đó khi đã ra ngoài
 _Tạo link cho các logo .
 _Làm link() (nút next back) video 40
 _Nút load more ngoài trang chủ chưa hoàn thành nên command lại sau làm tiếp..
-_Font chữ đang bị sai 
 _Hướng dẫn filter ở vid 40 phút thứ 5
-_Các vùng pointer vẫn còn nhỏ nên khó tương tác
-_Bấm qua nam nữ nhưng vẫn hiện xanh ở trang chủ
+_Các vùng pointer vẫn còn nhỏ nên khó tương tác(chưa làm)
 _Product-detail: ảnh 2 với 3 css lại k cần mảng biến
 _Giỏ hàng trống cuối video 44
-_Xóa total trong giỏ hàng
-_Chuyển qua trang carts bằng view add thì k vào
-_
+_Chuyển qua trang carts bằng view add thì k vào (đã fixed nhưng thiếu toastmessage)
+_Đăng nhập trên header lấy từ bên preview của Huy
+_Bấm nam ra nam nữ ra nữ
+_Set product detail 3 ảnh chi tiết là product->image - slug 1,2,3 cho 3 ảnh
+_Thêm số lượng sản phẩm ở cart
+_Mới vào trang thì bị load hết sp bên cart fix bên cart composer returrn [] hoặc bên if cho elseif == 0
+_chuyển tất cả ảnh về 1 định dạng file .jpeg hoặc gì đó

@@ -684,10 +684,13 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 /*---------------------------------------------*/
-.main-menu > li.active-menu > a {
+/* .main-menu > li.active-menu > a {
   color: #6c7ae0;
-}
+} */
 
+/* .active-menu:hover {
+  color: #38f923;
+} */
 
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1824,7 +1827,74 @@ button.mfp-close {
   .filter-col3,
   .filter-col4 {width: 100%;}
 }
+/* Icon-scale */
+.ic-s{
+    scale: 136%;
+    position: relative;
+    top: -2px;
+    left: 2px;
+}
 
+/* Icon-Login */
+/* .transition-primary:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.navbar__menu-user {
+  position: relative;
+}
+.transition-primary {
+  transition: color 0.3s ease;
+}
+.zmdi-solid {
+  font-weight: 900;
+  font-family: BeVietnamPro-Regular;
+}
+.zmdi-account-circle:before {
+  content: "\f500";
+}
+.navbar__menu-user:hover .menu-user__list {
+  display: block;
+}
+.transition-primary:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.menu-user__list {
+  position: absolute;
+  padding-left: 0;
+  list-style: none;
+  background-color: var(--white-color);
+  padding: 10px 20px;
+  min-width: 130px;
+  right: -32px;
+  top: 80%;
+  border-radius: 3px;
+  border: 1px solid #e1e1e1;
+  display: none;
+  cursor: default;
+  animation: paxscroll ease-in-out 0.3s;
+}
+
+.menu-user__item-link {
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: block;
+  padding: 7px 0;
+  color: var(--text-color);
+}
+
+.menu-user__list::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 16px;
+  position: absolute;
+  top: -16px;
+  right: 0.2px;
+  cursor: pointer;
+}
+ */
 
 
 /*//////////////////////////////////////////////////////////////////
@@ -1835,6 +1905,16 @@ button.mfp-close {
   border: 1px solid #e6e6e6;
   border-radius: 3px;
   overflow: hidden;
+}
+
+.wrap-num-product-in-cart {
+  width: 140px;
+  height: 45px;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  left: 12%;
 }
 
 .quantity-cart{

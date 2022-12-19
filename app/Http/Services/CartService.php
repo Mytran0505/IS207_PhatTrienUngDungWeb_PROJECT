@@ -100,6 +100,14 @@ class CartService{
         return true;
     }
 
+    public function removeInHome($id){
+        $carts = Session::get('carts');
+        unset($carts[$id]); //xoa roi cap nhat lai
+
+        Session::put('carts', $carts);
+        return true;
+    }
+
     public function addCart($request){
         try{
             DB::beginTransaction();
@@ -129,7 +137,6 @@ class CartService{
         }catch(\Exception $err) {
             DB::rollBack();
             Session::flash('error', 'Đặt Hàng Không Thành Công, Vui lòng thử lại sau');
-            // Session::flash('error', $err->getMessage());
             return false;
         }
 

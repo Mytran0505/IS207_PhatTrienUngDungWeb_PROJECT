@@ -35,7 +35,7 @@
 										<tr class="table_row">
 											<td class="column-1">
 												<div class="how-itemcart1">
-													<img src="{{$product->image}}" alt="IMG">
+													<img src="{{$product->image}}/item1.jpeg" alt="IMG">
 												</div>
 											</td>
 											<td class="column-2">{{$product->name}}</td>

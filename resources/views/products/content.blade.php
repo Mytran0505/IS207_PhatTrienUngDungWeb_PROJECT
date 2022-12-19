@@ -39,33 +39,21 @@
 							<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 
 							<div class="slick3 gallery-lb">
-								<div class="item-slick3" data-thumb="{{$product->image}}">
+								<div class="item-slick3" data-thumb="{{$product->image}}/item1.jpeg">
 									<div class="wrap-pic-w pos-relative">
-										<img src="{{$product->image}}" alt="IMG-PRODUCT">
-
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{{$product->image}}">
-											<i class="fa fa-expand"></i>
-										</a>
+										<img src="{{$product->image}}/item1.jpeg" alt="IMG-PRODUCT">
 									</div>
 								</div>
 
-								<div class="item-slick3" data-thumb="{{$product->image}}">
+								<div class="item-slick3" data-thumb="{{$product->image}}/item2.jpeg">
 									<div class="wrap-pic-w pos-relative">
-										<img src="{{$product->image}}" alt="IMG-PRODUCT">
-
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{{$product->image}}">
-											<i class="fa fa-expand"></i>
-										</a>
+										<img src="{{$product->image}}/item2.jpeg" alt="IMG-PRODUCT">
 									</div>
 								</div>
 
-								<div class="item-slick3" data-thumb="{{$product->image}}">
+								<div class="item-slick3" data-thumb="{{$product->image}}/item3.jpeg">
 									<div class="wrap-pic-w pos-relative">
-										<img src="{{$product->image}}" alt="IMG-PRODUCT">
-
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{{$product->image}}">
-											<i class="fa fa-expand"></i>
-										</a>
+										<img src="{{$product->image}}/item3.jpeg" alt="IMG-PRODUCT">
 									</div>
 								</div>
 							</div>
@@ -92,7 +80,7 @@
 									<form>
 										@csrf
 										@if ($product->original_price != NULL)
-											<div class="wrap-num-product flex-w m-r-20 m-tb-10">
+											<div class="wrap-num-product-in-cart flex-w m-r-20 m-tb-10">
 												<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
 													<i class="fs-16 zmdi zmdi-minus"></i>
 												</div>

@@ -7,7 +7,6 @@
                 
                 <!-- Logo desktop -->		
                 <a href="/" class="logo">
-                    {{-- <h2>Sport shop 4B</h2> --}}
                     <img src="/template/images/icons/image-logo-icon.png" alt="IMG-LOGO">
                 </a>
 
@@ -30,6 +29,10 @@
 
                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="{{ !is_null(\Session::get('carts')) ? count(\Session::get('carts')) : 0 }}">
                         <i class="zmdi zmdi-shopping-cart"></i>
+                    </div>
+
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 ic-s">
+                        <i class="zmdi zmdi-account-circle"></i>
                     </div>
                 </div>
             </nav>

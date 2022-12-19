@@ -15,41 +15,64 @@ use App\Models\CTHD;
 use Illuminate\Support\Facades\DB;
 
 class CartService{
-    public function create($request)
-    {
-        $qty = (int)$request->input('num_product'); 
-        $product_id = (int)$request->input('product_id');
+    // public function create($request)
+    // {
+    //     $qty = (int)$request->input('num_product');
+    //     $product_id = (int)$request->input('product_id');
 
-        if ($qty <= 0 || $product_id <= 0)
-        {
-            Session::flash('error', 'Số lượng hoặc Sản phẩm không chính xác');
-            return false;
-        }
+    //     if ($qty <= 0 || $product_id <= 0)
+    //     {
+    //         Session::flash('error', 'Số lượng hoặc Sản phẩm không chính xác');
+    //         return false;
+    //     }
 
-        // Session::forget('carts');
+    //     // Session::forget('carts');
 
-        $carts = Session::get('carts'); //Lay toan bo thong tin cart tra ve array cho bien $carts
+    //     $carts = Session::get('carts'); //Lay toan bo thong tin cart tra ve array cho bien $carts
         
+    //     if(is_null($carts)){
+    //         Session::put('carts', [
+    //             $product_id =>$qty
+    //         ]); 
+    //         return true;
+    //     }
+        
+        
+    //     $exists = Arr::exists($carts, $product_id);
+    //     if($exists){
+    //         $carts[$product_id] = $carts[$product_id] + $qty;
+    //         Session::put('carts', $carts);
+    //         return true;
+    //     }
+        
+    //     $carts[$product_id] = $qty;
+    //     Session::put('carts', $carts);
+    //         return true;
+    // }
+
+    public function create($request) {
+        $data = $request->all();
+        // $session_id = substr(md5(microtime()), rand(0, 26), 5);
+        $carts = Session::get('carts'); //Lay toan bo thong tin cart tra ve array cho bien $carts
         if(is_null($carts)){
             Session::put('carts', [
-                $product_id =>$qty
-            ]); 
+                // 'session_id' => $session_id,
+                $data['cart_pro_id'] => $data['cart_pro_qty']
+            ]);
             return true;
         }
-        
-        
-        $exists = Arr::exists($carts, $product_id);
+
+        $exists = Arr::exists($carts, $data['cart_pro_id']);
         if($exists){
-            $carts[$product_id] = $carts[$product_id] + $qty;
+            $carts[$data['cart_pro_id']] = $carts[$data['cart_pro_id']] + $data['cart_pro_qty'];
             Session::put('carts', $carts);
             return true;
         }
-        
-        $carts[$product_id] = $qty;
-        Session::put('carts', $carts);
-            return true;
-    }
 
+        $carts[$data['cart_pro_id']] = $data['cart_pro_qty'];
+        Session::put('carts', $carts);
+        return true;
+    }
 
     public function getProduct(){
         $carts = Session::get('carts');

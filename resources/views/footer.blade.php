@@ -350,7 +350,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!--===============================================================================================-->
 	<script src="/template/vendor/isotope/isotope.pkgd.min.js"></script>
 <!--===============================================================================================-->
-	<script src="/template/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="/template/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script>
 		$('.js-addwish-b2').on('click', function(e){
 			e.preventDefault();
@@ -379,24 +380,53 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 		/*---------------------------------------------*/
 
-		$('.js-addcart-detail').each(function(){
-			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
-			$(this).on('click', function(){
-				 swal(
-                    nameProduct, "đã được thêm vào giỏ hàng !", "success")
-                //     title: "Đã thêm sản phẩm vào giỏ hàng",
-                //     text: "Bạn có thể mua giỏ hàng tiếp hoặc tới giỏ hàng để tiến hành thanh toán",
-                //     showCancelButton: true,
-                //     cancelButtonText: "Xem tiếp",
-                //     confirmButtonClass: "btn-success"
-                //     confirmButtonText: "Đi đến giỏ hàng",
-                //     closeOnConfirm: false
-                // },
-                // function() {
-                //     window.location.href ="{{ url('carts') }}";
-                // });
-			});
-		});
+		// $('.js-addcart-detail').each(function(){
+		// 	var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+		// 	$(this).on('click', function(){
+		// 		 swal(
+        //             nameProduct, "đã được thêm vào giỏ hàng !", "success")
+        //         //     title: "Đã thêm sản phẩm vào giỏ hàng",
+        //         //     text: "Bạn có thể mua giỏ hàng tiếp hoặc tới giỏ hàng để tiến hành thanh toán",
+        //         //     showCancelButton: true,
+        //         //     cancelButtonText: "Xem tiếp",
+        //         //     confirmButtonClass: "btn-success"
+        //         //     confirmButtonText: "Đi đến giỏ hàng",
+        //         //     closeOnConfirm: false
+        //         // },
+        //         // function() {
+        //         //     window.location.href ="{{ url('carts') }}";
+        //         // });
+		// 	});
+		// });
+        
+        $('.js-addcart-detail').click(function(){
+            var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+            var id = $(this).data('id_product');
+            var cart_pro_qty = $('.num_product_' + id).val();
+            var cart_pro_id = $('.product_id_' + id).val();
+            var _token = $('input[name="_token"]').val();
+
+            $.ajax({
+                url: "{{url('/add-cart')}}",
+                method: "POST",
+                data: {cart_pro_qty:cart_pro_qty, cart_pro_id:cart_pro_id, _token:_token},
+                success:function(data) {
+                    swal({
+                        title: "Đã thêm sản phẩm vào giỏ hàng",
+                        text: "Bạn có thể mua giỏ hàng tiếp hoặc tới giỏ hàng để tiến hành thanh toán",
+                        icon: "success",
+                        buttons: ["Tiếp tục mua hàng", "Xem giỏ hàng"]
+                    }).then(function(isConfirm) {
+                        if(isConfirm){
+                            window.location ="{{url('/carts')}}";
+                        }
+                        else {
+                            window.location = window.location.href;
+                        }
+                    });
+                }
+            });
+        });
 	
 	</script>
 <!--===============================================================================================-->

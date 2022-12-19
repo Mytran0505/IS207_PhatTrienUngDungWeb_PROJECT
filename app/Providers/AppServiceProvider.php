@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Models\Product;
 use App\Models\Customer;
 use App\Models\Bill_khachhang;
+use Illuminate\Support\Facades\Session;
 
 class AppServiceProvider extends ServiceProvider
 {

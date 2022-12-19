@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Http\Services\CartService;
+use App\Models\Cart;
+use GuzzleHttp\Psr7\Request as Psr7Request;
 
 class CartController extends Controller
 {
@@ -35,6 +37,7 @@ class CartController extends Controller
             'products' => $products,
             'carts' => Session::get('carts')
         ]);
+        // Session::forget('carts');
     }
 
     public function update(Request $request){

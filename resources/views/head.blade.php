@@ -28,7 +28,6 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/template/vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/template/css/sweetalert.css">
 	<link rel="stylesheet" type="text/css" href="/template/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/template/css/main.css">
 <!--===============================================================================================-->

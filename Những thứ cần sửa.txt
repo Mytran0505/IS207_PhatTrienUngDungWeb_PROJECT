@@ -20,3 +20,5 @@ _Set product detail 3 ảnh chi tiết là product->image - slug 1,2,3 cho 3 ả
 _Thêm số lượng sản phẩm ở cart
 _Mới vào trang thì bị load hết sp bên cart fix bên cart composer returrn [] hoặc bên if cho elseif == 0
 _chuyển tất cả ảnh về 1 định dạng file .jpeg hoặc gì đó
+_Chay duoc do an tren yt lay khuyen mai
+_ lam chu dang nhap

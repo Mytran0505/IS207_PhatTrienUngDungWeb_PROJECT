@@ -22,3 +22,4 @@ _Mới vào trang thì bị load hết sp bên cart fix bên cart composer retur
 _chuyển tất cả ảnh về 1 định dạng file .jpeg hoặc gì đó
 _Chay duoc do an tren yt lay khuyen mai
 _ lam chu dang nhap
+_ logo trên tab

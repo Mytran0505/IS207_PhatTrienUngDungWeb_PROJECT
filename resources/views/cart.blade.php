@@ -27,8 +27,9 @@
                             <!-- Kiem tra gia giam != 0 thi lay gia giam con = 0 thi lay gia goc -->
                             <!-- Kiem tra gia ban != 0 thi lay gia ban con = 0 thi lay gia mua -->
                             <li class="header-cart-item flex-w flex-t m-b-20">
+                                <a href="/delete/{{$product->id}}">
                                 <div class="header-cart-item-img p-t-2">
-                                    <img src="{{$product->image}}" alt="IMG">
+                                    <img src="{{$product->image}}/item1.jpeg" alt="IMG">
                                 </div>
 
                                 <div class="header-cart-item-txt">

@@ -29,6 +29,7 @@ Route::middleware(['auth']) -> group(function (){
         Route::get('/logout', [LoginController::class, 'logout']) -> name('logout');
         Route::post('/filter-by-date', [MainController::class, 'filterByDate']);
         Route::post('/days-order', [MainController::class, 'daysOrder']);
+        Route::get('/print-revenue-report', [MainController::class, 'printRevenueReport']);
         // Category
         Route::prefix('menus')->group(function(){
             Route::get('add', [MenuController::class, 'create']);

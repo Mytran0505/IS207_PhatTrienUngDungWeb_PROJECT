@@ -33,15 +33,19 @@
         <form autocomplete="off">
             @csrf
             <div class="col-md-2">
-                <p>Từ ngày: <input type="text" id="datepicker" class="form-control"></p>           
+                <p>Từ ngày: <input type="text" id="datepicker" class="form-control"></p>     
             </div>
             <div class="col-md-2">
-                <p>Đến ngày: <input type="text" id="datepicker2" class="form-control"></p>
-                <input type="button" id="btn-dashboard-filter" class="btn btn-primary btn-md" value="Thống kê">
+              <p>Đến ngày: <input type="text" id="datepicker2" class="form-control"></p>
+              <input type="button" id="btn-dashboard-filter" class="btn btn-primary btn-md" value="Thống kê">
             </div>
-        </form>
-      </div>
-
+            <div class="col-md-12">
+              <div class="float-right mr-3 mb-4">
+                <a href="/admin/print-revenue-report" target="_blank" class="btn btn-info btn-border btn-round btn-md">In thống kê</a>
+              </div>
+            </div>
+          </form>
+        </div>
       <div class="row-md">
         <div class="col-md-12">
             <div id="myfirstchart" style="height: 250px;"></div>

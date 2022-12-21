@@ -47,6 +47,9 @@
                 </tr>
             </tbody>
         </table>
-        <a class="btn btn-primary" target="_blank" href="/admin/print-order/{{ $order->id }}">In đơn hàng</a>
+        <a class="btn btn-primary" target="_blank" href="/admin/print-order/{{ $order->id }}">
+            <i class="fas fa-print"></i>
+            <span>In đơn hàng</span> 
+        </a>
     </div>
 @endsection

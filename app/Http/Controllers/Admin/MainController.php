@@ -71,4 +71,21 @@ class MainController extends Controller
         }
         echo $data = json_encode($chart_data);
     }
+
+    public function printRevenueReport() {
+        $from_date = Carbon::now('Asia/Ho_Chi_Minh')->subdays(30)->toDateString();
+        $to_date = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
+        $status = "Đã nhận đơn";
+        $result = Bill_khachhang::selectRaw('sum(total_money) as sum, bill_khachhangs.created_at')
+            ->whereBetween('bill_khachhangs.created_at', [$from_date, $to_date])
+            ->where('bill_khachhangs.status', $status)
+            ->groupBy('bill_khachhangs.created_at')
+            ->orderBy('bill_khachhangs.created_at', 'ASC')
+            ->get();
+        return view('admin.report.revenue_report', [
+            'from_date' => $from_date,
+            'to_date' => $to_date,
+            'statistic_info' => $result
+        ]);
+    }
 }

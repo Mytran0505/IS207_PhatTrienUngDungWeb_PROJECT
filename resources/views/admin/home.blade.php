@@ -41,7 +41,10 @@
             </div>
             <div class="col-md-12">
               <div class="float-right mr-3 mb-4">
-                <a href="/admin/print-revenue-report" target="_blank" class="btn btn-info btn-border btn-round btn-md">In thống kê</a>
+                <a href="/admin/print-revenue-report" target="_blank" id="print-revenue-report" class="btn btn-info btn-border btn-round btn-md">
+                  <i class="fas fa-print"></i>
+                  In thống kê
+                </a>
               </div>
             </div>
           </form>

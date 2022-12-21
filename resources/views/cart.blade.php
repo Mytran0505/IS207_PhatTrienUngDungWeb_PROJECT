@@ -12,7 +12,7 @@
         </div>
         @if ($carts == null)
             <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="/template/images/empty-cart.png">
-            <p>-Giỏ hàng chưa có sản phẩm-</p>
+            <p style="font-size: 20px">-Giỏ hàng chưa có sản phẩm-</p>
         @else
             @if (count($product) > 0)
             <div class="header-cart-content p-l-1 flex-w js-pscroll">
@@ -47,7 +47,7 @@
             </div>
             @else
                 <img style="display: block; width: auto; height: 150px; margin-left: auto; margin-right:auto;" src="/template/images/empty-cart.png">
-                <p>-Giỏ hàng chưa có sản phẩm-</p>
+                <p style="font-size: 20px">-Giỏ hàng chưa có sản phẩm-</p>
             @endif
         @endif
         <div class="w-full">

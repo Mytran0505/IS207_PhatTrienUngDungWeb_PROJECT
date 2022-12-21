@@ -32,7 +32,7 @@
             <tr>
                 <td class="column-1">
                     <div class="how-itemcart1">
-                        <img src="{{ $cthd->product->image }}" alt="IMG" style="width: 100px">
+                        <img src="{{ $cthd->product->image }}/item1.jpeg" alt="IMG" style="width: 100px">
                     </div>
                 </td>
                 <td class="column-2">{{ $cthd->product->name }}</td>

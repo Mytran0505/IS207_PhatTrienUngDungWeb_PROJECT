@@ -14,12 +14,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('admin/users/login', [LoginController::class, 'index']) -> name('login');
-
-Route::get('/admin/users/register', [LoginController::class, 'register']) -> name('register');
-Route::post('/admin/users/registerAuth', [LoginController::class, 'registerAuth']) -> name('registerAuth');
-
-Route::post('/admin/users/login/store', [LoginController::class, 'store']);
+Route::get('admin/users/login', [App\Http\Controllers\Admin\Users\LoginController::class, 'index']) -> name('login');
+Route::post('/admin/users/login/store', [App\Http\Controllers\Admin\Users\LoginController::class, 'store']);
 
 
 Route::middleware(['auth']) -> group(function (){
@@ -30,6 +26,7 @@ Route::middleware(['auth']) -> group(function (){
         Route::post('/filter-by-date', [MainController::class, 'filterByDate']);
         Route::post('/days-order', [MainController::class, 'daysOrder']);
         Route::get('/print-revenue-report', [MainController::class, 'printRevenueReport']);
+        Route::get('/print-revenue-report/{from_date}/{to_date}', [MainController::class, 'printRevenueReportDate']);
         // Category
         Route::prefix('menus')->group(function(){
             Route::get('add', [MenuController::class, 'create']);
@@ -85,7 +82,15 @@ Route::middleware(['auth']) -> group(function (){
 
 });
 
-Route::get('/', [App\Http\Controllers\MainController::class, 'index']);
+//login client
+Route::get('/login', [App\Http\Controllers\LoginController::class, 'index'])->name('clientLogin');
+Route::post('/login/store', [App\Http\Controllers\LoginController::class, 'store']);
+Route::post('/registerAuth', [App\Http\Controllers\LoginController::class, 'registerAuth']) -> name('registerAuth');
+Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout']);
+Route::get('/profile/{customerId}', [App\Http\Controllers\LoginController::class, 'profile']);
+
+//trang chu
+Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('home');
 Route::post('/services/load-product', [App\Http\Controllers\MainController::class, 'loadProduct']);
 
 Route::get('danh-muc/{id}-{slug}.html', [App\Http\Controllers\MenuController::class, 'index']);

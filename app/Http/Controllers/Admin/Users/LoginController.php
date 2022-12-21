@@ -29,6 +29,7 @@ class LoginController extends Controller
         ], $request ->input('remember'))) {
             $user = User::where('email', $request -> input('email'))->first();
             FacadesSession::put('email', $user->email);
+            FacadesSession::put('name', $user->name);
             FacadesSession::put('id', $user->id);
             return redirect()->route('admin');
         }
@@ -60,12 +61,4 @@ class LoginController extends Controller
 
         return redirect()->route('login')->with('success', 'Đăng ký thành công, mời đăng nhập');
     }
-
-    public function logout(Request $request){
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        return redirect()->route('login');
-    }
-
 }

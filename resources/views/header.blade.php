@@ -31,13 +31,35 @@
                         <i class="zmdi zmdi-shopping-cart"></i>
                     </div>
 
-                    <a href="/">
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 ic-s">
-                        <i class="zmdi zmdi-account-circle"></i>
-                        <i class="zmdi zmdi-sign-in logo-sc"></i> 
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+                        {{-- <i class="zmdi zmdi-account-circle"></i> --}}
+                        {{-- <i class="zmdi zmdi-sign-in logo-sc"></i>  --}}
+                        <div class="dropdown">
+                            <div class="nut_dropdown">
+                                <a href="/login">
+                                    <i class="zmdi zmdi-account-circle p-1" title="Đăng Nhập"></i>
+                                    {{-- <i class="fa fa-user-circle-o"  title="Đăng Nhập"></i> --}}
+                                </a>
+                            </div>
+                            <div class="noidung_dropdown">
+                                <?php
+                                $CustomerId= Session::get('customerId');
+							    if($CustomerId) { ?>
+                                    <a href="/profile/{{ $CustomerId }}" class="mb-1">Tài khoản</a>
+                                    <a href="{{URL::to('/my-orders')}}" class="mb-1">Đơn hàng của tôi</a>
+                                    <a href="/logout" class="mb-1">Đăng xuất</a>
+                                <?php } ?>
+                            </div>
+                        </div>
                     </div>
-                    </a>
-
+                    <?php
+					if($CustomerId) { ?>
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-20 p-r-11 ic-s mt-2">
+                            <a href="/logout">
+                                <i class="zmdi zmdi-sign-in logo-sc"></i>
+                            </a>
+                        </div>
+			        <?php } ?>
                 </div>
             </nav>
         </div>	

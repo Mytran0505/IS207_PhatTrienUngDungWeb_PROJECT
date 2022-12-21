@@ -19,6 +19,7 @@ class MainController extends Controller
         $this->menu = $menu;
         $this->product = $product;
     }
+
     public function index() {
         return view('home', [
             'title' => 'Trang chu',

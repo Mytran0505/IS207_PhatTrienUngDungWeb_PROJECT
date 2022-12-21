@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thống kê doanh thu bán hàng từ ngày {{date('d-m-Y', strtotime($from_date))}} đến ngày {{date('d-m-Y', strtotime($to_date))}}</title>
+    <title>Thống kê doanh số bán hàng từ ngày {{date('d-m-Y', strtotime($from_date))}} đến ngày {{date('d-m-Y', strtotime($to_date))}}</title>
     <link rel="icon" type="image/png" href="{{URL::to('public/admin/images/pdf-icon.jpg')}}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,16 +25,13 @@
 <!-- <button onclick="window.print();" class="noPrint">Print</button> -->
     <div class="container" style="font-size:22px;">
         <div class="row" style="margin-top: 40px;">
-            <div class="col-sm-1">
-                <img src="{{URL::to('public/client/Images/logo3.png')}}" alt="img">
+            <div class="col-sm-2">
+                <img src="/template/images/icons/image-logo-icon.png" alt="LOGO" style="margin-top: 15px; margin-right: 20px" width="150" height="auto">
             </div>
-            <div class="col-sm-11">
+            <div class="col-sm-10">
                 <b>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ SPORTWEARSHOP</b>
                 <p>Tầng 5, Saigon Center, Quận 1, Thành Phố Hồ Chí Minh</p>
             </div>
-            <!-- <div class="col-sm-4" style="text-align: right;">
-                <p style="color:#F70C72;font-weight: bold;">"Tất cả vì khách hàng"</p>
-            </div> -->
         </div>
         <hr style="margin:20px 0px 40px 0px">
         <div class="row" style="margin-bottom:40px;">
@@ -44,7 +41,6 @@
             </div>
             <div class="col-md-12" style="text-align: right;">
                 <p style="margin:30px 0px">Thời gian thống kê: {{date('H:i d-m-Y')}}</p>
-                <!-- <p>Người bán hàng: Lê Thị Hồng Cúc</p> -->
             </div>
         </div>
         <div class="row">
@@ -61,46 +57,38 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $stt = 1; $total_sales = 0; $total_profit = 0;
-                         $max_sales = 0; $max_profit = 0; $max_sales_date = ''; $max_profit_date  = ''; 
-                        // $first_statistic_row = $statistic_info->first(); $min_sales = $first_statistic_row->Sales; $min_profit = $first_statistic_row->Profit; $min_sales_date = ''; $min_profit_date  = ''; 
+                        <?php $stt = 1; $total_sales = 0;
+                         $max_sales = 0; $max_sales_date = ''; $max_profit_date  = ''; 
+                        $first_statistic_row = $statistic_info->first();
+                        foreach($first_statistic_row as $key => $item){
+                            $min_sales = $first_statistic_row->sum;
+                        }
+                         $min_sales_date = ''; 
                          ?>
                         @foreach($statistic_info as $key => $item)
                         <tr>
                             <th scope="row">{{$stt}}</th>
-                            {{-- <td>{{date('d-m-Y', strtotime($item->StatisticDate))}}</td>
-                            <td>{{number_format($item->Sales, 0, " ", ".").' ₫'}}</td>
-                            <td>{{number_format($item->Profit, 0, " ", ".").' ₫'}}</td> --}}
+                            <td>{{date('d-m-Y', strtotime($item->created_at))}}</td>
+                            <td>{{number_format($item->sum, 0, " ", ".").' ₫'}}</td>
+                            {{-- <td>{{number_format($item->Profit, 0, " ", ".").' ₫'}}</td> --}}
                         </tr>
-                        <?php $stt = $stt + 1; $total_sales += $item->Sales; $total_profit += $item->Profit;?>
+                        <?php $stt = $stt + 1; $total_sales += $item->sum;?>
                         <?php 
-                            if($max_sales < $item->Sales)
+                            if($max_sales < $item->sum)
                             {
-                                $max_sales = $item->Sales;
-                                $max_sales_date = $item->StatisticDate;
+                                $max_sales = $item->sum;
+                                $max_sales_date = $item->created_at;
                             }
-                            if($min_sales > $item->Sales)
+                            if($min_sales > $item->sum)
                             {
-                                $min_sales = $item->Sales;
-                                $min_sales_date = $item->StatisticDate;
-                            }
-
-                            if($max_profit < $item->Profit)
-                            {
-                                $max_profit = $item->Profit;
-                                $max_profit_date = $item->StatisticDate;
-                            }
-                            if($min_profit > $item->Profit)
-                            {
-                                $min_profit = $item->Profit;
-                                $min_profit_date = $item->StatisticDate;
+                                $min_sales = $item->sum;
+                                $min_sales_date = $item->created_at;
                             }
                         ?>
                         @endforeach
                         <tr>
                             <td colspan="2"><b>TỔNG CỘNG</b></td>
-                            {{-- <td>{{number_format($total_sales, 0, " ", ".").' ₫'}}</td>
-                            <td>{{number_format($total_profit, 0, " ", ".").' ₫'}}</td> --}}
+                            <td>{{number_format($total_sales, 0, " ", ".").' ₫'}}</td>
                         </tr>
                     </tbody>
                     </table>
@@ -109,14 +97,14 @@
 
         <div class="row">
             <div class="col-md-12">
-                <p><b style="font-size: 24px;">II. Biểu đồ thống kê doanh thu</b></p>
+                <p><b style="font-size: 24px;">II. Biểu đồ thống kê doanh số</b></p>
                 <form>
                     @csrf
                     <div id="bieuDoDoanhThu" style="max-width:85%"></div>
                 </form>
                 <small>Chú thích: 
                     <div style="display:inline-block;background-color:#0B62A4; height:10px; width:10px;margin-left: 20px;"></div> : Bán hàng
-                    <div style="display:inline-block;background-color:#7A92A3; height:10px; width:10px;margin-left: 20px;"></div>  : Doanh thu
+                    {{-- <div style="display:inline-block;background-color:#7A92A3; height:10px; width:10px;margin-left: 20px;"></div>  : Doanh thu --}}
                 </small >
             </div>
         </div>
@@ -125,12 +113,9 @@
                 <p><b style="font-size: 24px;">III. Phân tích thống kê</b></p>
                 <p>Từ ngày {{date('d-m-Y', strtotime($from_date))}} đến ngày {{date('d-m-Y', strtotime($to_date))}}:</p>
                 <div style="margin-left:40px">
-                    {{-- <p>- Ngày bán hàng có giá trị lớn nhất: {{date('d-m-Y', strtotime($max_sales_date))}} ({{number_format($max_sales, 0, " ", ".").' ₫'}})</p>
+                    <p>- Ngày bán hàng có giá trị lớn nhất: {{date('d-m-Y', strtotime($max_sales_date))}} ({{number_format($max_sales, 0, " ", ".").' ₫'}})</p>
                     <p>- Ngày bán hàng có giá trị nhỏ nhất: {{date('d-m-Y', strtotime($min_sales_date))}} ({{number_format($min_sales, 0, " ", ".").' ₫'}})</p>
-                    <p>- Ngày có doanh thu lớn nhất: {{date('d-m-Y', strtotime($max_profit_date))}} ({{number_format($max_profit, 0, " ", ".").' ₫'}})</p>
-                    <p>- Ngày có doanh thu nhỏ nhất: {{date('d-m-Y', strtotime($min_profit_date))}} ({{number_format($min_profit, 0, " ", ".").' ₫'}})</p>
                     <p>- Giá trị bán hàng trung bình mỗi ngày: {{number_format(round($total_sales/count($statistic_info), 0), 0, " ", ".").' ₫'}}</p>
-                    <p>- Doanh thu trung bình mỗi ngày: {{number_format(round($total_profit/count($statistic_info), 0), 0, " ", ".").' ₫'}}</p> --}}
                 </div>
             </div>
         </div>
@@ -138,11 +123,11 @@
             <div class="col-md-8" style="text-align: right;">
             </div>
             <div class="col-md-4" style="text-align: center;">
-                <p style="margin:20px 0px 100px 0px">
+                <p style="margin:20px 0px 80px 0px">
                     <b style="font-size: 24px;">Người lập thống kê</b><br>
                     <i>(Kí, đóng dấu và ghi rõ họ tên)</i>
                 </p>
-                <p>{{Session::get('LastName')}} {{Session::get('FirstName')}}</p>
+                <p>{{Session::get('name')}}</p>
             </div>
         </div>
         <div class="row" style="margin-bottom:10px;">
@@ -173,12 +158,14 @@
             load_chart();
             setTimeout(function() { window.print();}, 500);
             function load_chart(){
+                var from_date = $('#tu-ngay').val();
+                var to_date = $('#den-ngay').val();
                 var _token = $('input[name="_token"]').val();
                 $.ajax({
-                    url:"{{url('/admin/days-order')}}",
+                    url:"{{url('/admin/filter-by-date')}}",
                     method: "POST",
                     dataType:"JSON",
-                    data:{_token:_token},
+                    data:{from_date:from_date, to_date:to_date ,_token:_token},
 
                     success:function(data){
                     chart.setData(data);

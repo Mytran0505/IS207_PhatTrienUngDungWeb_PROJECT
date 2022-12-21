@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Http\Services\Order\OrderService;
-use App\Models\Bill_khachhang;
 use App\Models\CTHD;
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use App\Models\Bill_khachhang;
 use Illuminate\Support\Facades\App;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use App\Http\Services\Order\OrderService;
 
 class OrderController extends Controller
 {
@@ -77,10 +78,19 @@ class OrderController extends Controller
                 }
 
             </style>
-            <h1>
-                <center>Cửa hàng thể thao 4B</center>
-            </h1>
-            <p>Người đặt hàng</p>
+            <div class="container" style="font-size:22px;">
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-sm-10">
+                        <b>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ SPORTWEARSHOP</b>
+                        <p>Tầng 5, Saigon Center, Quận 1, Thành Phố Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+            <h1> <center> Cửa hàng thể thao Sportwearshop </center> </h1>
+            <div class="col-md-12" style="text-align: right;">
+                <p style="margin:30px 0px">Thời gian thống kê: '.date('d-m-Y').'</p>
+            </div>
+            <p><b style="font-size: 18px;">Người đặt hàng</b></p>
             <table class="table table-styling table-striped table-bordered">
                 <thead>
                     <tr>
@@ -104,7 +114,7 @@ class OrderController extends Controller
         $output .= '
                 </tbody>
             </table>
-            <p>Danh sách sản phẩm</p>
+            <p><b style="font-size: 18px;">Danh sách sản phẩm</b></p>
             <table class="table table-styling table-striped table-bordered">
                 <thead>
                     <tr>
@@ -149,8 +159,19 @@ class OrderController extends Controller
             <table>
                 <thead>
                     <tr>
-                        <th width = "200px"> Người lập phiếu </th>
-                        <th width = "800px"> Người nhận </th>
+                        <th width = "250px"> 
+                            <p style="margin:20px 0px 80px 0px">
+                                <b style="font-size: 18px;">Người lập phiếu</b><br>
+                                <i style="font-weight: 400;">(Kí, đóng dấu và ghi rõ họ tên)</i>
+                            </p>
+                            <p>' . Session::get('name') . '</p>
+                        </th>
+                        <th width = "700px">
+                            <p style="margin:20px 0px 80px 0px">
+                                <b style="font-size: 18px;">Người nhận</b><br>
+                                <i style="font-weight: 400;">(Kí, đóng dấu và ghi rõ họ tên)</i>
+                            </p>
+                        </th>
                     </tr>
                 </thead>
             </table>

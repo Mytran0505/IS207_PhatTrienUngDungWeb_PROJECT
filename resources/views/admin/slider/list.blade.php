@@ -20,7 +20,7 @@
                 <td>{{ $slider->name }}</td>
                 <td>{{ $slider->url }}</td>
                 <td>
-                    <a href=""{{ $slider->image }}" target = "_blank">
+                    <a href="{{ $slider->image }}" target = "_blank">
                         <img src="{{ $slider->image }}" height = "40px">
                     </a>
                 </td>

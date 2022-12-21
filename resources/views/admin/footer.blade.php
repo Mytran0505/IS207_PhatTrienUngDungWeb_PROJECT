@@ -69,6 +69,10 @@
 
             success:function(data){
                 chart.setData(data);
+                var newURL = "/admin/print-revenue-report/tu-ngay/den-ngay";
+                newURL = newURL.replace('tu-ngay', from_date);
+                newURL = newURL.replace('den-ngay', to_date);
+                $('#print-revenue-report').attr("href", newURL);
             }
         })
     });

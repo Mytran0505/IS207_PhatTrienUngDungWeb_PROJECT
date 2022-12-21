@@ -31,9 +31,13 @@
                         <i class="zmdi zmdi-shopping-cart"></i>
                     </div>
 
+                    <a href="/">
                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 ic-s">
                         <i class="zmdi zmdi-account-circle"></i>
+                        <i class="zmdi zmdi-sign-in logo-sc"></i> 
                     </div>
+                    </a>
+
                 </div>
             </nav>
         </div>	

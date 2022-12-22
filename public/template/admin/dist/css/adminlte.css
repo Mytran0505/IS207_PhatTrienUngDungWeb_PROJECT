@@ -28932,7 +28932,7 @@ html.maximized-card {
 .form{
   position: relative;
   z-index: 10;
-  height: 276px;
+  /* height: 276px; */
   width: 610px;
   left: 5px;
   top: 5px;
@@ -35060,7 +35060,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .login-box .card,
 .register-box .card {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .login-card-body,

@@ -11,7 +11,7 @@
         <!-- /.login-logo -->
         <div class="card">
             <div class="login-logo">
-                <a href="#"><b>Đăng nhập</b></a>
+                <b>Đăng nhập</b>
             </div>
                 <div class="card-body login-card-body">
                     {{-- <p class="login-box-msg">Đăng nhập vào admin</p> --}}

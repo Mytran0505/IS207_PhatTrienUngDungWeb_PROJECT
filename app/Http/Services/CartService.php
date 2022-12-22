@@ -115,16 +115,22 @@ class CartService{
             $carts = Session::get('carts');
             if (is_null($carts))
                 return false;
-
-            $customer = Customer::create([
-                'name'=> $request->input('name'),
-                'email'=> $request->input('email'),
-                'phone'=> $request->input('phone'),
-                'address'=> $request->input('address'),
-                'content'=> $request->input('content'),
-                'spend'=> $request->input('total')
-                
+            $customer = Customer::where('email', $request->input('email'))->first();
+            $customer->update([
+                'address' => $request->input('address'),
+                'content' => $request->input('content'),
+                'spend' => $customer->spend += $request->input('total'),
             ]);
+
+            // $customer = Customer::create([
+            //     'name'=> $request->input('name'),
+            //     'email'=> $request->input('email'),
+            //     'phone'=> $request->input('phone'),
+            //     'address'=> $request->input('address'),
+            //     'content'=> $request->input('content'),
+            //     'spend'=> $request->input('total')
+                
+            // ]);
             $this->infoProductCart($carts, $customer->id, $request);
 
             DB::commit();
@@ -136,7 +142,9 @@ class CartService{
             // dispatch truyeen vao email khach hang
         }catch(\Exception $err) {
             DB::rollBack();
-            Session::flash('error', 'Đặt Hàng Không Thành Công, Vui lòng thử lại sau');
+            // Session::flash('error', 'Đặt Hàng Không Thành Công, Vui lòng thử lại sau');
+            Session::flash('error', $err->getMessage());
+            
             return false;
         }
 

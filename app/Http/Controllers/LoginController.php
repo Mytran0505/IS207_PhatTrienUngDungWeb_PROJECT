@@ -52,7 +52,7 @@ class LoginController extends Controller
         Customer::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => $data['password'],
             'phone' => $data['phone']
         ]);
 

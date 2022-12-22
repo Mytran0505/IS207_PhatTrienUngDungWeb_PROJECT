@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
-use App\Http\Services\CartService;
 use App\Models\Cart;
-use GuzzleHttp\Psr7\Request as Psr7Request;
+use App\Models\Customer;
+use Illuminate\Http\Request;
+use App\Http\Services\CartService;
+use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
@@ -54,12 +54,64 @@ class CartController extends Controller
         $this->cartService->removeInHome($id);
         return redirect()->back();
     }
-
     
 
     public function addCart(Request $request){
+        $this -> validate($request, [
+            'address' => 'required|max:255'
+        ]);
         $this->cartService->addCart($request);
 
         return redirect()->back();
+    }
+
+    public function login_checkout() {
+        return view('carts.login-checkout', [
+            'title' => 'Đăng nhập Sportwearshop'
+        ]);
+    }
+
+    public function registerCheckout(Request $request){
+        $this -> validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|max:255|unique:customers',
+            'phone' => 'required',
+            'password' => 'required|min:6'
+        ], [
+            'name' => 'Vui lòng nhập họ và tên',
+            'phone' => 'Vui lòng nhập sđt',
+            'email'=> 'Vui lòng nhập email',
+            'email.unique' => 'Email đã tồn tại'
+        ]);
+
+        $data = $request -> all();
+
+        Customer::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => $data['password'],
+            'phone' => $data['phone']
+        ]);
+
+        return redirect('/login-checkout')->with('success', 'Đăng ký thành công');
+    }
+
+    public function store(Request $request) {
+        $this -> validate($request, [
+            'email' => 'required|email:filter|max:255',
+            'password' => 'required|max:255'
+        ]);
+        $customer = Customer::where('email', $request->input('email'))->where('password', $request->input('password'))->first();
+        if($customer){
+            Session::put('email', $customer->email);
+            Session::put('name', $customer->name);
+            Session::put('phone', $customer->phone);
+            Session::put('customerId', $customer->id);
+            return redirect('/carts');
+        }
+        else{
+            Session::flash('error', 'Đăng nhập sai, vui lòng thử lại');
+            return redirect('/');
+        }
     }
 }

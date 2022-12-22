@@ -3518,6 +3518,134 @@ input.num-product::-webkit-inner-spin-button {
   
 }
 
+/* ////////////////////////////////////////////////////////////////// */
+/* Loading */
+#loader {
+  background: #000;
+  background: radial-gradient(#222, #000);
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+.loader-inner {
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.loader-line-wrap {
+  animation: 
+  spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
+;
+  box-sizing: border-box;
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform-origin: 50% 100%;
+  width: 100px;
+}
+.loader-line {
+  border: 4px solid transparent;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+.loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
+.loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
+.loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
+.loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
+.loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
+
+.loader-line-wrap:nth-child(1) .loader-line {
+  border-color: hsl(0, 80%, 60%);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line {
+  border-color: hsl(60, 80%, 60%);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line {
+  border-color: hsl(120, 80%, 60%);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line {
+  border-color: hsl(180, 80%, 60%);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line {
+  border-color: hsl(240, 80%, 60%);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+@keyframes spin {
+  0%, 15% {
+  transform: rotate(0);
+}
+100% {
+  transform: rotate(360deg);
+}
+}
+
+.load{  
+  position: absolute;
+  width: 7ch; height: 32px;
+  text-align: left;
+  line-height: 32px;
+  margin: -10px auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size:28px;
+  font-weight:400;
+  color:rgba(240,220,220,1);
+  left: 2%; top: 5%;
+  -webkit-animation:fontAnim 3.75s infinite;
+  -webkit-animation-timing-function:ease-out;
+  word-wrap: break-word;
+  display:block;
+  overflow: hidden;
+  top: 65%;
+  left: 46%;
+}
+
+@-webkit-keyframes fontAnim{
+  0%{ width:7ch; }
+ 16%{ width:8ch; }
+ 32%{ width:9ch; }
+ 48%{ width:10ch; }
+ 64%{ width:11ch; }
+ 80%{ width:12ch; }
+100% { width:13ch;} 
+}
+
+
 
 /*//////////////////////////////////////////////////////////////////
 [ SSM ]*/

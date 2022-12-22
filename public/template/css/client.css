@@ -238,7 +238,6 @@ body {
 /* hiển thị nội dung dropdown khi hover */
 .dropdown:hover .noidung_dropdown {
     margin-top: 5%;
-    ;
     display: block;
     transition-delay: 2s;
 }

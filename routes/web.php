@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('admin/users/login', [App\Http\Controllers\Admin\Users\LoginController::class, 'index']) -> name('login');
 Route::post('/admin/users/login/store', [App\Http\Controllers\Admin\Users\LoginController::class, 'store']);
+Route::get('admin/users/logout', [App\Http\Controllers\Admin\Users\LoginController::class, 'logout']);
 
 
 Route::middleware(['auth']) -> group(function (){
@@ -102,4 +103,7 @@ Route::post('update-cart', [App\Http\Controllers\CartController::class, 'update'
 Route::get('carts/delete/{id}', [App\Http\Controllers\CartController::class, 'remove']);
 Route::get('delete/{id}', [App\Http\Controllers\CartController::class, 'removeInHome']);
 Route::post('carts', [App\Http\Controllers\CartController::class, 'addCart']);
+Route::get('login-checkout', [App\Http\Controllers\CartController::class, 'login_checkout']);
+Route::post('login-checkout-store', [App\Http\Controllers\CartController::class, 'store']);
+Route::post('register-checkout', [App\Http\Controllers\CartController::class, 'registerCheckout']);
 

@@ -1,7 +1,7 @@
 @extends('main')
 
 @section('content')
-<form class="bg0 p-t-130 p-b-85" method="post">
+<form action="" class="bg0 p-t-130 p-b-85" method="post">
 		<div class="container">
 			@include('admin.alert')
 			<div class="row">
@@ -100,21 +100,23 @@
 									<span class="stext-112 cl8">
 										Thông Tin Khách Hàng
 									</span>
-
+									@php
+										$CustomerId= Session::get('customerId');
+									@endphp
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="name" placeholder="Tên Khách Hàng" >
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="name" placeholder="Tên Khách Hàng" value="{{ $CustomerId ? Session::get('name') : ''}}">
 									</div>
 
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="phone" placeholder="Số Điện Thoại" >
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="phone" placeholder="Số Điện Thoại" value="{{ $CustomerId ? Session::get('phone') : ''}}">
+									</div>
+									
+									<div class="bor8 bg0 m-b-12">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="email" placeholder="Email Liên Hệ" value="{{ $CustomerId ? Session::get('email') : ''}}">
 									</div>
 
 									<div class="bor8 bg0 m-b-12">
 										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="address" placeholder="Địa Chỉ Giao Hàng">
-									</div>
-
-									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="email" placeholder="Email Liên Hệ">
 									</div>
 
 									<div class="bor8 bg0 m-b-12">
@@ -137,10 +139,21 @@
 									{{number_format($total, 0, '', '.')}}₫
 							</div>
 						</div>
+						<?php
+						$CustomerId= Session::get('customerId');
+						if($CustomerId == null) { ?>
+							<a href="/login-checkout" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+								Đặt Hàng
+							</a>
+						<?php }
 
-						<button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
-							Đặt Hàng
-						</button>
+						else { ?>
+							<button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+								Đặt Hàng
+							</button>
+						<?php } ?>
+
+						
 					</div>
 				</div>
 			</div>

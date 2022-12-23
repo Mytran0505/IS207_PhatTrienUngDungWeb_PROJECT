@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bill_khachhang;
+use App\Models\CTHD;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -25,6 +27,7 @@ class LoginController extends Controller
             FacadesSession::put('email', $customer->email);
             FacadesSession::put('name', $customer->name);
             FacadesSession::put('phone', $customer->phone);
+            FacadesSession::put('address', $customer->address);
             FacadesSession::put('customerId', $customer->id);
             return redirect('/');
         }
@@ -72,6 +75,26 @@ class LoginController extends Controller
         return view('profile', [
             'title' => 'Thông tin tài khoản',
             'customer' => $customer
+        ]);
+    }
+
+    public function myOrder() {
+        $CustomerId = FacadesSession::get('customerId');
+        $orders = Bill_khachhang::where('customer_id', $CustomerId)->get();
+        return view('my-order', [
+            'title' => 'Đơn hàng của tôi',
+            'orders' => $orders,
+            // 'cthds' => CTHD::with(['product' => function($query) {
+            //     $query->select('id', 'name');}])->where('id', $orders->id)
+        ]);
+    }
+
+    public function myOrderDetail($orderId) {
+        return view('my-order-detail', [
+            'title' => 'Chi tiết đơn hàng',
+            'order' => Bill_khachhang::where('id', $orderId)->first(),
+            'cthds' => CTHD::with(['product' => function($query) {
+                    $query->select('id', 'name', 'image', 'original_price', 'price_sale');}])->where('id', $orderId)->get()
         ]);
     }
 }

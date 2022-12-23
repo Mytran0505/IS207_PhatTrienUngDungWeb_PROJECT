@@ -89,6 +89,8 @@ Route::post('/login/store', [App\Http\Controllers\LoginController::class, 'store
 Route::post('/registerAuth', [App\Http\Controllers\LoginController::class, 'registerAuth']) -> name('registerAuth');
 Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout']);
 Route::get('/profile/{customerId}', [App\Http\Controllers\LoginController::class, 'profile']);
+Route::get('/my-orders', [App\Http\Controllers\LoginController::class, 'myOrder']);
+Route::get('/my-order-details/{orderId}', [App\Http\Controllers\LoginController::class, 'myOrderDetail']);
 
 //trang chu
 Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('home');

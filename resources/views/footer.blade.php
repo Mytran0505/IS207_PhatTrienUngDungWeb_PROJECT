@@ -1,3 +1,4 @@
+
 <!-- Footer -->
 <footer class="bg3 p-t-75 p-b-32">
     <div class="container">
@@ -170,31 +171,31 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 
                             <div class="slick3 gallery-lb">
-                                <div class="item-slick3" data-thumb="/template/images/product-detail-01.jpg">
+                                <div class="item-slick3" data-thumb="/template/images/product-collection17/item1.jpeg">
                                     <div class="wrap-pic-w pos-relative">
-                                        <img src="/template/images/product-detail-01.jpg" alt="IMG-PRODUCT">
+                                        <img src="/template/images/product-collection17/item1.jpeg" alt="IMG-PRODUCT">
 
-                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/template/images/product-detail-01.jpg">
+                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/template/images/product-collection17/item1.jpeg">
                                             <i class="fa fa-expand"></i>
                                         </a>
                                     </div>
                                 </div>
 
-                                <div class="item-slick3" data-thumb="/template/images/product-detail-02.jpg">
+                                <div class="item-slick3" data-thumb="/template/images/product-collection17/item2.jpeg">
                                     <div class="wrap-pic-w pos-relative">
-                                        <img src="/template/images/product-detail-02.jpg" alt="IMG-PRODUCT">
+                                        <img src="/template/images/product-collection17/item2.jpeg" alt="IMG-PRODUCT">
 
-                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/template/images/product-detail-02.jpg">
+                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/template/images/product-collection17/item1.jpeg">
                                             <i class="fa fa-expand"></i>
                                         </a>
                                     </div>
                                 </div>
 
-                                <div class="item-slick3" data-thumb="/template/images/product-detail-03.jpg">
+                                <div class="item-slick3" data-thumb="/template/images/product-collection17/item3.jpeg">
                                     <div class="wrap-pic-w pos-relative">
-                                        <img src="/template/images/product-detail-03.jpg" alt="IMG-PRODUCT">
+                                        <img src="/template/images/product-collection17/item3.jpeg" alt="IMG-PRODUCT">
 
-                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/template/images/product-detail-03.jpg">
+                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/template/images/product-collection17/item3.jpeg">
                                             <i class="fa fa-expand"></i>
                                         </a>
                                     </div>
@@ -207,25 +208,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 <div class="col-md-6 col-lg-5 p-b-30">
                     <div class="p-r-50 p-t-5 p-lr-0-lg">
                         <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-                            Lightweight Jacket
+                            Quần short chạy bộ Kiprun Light cho nam - Đen
                         </h4>
 
-                        <span class="mtext-106 cl2">
-                            $58.79
+                        <span class="mtext-106 cl2">                       
+                            500,000₫
                         </span>
 
                         <p class="stext-102 cl3 p-t-23">
-                            Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.
+                            Quần short chạy bộ Kiprun Light
                         </p>
                         
                         <!--  -->
                         <div class="p-t-33">
-                            <div class="flex-w flex-r-m p-b-10">
+                            {{--<div class="flex-w flex-r-m p-b-10">
                                 <div class="size-203 flex-c-m respon6">
                                     Size
                                 </div>
 
-                                <div class="size-204 respon6-next">
+                                 <div class="size-204 respon6-next">
                                     <div class="rs1-select2 bor8 bg0">
                                         <select class="js-select2" name="time">
                                             <option>Choose an option</option>
@@ -256,11 +257,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                         <div class="dropDownSelect2"></div>
                                     </div>
                                 </div>
-                            </div>
-
+                            </div> --}}
                             <div class="flex-w flex-r-m p-b-10">
                                 <div class="size-204 flex-w flex-m respon6-next">
-                                    <div class="wrap-num-product flex-w m-r-20 m-tb-10">
+                                    <div class="wrap-num-product-in-cart flex-w m-r-20 m-tb-10" style="left: 7%;">
                                         <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
                                             <i class="fs-16 zmdi zmdi-minus"></i>
                                         </div>
@@ -271,31 +271,32 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                             <i class="fs-16 zmdi zmdi-plus"></i>
                                         </div>
                                     </div>
-
-                                    <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-                                        Add to cart
+                                    <input type="hidden" name="product_id">
+                                    <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail-quick">
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>	
                         </div>
 
+
                         <!--  -->
                         <div class="flex-w flex-m p-l-100 p-t-40 respon7">
                             <div class="flex-m bor9 p-r-10 m-r-11">
-                                <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
+                                <a class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
                                     <i class="zmdi zmdi-favorite"></i>
                                 </a>
                             </div>
 
-                            <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+                            <a  class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
                                 <i class="fa fa-facebook"></i>
                             </a>
 
-                            <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
+                            <a  class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
                                 <i class="fa fa-twitter"></i>
                             </a>
 
-                            <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
+                            <a  class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
                                 <i class="fa fa-google-plus"></i>
                             </a>
                         </div>
@@ -408,7 +409,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 }
             });
         });
-	
+        
+
+        $('.js-addcart-detail-quick').each(function(){
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+			$(this).on('click', function(){
+				swal("Đã thêm sản phẩm vào giỏ hàng", "Bạn có thể tiếp tục mua sắm", "success");
+			});
+		});
 	</script>
 <!--===============================================================================================-->
 	<script src="/template/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>

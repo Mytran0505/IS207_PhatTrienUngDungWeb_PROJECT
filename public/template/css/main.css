@@ -1873,7 +1873,10 @@ button.mfp-close {
 }
 
 .logo-sc{
-  scale: 70%;
+  position: relative;
+  left: -31px;
+  top: -8px;
+  scale: 50%
 }
 
 .img-sc{
@@ -2450,7 +2453,7 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .stext-301 {
-  font-family: Montserrat-Bold;
+  font-family: BeVietnamPro-Bold;
   font-size: 15px;
   line-height: 1.6;
   text-transform: uppercase;
@@ -3521,8 +3524,8 @@ input.num-product::-webkit-inner-spin-button {
 /* ////////////////////////////////////////////////////////////////// */
 /* Loading */
 #loader {
-  background: #000;
-  background: radial-gradient(#222, #000);
+  background: rgb(254, 209, 160);
+  background: radial-gradient(rgb(203, 186, 159), rgb(254, 209, 160));
   bottom: 0;
   left: 0;
   overflow: hidden;
@@ -3621,10 +3624,10 @@ input.num-product::-webkit-inner-spin-button {
   line-height: 32px;
   margin: -10px auto;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'BeVietnamPro-Regular', sans-serif;
   font-size:28px;
   font-weight:400;
-  color:rgba(240,220,220,1);
+  color:rgb(237, 110, 13);
   left: 2%; top: 5%;
   -webkit-animation:fontAnim 3.75s infinite;
   -webkit-animation-timing-function:ease-out;
@@ -3632,7 +3635,7 @@ input.num-product::-webkit-inner-spin-button {
   display:block;
   overflow: hidden;
   top: 65%;
-  left: 46%;
+  left: 45.5%;
 }
 
 @-webkit-keyframes fontAnim{

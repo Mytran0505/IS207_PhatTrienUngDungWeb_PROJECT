@@ -34,8 +34,6 @@
 	<link rel="stylesheet" type="text/css" href="/template/css/style.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" href="/template/css/client.css">
-
-
     <meta name="csrf-token" content="{{ csrf_token() }}">
 <!--===============================================================================================-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">

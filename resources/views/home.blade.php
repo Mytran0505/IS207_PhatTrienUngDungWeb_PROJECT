@@ -76,6 +76,7 @@
 								<span class="block1-info stext-102 trans-04">
 									HOT SUMMER 2022
 								</span>
+								
 							</div>
 
 							<div class="block1-txt-child2 p-b-4 trans-05">

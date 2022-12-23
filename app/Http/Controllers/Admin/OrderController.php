@@ -88,7 +88,7 @@ class OrderController extends Controller
             </div>
             <h1> <center> Cửa hàng thể thao Sportwearshop </center> </h1>
             <div class="col-md-12" style="text-align: right;">
-                <p style="margin:30px 0px">Thời gian thống kê: '.date('d-m-Y').'</p>
+                <p style="margin:30px 0px">Thời gian in: '.date('d-m-Y').'</p>
             </div>
             <p><b style="font-size: 18px;">Người đặt hàng</b></p>
             <table class="table table-styling table-striped table-bordered">

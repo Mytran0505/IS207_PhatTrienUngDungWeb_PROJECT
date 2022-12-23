@@ -1,8 +1,10 @@
 @extends('main')
-@section('content')
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>	
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+@section('head')
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+@endsection
+
+@section('content')
 	<!-- Breadcrumbs -->
 	<div class="breadcrumbs">
 		<div class="container p-t-80">
@@ -12,9 +14,8 @@
                     <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
                 </a>
     
-                <a href="" class="stext-109 cl8 hov-cl1 trans-04" style="font-size: 16px">
+                <a href="#" class="stext-109 cl8 hov-cl1 trans-04" style="font-size: 16px">
                     profile
-                    <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
                 </a>
             </div>
 		</div>
@@ -31,7 +32,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="" alt="Admin" class="rounded-circle" width="150">
+                    <img src="/template/admin/dist/img/{{ $avt }}" alt="Client" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>Xin chào, {{$name}}!</h4>
                       
@@ -44,14 +45,14 @@
 				  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h4 class="mb-0" >
 						<i style="font-size: 20px; padding-right: 15px; font-weight:bold;" class="fa fa-user-circle-o" class="fa fa-user-circle-o" ></i> 
-						<a href="/profile/{{ $CustomerId }}" style="color:#333; font-weight:500;">Tài khoản</a>
+						<a href="/profile/{{ $CustomerId }}" class="cl8 hov-cl1 trans-04" style="font-weight:600;">Tài khoản</a>
 					</h4>
                     
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h4 class="mb-0">
 						<i style="font-size: 20px; padding-right: 18px;" class="fa fa-history" class="fa fa-history" ></i>
-						<a href="{{URL::to('/my-orders')}}" style="color:#333; font-weight:500;">Lịch sử mua hàng</a>
+						<a href="/my-orders" class="cl8 hov-cl1 trans-04" style="font-weight:600;">Lịch sử mua hàng</a>
 					</h4>
                   </li>
                   
@@ -92,13 +93,23 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="form-group">
-                                    <input name="company_name" type="text" placeholder="{{$cus->phone}}" style="width: 400px; border-radius: 3px; height: 28px;">
+                                    <input name="phone" type="text" placeholder="{{$cus->phone}}" style="width: 400px; border-radius: 3px; height: 28px;">
                                 </div>	
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-12">
-                            <a class="btn btn-info " target="__blank" href="#" style="font-size:12px;">Cập nhật</a>
+                            <div class="col-sm-3">
+                                <h4 class="mb-0">Địa chỉ</h4>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="form-group">
+                                    <input name="address" type="text" placeholder="{{$cus->address != null ? $cus->address : ''}}" style="width: 400px; border-radius: 3px; height: 28px;">
+                                </div>	
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                            <a class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10" target="__blank" href="#" style="font-size:12px;">Cập nhật</a>
                             </div>
                         </div>
                     </div>
@@ -142,8 +153,8 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col-sm-12">
-                            <a class="btn btn-info " target="__blank" href="#" style="font-size:12px">Cập nhật</a>
+                            <div class="col-sm-2">
+                            <a class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10" target="__blank" href="#" style="font-size:12px">Cập nhật</a>
                             </div>
                         </div>
                     </div>

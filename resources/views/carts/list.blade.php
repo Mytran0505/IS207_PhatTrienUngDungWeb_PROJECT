@@ -102,6 +102,7 @@
 									</span>
 									@php
 										$CustomerId= Session::get('customerId');
+										$cusAddress = Session::get('address');
 									@endphp
 									<div class="bor8 bg0 m-b-12">
 										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="name" placeholder="Tên Khách Hàng" value="{{ $CustomerId ? Session::get('name') : ''}}">
@@ -116,7 +117,7 @@
 									</div>
 
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="address" placeholder="Địa Chỉ Giao Hàng">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="address" placeholder="Địa Chỉ Giao Hàng" value="{{ $cusAddress ? Session::get('address') : ''}}">
 									</div>
 
 									<div class="bor8 bg0 m-b-12">

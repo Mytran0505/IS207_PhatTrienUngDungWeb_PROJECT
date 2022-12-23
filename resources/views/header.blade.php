@@ -45,9 +45,9 @@
                                 <?php
                                 $CustomerId= Session::get('customerId');
 							    if($CustomerId) { ?>
-                                    <a href="/profile/{{ $CustomerId }}" class="mb-1">Tài khoản</a>
-                                    <a href="{{URL::to('/my-orders')}}" class="mb-1">Đơn hàng của tôi</a>
-                                    <a href="/logout" class="mb-1">Đăng xuất</a>
+                                    <a href="/profile/{{ $CustomerId }}">Tài khoản</a>
+                                    <a href="{{URL::to('/my-orders')}}">Đơn hàng của tôi</a>
+                                    <a href="/logout" >Đăng xuất</a>
                                 <?php } ?>
                             </div>
                         </div>

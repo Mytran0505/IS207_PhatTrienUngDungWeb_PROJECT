@@ -69,7 +69,7 @@ body {
 
 
 * {
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family: BeVietnamPro-Medium;
     font-weight: 500;
 }
 
@@ -110,7 +110,7 @@ p {
 }
 
     p span {
-        font-family: inherit;
+        font-family: BeVietnamPro-Medium;
         color: inherit;
         font-size: inherit;
     }
@@ -202,10 +202,11 @@ body {
     top: 100%;
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color:rgb(249, 249, 249);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 3px 1px rgb(88 88 88 / 20%);
     z-index: 999;
+    width: 190px;
 }
 .noidung_dropdown::before {
     position: absolute;
@@ -220,9 +221,9 @@ body {
 /* Thiết kế style cho các đường dẫn tronng Dropdown */
 .noidung_dropdown a {
     display: block;
-    padding: 5px 8px;
+    padding: 13px 20px;
     text-align: left;
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family: BeVietnamPro-Medium;
     font-size: 14px;
     color: #1d1d1d;
     font-weight: 500;
@@ -231,13 +232,14 @@ body {
     /* thay đổi màu background khi hover vào đường dẫn */
     .noidung_dropdown a:hover {
         top: 50%;
-        padding-left: 25px;
-        color: #77ACF1;
+        padding-left: 30px;
+        color: #ffffff;
+        background-color: #77ACF1;
     }
 
 /* hiển thị nội dung dropdown khi hover */
 .dropdown:hover .noidung_dropdown {
-    margin-top: 5%;
+    margin-top: 60%;
     display: block;
     transition-delay: 2s;
 }
@@ -255,7 +257,6 @@ body {
     margin-top: 16px;
     left: 0;
     z-index: 1000;
-    border-top: 1px solid #eee;
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     -moz-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -279,14 +280,14 @@ body {
         .sub-menu > li > a {
             position: relative;
             z-index: 10;
-            font-family: "Archivo Narrow", sans-serif;
+            font-family: BeVietNamPro-Medium;
             display: block;
             padding: 10px 15px;
             font-size: 13px;
             color: #1d1d1d;
             font-weight: 600;
             text-transform: uppercase;
-            background-color: #fff;
+            background-color: rgb(249, 249, 249);
             border-bottom: 1px solid #eee;
             -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
             -moz-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -294,8 +295,8 @@ body {
         }
 
             .sub-menu > li > a:hover {
-                color: #fff;
-                padding-left: 20px;
+                color: #ffffff;
+                padding-left: 30px;
                 background-color: #77ACF1;
             }
 

@@ -10,7 +10,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	font-family: "Be Vietnam Pro", sans-serif;
+	font-family: BeVietnamPro-Medium;
 	height: 100vh;
 	margin: -20px 0 50px;
 }

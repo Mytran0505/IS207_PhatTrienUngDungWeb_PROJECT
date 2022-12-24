@@ -22,10 +22,21 @@
                 </div>	
 
                 <!-- Icon header -->
-                <div class="wrap-icon-header flex-w flex-r-m">
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-                        <i class="zmdi zmdi-search"></i>
-                    </div>
+                <div class="wrap-icon-header flex-w flex-r-m p-t-15">
+                    <form class= "navbar-form navbar-left form-search" role="search">
+                        <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 form-group">
+                            {{-- <i class="zmdi zmdi-search search-css-btn input-search-ajax search-ajax-result"></i> --}}
+                            <input class="search-css form-control input-search-ajax" type="text" placeholder="Tìm kiếm ...">
+                            
+                            <div class="search-ajax-result">
+
+                            </div>
+
+                            
+                        </div>
+                            
+                        </div>
+                    </form>
 
                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="{{ !is_null(\Session::get('carts')) ? count(\Session::get('carts')) : 0 }}">
                         <i class="zmdi zmdi-shopping-cart"></i>
@@ -74,7 +85,7 @@
 
         <!-- Icon header -->
         <div class="wrap-icon-header flex-w flex-r-m m-r-15">
-            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11">
                 <i class="zmdi zmdi-search"></i>
             </div>
 
@@ -121,3 +132,5 @@
 
     
 </header>
+
+

@@ -27,7 +27,14 @@
 	<link rel="stylesheet" type="text/css" href="/template/vendor/MagnificPopup/magnific-popup.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/template/vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/template/admin/plugins/owl-carousel/assets/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="/template/css/owl-carousel.css">
+		<!-- Basic stylesheet -->
+	<link rel="stylesheet" href="/template/owl-carousel/owl.carousel.css">
+	
+	<!-- Default Theme -->
+	<link rel="stylesheet" href="template/owl-carousel/owl.theme.css">
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/template/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/template/css/main.css">
 <!--===============================================================================================-->

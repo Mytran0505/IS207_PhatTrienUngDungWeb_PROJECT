@@ -164,6 +164,19 @@
                 },  
             });
         });
+
+        // Banner Sales
+        $('.banner-sales').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          arrows: true,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          speed: 1500,
+          prevArrow:'<button class="slick-prev slick-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+          nextArrow:'<button class="slick-next slick-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+        });
             
                 
 

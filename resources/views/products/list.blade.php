@@ -6,9 +6,10 @@
             <div class="block2-pic hov-img0 b-r-20 b-shadow">
                 <a href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name),'-'}}.html">
                     <img src="{{ $product->image }}/item1.jpeg" alt="{{ $product->name }}">
-                    <a href="#" class="bg-quick hov-bg-quick block2-btn flex-c-m stext-103 cl2 size-102 bor2 p-lr-15 trans-04 js-show-modal1">
+                    <button href="#" class="bg-quick hov-bg-quick block2-btn flex-c-m stext-103 cl2 size-102 bor2 p-lr-15 trans-04 js-show-modal1"
+                    data-product = "{{ $product }}">
                         Xem nhanh
-                    </a>
+                    </button>
                 </a>
             </div>
 

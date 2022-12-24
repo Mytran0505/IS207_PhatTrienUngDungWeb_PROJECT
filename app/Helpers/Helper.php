@@ -60,10 +60,10 @@ class Helper {
                             '.$menu->name.'
                         </a>';
                 unset($menus[$key]);
-                if(self::isChild($menus, $menu -> id)){
+                if(self::isChild($menus, $menu->id)){
                     $html.= '<ul class = "sub-menu">';
                     $html.= self::menus($menus, $menu->id);
-                    $html.= '</ul>'; 
+                    $html.= '</ul>';
                 }
                     $html .= '</li>
                 ';

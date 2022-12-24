@@ -3171,7 +3171,9 @@ iframe {border: none;}
 	display: block;
 }
 
-.wrap-pic-w img {width: 100%;}
+.wrap-pic-w img {
+	width: 100%;
+}
 .wrap-pic-max-w img {max-width: 100%;}
 
 .wrap-pic-h img {height: 100%;}

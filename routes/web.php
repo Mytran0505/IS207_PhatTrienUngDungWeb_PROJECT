@@ -109,3 +109,8 @@ Route::get('login-checkout', [App\Http\Controllers\CartController::class, 'login
 Route::post('login-checkout-store', [App\Http\Controllers\CartController::class, 'store']);
 Route::post('register-checkout', [App\Http\Controllers\CartController::class, 'registerCheckout']);
 
+Route::get('/contact.html', [App\Http\Controllers\ContactController::class, 'contactus']);
+Route::get('/danh-muc/contact.html', [App\Http\Controllers\ContactController::class, 'contactus']);
+
+
+

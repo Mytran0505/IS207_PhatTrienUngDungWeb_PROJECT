@@ -15,7 +15,7 @@
                 </a>
     
                 <a href="#" class="stext-109 cl8 hov-cl1 trans-04" style="font-size: 16px">
-                    profile
+                    Profile
                 </a>
             </div>
 		</div>
@@ -23,7 +23,7 @@
 	<!-- End Breadcrumbs -->
     <?php   
             $CustomerId = Session::get('customerId');
-            $avt = "default-user-icon.png";
+            $avt = "user.png";
             $name = Session::get('name');
 	?>												
 	<!-- Start Contact -->
@@ -32,7 +32,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="/template/admin/dist/img/{{ $avt }}" alt="Client" class="rounded-circle" width="150">
+                    <img src="/template/images/Logo/{{ $avt }}" alt="Client" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>Xin chào, {{$name}}!</h4>
                       
@@ -73,7 +73,7 @@
                             </div>
                             <div class="col-lg-6" >
                                 <div class="form-group">
-                                    <input name="name" type="text" placeholder="{{$cus->name}}" style="width: 400px; border-radius: 3px; height: 28px;" >
+                                    <input name="name" class="input-profile" type="text" placeholder="{{$cus->name}}" >
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="form-group">
-                                    <input name="email" type="email" placeholder="{{$cus->email}}" style="width: 400px; border-radius: 3px; height: 28px;">
+                                    <input name="email" type="email" placeholder="{{$cus->email}}" class="input-profile">
                                 </div>	
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="form-group">
-                                    <input name="phone" type="text" placeholder="{{$cus->phone}}" style="width: 400px; border-radius: 3px; height: 28px;">
+                                    <input name="phone" type="text" placeholder="{{$cus->phone}}" class="input-profile">
                                 </div>	
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="form-group">
-                                    <input name="address" type="text" placeholder="{{$cus->address != null ? $cus->address : ''}}" style="width: 400px; border-radius: 3px; height: 28px;">
+                                    <input name="address" type="text" placeholder="{{$cus->address != null ? $cus->address : ''}}" class="input-profile">
                                 </div>	
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="password"  name="" id="" placeholder="" style="width: 400px; border-radius: 3px; height: 28px;">
+                                    <input type="password"  name="" id="" placeholder="" class="input-profile">
                                 </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="password"  name="" id="" placeholder=""style="width: 400px; border-radius: 3px; height: 28px;">
+                                    <input type="password"  name="" id="" placeholder="" class="input-profile">
                                 </div>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="password"  name="" id="" placeholder="" style="width: 400px; border-radius: 3px; height: 28px;">
+                                    <input type="password"  name="" id="" placeholder="" class="input-profile">
                                 </div>
                             </div>
                         </div>

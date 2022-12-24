@@ -28,7 +28,7 @@
 	<!-- End Breadcrumbs -->
 	<?php   
             $CustomerId = Session::get('customerId');
-            $avt = "default-user-icon.png";
+            $avt = "user.png";
 			$name = Session::get('name');
 	?>	
  
@@ -38,7 +38,7 @@
             <div class="card">
               <div class="card-body">
                 <div class="d-flex flex-column align-items-center text-center">
-                  <img src="/template/admin/dist/img/{{ $avt }}" alt="Client" class="rounded-circle" width="150">
+                  <img src="/template/images/Logo/{{ $avt }}" alt="Client" class="rounded-circle" width="150">
                   <div class="mt-3">
                     <h4>Xin chào, {{$name}}!</h4>
                     

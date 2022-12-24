@@ -307,6 +307,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </div>
 </div>
 <!--===============================================================================================-->	
+<script src="/template/admin/plugins/jquery/jquery.min.js"></script>
 <script src="/template/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 	<script src="/template/vendor/animsition/js/animsition.min.js"></script>
@@ -436,6 +437,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		});
 	</script>
 <!--===============================================================================================-->
+    <script src="/template/owl-carousel/owl.carousel.js"></script>
+    <script src="/template/admin/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Include js plugin -->
+	<script src="/template/js/owl-carousel.js"></script>
 	<script src="/template/js/main.js"></script>
     <script src="/template/js/public.js"></script>
 

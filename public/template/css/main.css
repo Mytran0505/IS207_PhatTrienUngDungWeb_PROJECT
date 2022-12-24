@@ -808,6 +808,20 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   background: #fff;
 }
 
+.tquan{
+  padding: 20px;
+  display: inline-block;
+}
+
+.d-center{
+  text-align: center;
+  padding-left: 35%;
+}
+
+.d-center>p{
+  font-size: 35px;
+  font-family: BeVietnamPro-Bold;
+}
 /*---------------------------------------------*/
 .wrap-search-header input {
   font-family: BeVietnamPro-ExtraLight;

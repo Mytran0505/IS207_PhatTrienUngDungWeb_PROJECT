@@ -106,93 +106,90 @@
 			<div class="row">
 				<div class="col-12" style="background-color: white;border-radius: 30px">
 					<div class="banner-sales">
-						@foreach($products as $key => $product)
-						<div class="single-product">
-							<div class="product-img" style="width: 250px; height: 200px;">
-								<a href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name),'-'}}.html">
-									<img class="default-img" style="margin: auto; max-width: 250px; max-height: 200px; width: auto; height: auto;" src="{{ $product->image }}/item1.jpeg" alt="#">
-									<span class="out-of-stock">GIẢM 10%</span>
-								</a>
-								<div class="button-head">
-									<div class="product-action-2">
-										<a title="Add to cart" class="add-to-cart-a-tag" href="javascript:void(0)">Thêm vào giỏ hàng</a>
-										<input type="text" value="{{$product->id}}" hidden>
-										<input type="hidden" class="Quantity" value="{{$product->menu_id}}">
+						@foreach($coupons as $key => $coupon)
+							@foreach($products as $key => $product)
+								@if($product->menu_id == $coupon->menu_id)
+									<div class="single-product">
+										<div class="product-img" style="width: 250px; height: 200px;">
+											<a href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name),'-'}}.html">
+												<img class="default-img" style="margin: auto; max-width: 250px; max-height: 200px; width: auto; height: auto;" src="{{ $product->image }}/item1.jpeg" alt="#">
+												<span class="out-of-stock">GIẢM {{ $coupon->number }}%</span>
+											</a>
+										</div>
+										<div class="product-content">
+											<h3><a style="text-decoration:none; color:black;" href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name),'-'}}.html"><b style="font-size:14px">{{$product->name}}</b></a></h3>
+											<?php $avg_rating = $product->menu_id?> 
+											@if($avg_rating >= 1)
+												<div class="star-wrapper" style="display: inline-block;">
+												<p style="display:inline-block; font-size:10px; margin-left:10px">{{round($avg_rating, 1)}}</p>	
+																			@if($avg_rating > 4.5) <!-- 5 sao -->
+																			<a href="javascript:void(0)" class="fa fa-star s1" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s2" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
+																			@elseif($avg_rating > 4) <!-- 4.5 sao -->
+																			<a href="javascript:void(0)" class="fa fa-star-half-o s1" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s2" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
+																			@elseif($avg_rating > 3.5) <!-- 4 sao -->
+																			<a href="javascript:void(0)" class="fa fa-star s1"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s2" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
+																			@elseif($avg_rating > 3) <!-- 3.5 sao -->
+																			<a href="javascript:void(0)" class="fa fa-star s1"></a>
+																			<a href="javascript:void(0)" class="fa fa-star-half-o s2" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
+																			@elseif($avg_rating > 2.5) <!-- 3 sao -->
+																			<a href="javascript:void(0)" class="fa fa-star s1"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s2"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
+																			@elseif($avg_rating > 2) <!-- 2.5 sao -->
+																			<a href="javascript:void(0)" class="fa fa-star s1"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s2"></a>
+																			<a href="javascript:void(0)" class="fa fa-star-half-o s3" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
+																			@elseif($avg_rating > 1.5) <!-- 2 sao -->
+																			<a href="javascript:void(0)" class="fa fa-star s1"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s2"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s3"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
+																			@elseif($avg_rating > 1) <!-- 1.5 sao -->
+																			<a href="javascript:void(0)" class="fa fa-star s1"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s2"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s3"></a>
+																			<a href="javascript:void(0)" class="fa fa-star-half-o s3" style="color:gold"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
+																			@else <!-- 1 sao -->
+																			<a href="javascript:void(0)" class="fa fa-star s1"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s2"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s3"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s4"></a>
+																			<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
+																			@endif		
+																			
+												</div>
+											@endif
+											<div class="product-price">
+												<span style="color:red; font-size:17px"><b>{{number_format($product->price_sale).' '.'₫'}}</b></span>
+												<br>
+												<span class="old">{{number_format($product->price_sale + ($product->price_sale * ($coupon->number/100))).' '.'₫'}}</span>
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="product-content">
-								<h3><a style="text-decoration:none; color:black;" href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name),'-'}}.html"><b style="font-size:14px">{{$product->name}}</b></a></h3>
-								<?php $avg_rating = 4?> 
-								@if($avg_rating >= 1)
-									<div class="star-wrapper" style="display: inline-block;">
-									<p style="display:inline-block; font-size:10px; margin-left:10px">{{round($avg_rating, 1)}}</p>	
-																@if($avg_rating > 4.5) <!-- 5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 4) <!-- 4.5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star-half-o s1" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 3.5) <!-- 4 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 3) <!-- 3.5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star-half-o s2" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 2.5) <!-- 3 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 2) <!-- 2.5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star-half-o s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 1.5) <!-- 2 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 1) <!-- 1.5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3"></a>
-																<a href="javascript:void(0)" class="fa fa-star-half-o s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@else <!-- 1 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@endif		
-																
-													</div>
+									<!-- End Single Product -->
 								@endif
-								<div class="product-price">
-									<span style="color:red; font-size:17px"><b>{{number_format($product->price_sale).' '.'₫'}}</b></span>
-									<br>
-									<span class="old">{{number_format($product->price_sale + ($product->price_sale * 0.1)).' '.'₫'}}</span>
-								</div>
-							</div>
-						</div>
-						<!-- End Single Product -->
+							@endforeach
 						@endforeach
 					</div>
 				</div>

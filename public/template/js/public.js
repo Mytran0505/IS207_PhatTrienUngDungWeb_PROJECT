@@ -26,11 +26,11 @@ function loadMore(){
 
 let loader = document.getElementById('loader');
 
-// window.onload = function(){
-//     loader.style.display='none';
-// }
+window.onload = function(){
+    loader.style.display='none';
+}
 
-setTimeout(() => {
-    loader.remove();
-  }, 1500);
-  window.onload = function(setTimeout){}
+// setTimeout(() => {
+//     loader.remove();
+//   }, 1500);
+//   window.onload = function(setTimeout){}

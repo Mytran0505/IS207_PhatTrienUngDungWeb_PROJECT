@@ -23,4 +23,16 @@ class Product extends Model
     public function menu(){
         return $this->hasOne(Menu::class, 'id', 'menu_id');
     }
+    public function scopeSearch($query){
+        if(request('key')){
+            $key = request('key');
+            $query = $query->where('name', 'like','%'.$key.'%');
+        }
+
+        if(request('m_id'))
+        {
+            $query = $query->where('menu_id', request('m_id'));
+        }
+        return $query;
+    }
 }

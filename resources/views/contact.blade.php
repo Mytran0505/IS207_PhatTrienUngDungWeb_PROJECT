@@ -3,9 +3,9 @@
 @section('content')
         
         	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('template/images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('/template/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
-			About
+			LIÊN HỆ
 		</h2>
 	</section>	
 
@@ -17,20 +17,20 @@
 				<div class="col-md-7 col-lg-8">
 					<div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
 						<h3 class="mtext-111 cl2 p-b-16">
-							Our Story
+							Câu chuyện của chúng tôi
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat consequat enim, non auctor massa ultrices non. Morbi sed odio massa. Quisque at vehicula tellus, sed tincidunt augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas varius egestas diam, eu sodales metus scelerisque congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas gravida justo eu arcu egestas convallis. Nullam eu erat bibendum, tempus ipsum eget, dictum enim. Donec non neque ut enim dapibus tincidunt vitae nec augue. Suspendisse potenti. Proin ut est diam. Donec condimentum euismod tortor, eget facilisis diam faucibus et. Morbi a tempor elit.
-						</p>
+                            Khách hàng là rất quan trọng, khách hàng sẽ được theo dõi bởi khách hàng. Trên thực tế, nó không phải là tác giả của bóng rổ đại chúng. Một đống bệnh mà ghét. Mọi người tại các phương tiện hạ cánh, nhưng tin đồn tuyên truyền. Và khi lũ Orc được sinh ra, những ngọn núi sẽ sinh ra những chiếc lông vũ và những mũi tên tuyệt vời, và một con chuột lố bịch sẽ ra đời. Maecenas là một người đàn ông có nhiều sở thích khác nhau và các thành viên trong gia đình anh ấy sợ bài tập về nhà. Trẻ em sống với bệnh tật, tuổi già và trẻ em và họ đang phải chịu đói và nghèo. Maecenas mang thai just eu arcu egestas convallis. Không cần phải uống, vì người ta nói rằng anh ấy cần thời gian. Cho đến lúc đó, nó không giống như một sản phẩm của cuộc sống hoặc khuyến mãi. điện thoại thông minh Như là đường kính. Cho đến khi nước sốt của tortor eismod, nó cần dễ dàng cắt cổ họng và Bệnh tật hết lần này đến lần khác.
+                        </p>
 
 						<p class="stext-113 cl6 p-b-26">
-							Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula. 
-						</p>
+                            Cho đến khi chúng tôi có thai, chúng tôi sẽ luôn có nước sốt ngon. Anh ấy cần một cái túi lớn. Một số thành viên có một số kinh phí. Là một trường sinh thái trong các phương tiện. Bài tập về nhà của trẻ em và y tế như mang thai. Đó là một ngày cuối tuần. Cho đến khi mũi tên của cung dễ dàng, các thành viên của đội bóng đá đã bị bắn tên. Ngay cả những đứa trẻ lớn hay trang điểm đã nói, chứ không chỉ các eleifends, hay các nhà phát triển đã cung trở thành một món salad. Mà trang điểm, căn cứ chế tạo thuận lợi, là cái thung lũng tự mình muốn, quan trọng nhất chính là nhỏ nhỏ nhỏ nhỏ.
+                        </p>
 
 						<p class="stext-113 cl6 p-b-26">
-							Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-						</p>
+                            Nếu bạn có bất kỳ câu hỏi nào? Hãy cho chúng tôi biết tại cửa hàng ở tầng 12, Tòa Nhà E, Trường Đại Học Công Nghệ Thông Tin, ĐHQG-TPHCM hoặc gọi cho chúng tôi theo số (+84) 54 726 801
+                        </p>
 					</div>
 				</div>
 
@@ -47,20 +47,20 @@
 				<div class="order-md-2 col-md-7 col-lg-8 p-b-30">
 					<div class="p-t-7 p-l-85 p-l-15-lg p-l-0-md">
 						<h3 class="mtext-111 cl2 p-b-16">
-							Our Mission
+							Nhiệm vụ của chúng tôi
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26">
-							Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum rhoncus dignissim risus, sed consectetur erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam maximus mauris sit amet odio convallis, in pharetra magna gravida. Praesent sed nunc fermentum mi molestie tempor. Morbi vitae viverra odio. Pellentesque ac velit egestas, luctus arcu non, laoreet mauris. Sed in ipsum tempor, consequat odio in, porttitor ante. Ut mauris ligula, volutpat in sodales in, porta non odio. Pellentesque tempor urna vitae mi vestibulum, nec venenatis nulla lobortis. Proin at gravida ante. Mauris auctor purus at lacus maximus euismod. Pellentesque vulputate massa ut nisl hendrerit, eget elementum libero iaculis.
-						</p>
+                            Mauris không phải là một lacinia vĩ đại. Nhưng thuốc cũng không đau. Vestibulum rhoncus dinissim risus, nhưng nó phải được tuân theo. Trẻ em sống với bệnh tật, tuổi già và trẻ em và họ đang phải chịu đói và nghèo. Không có mauris vĩ đại, mà là sự thù hận của thung lũng, trong rung động của những trọng lực vĩ ​​đại. Nhưng giờ đã đến lúc nhân viên của tôi phải ra đi. Tôi ghét cuộc sống hoạt hình. Pellentesque ac velit egestas, luctus arcu non, laoreet mauris. Nhưng đồng thời, kết quả là đáng ghét trước hãng hàng không. Khi còn trẻ, cuối tuần đoàn viên, đừng ghét cổng. Hiện tại, chiếc bình của cuộc đời tôi là tiền sảnh của tôi, và không có chất độc nào trong đó. Nhưng trước khi mang thai. Tác giả thuần khiết nhất tại hồ eismmod lớn nhất. Pellentesque vulputate khối lượng như nisl hendrerit, cần một yếu tố của mục tiêu tự do.
+                        </p>
 
 						<div class="bor16 p-l-29 p-b-9 m-t-22">
 							<p class="stext-114 cl6 p-r-40 p-b-11">
-								Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
-							</p>
+                                Sáng tạo chỉ là kết nối mọi thứ. Khi bạn hỏi những người sáng tạo rằng họ đã làm điều gì đó như thế nào, họ sẽ cảm thấy hơi tội lỗi vì họ không thực sự làm điều đó, họ chỉ nhìn thấy điều gì đó. Nó dường như rõ ràng với họ sau một thời gian.
+                            </p>
 
 							<span class="stext-111 cl8">
-								- Steve Job’s 
+								- Tăng Đức Said :)))
 							</span>
 						</div>
 					</div>
@@ -85,12 +85,9 @@
 
         <!-- about right  -->
         <div class="about-right">
-            <h1>About Me</h1>
+            <h1>Về chúng tôi</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Debitis fugiat a dolorem at similique maxime dolorum dolore
-                enim dicta voluptatibus, illum recusandae, vel optio tempore
-                ipsum incidunt eum. Aspernatur, repellendus.
+                Bản thân công ty là một công ty rất thành công. Hãy để con nợ chạy trốn khỏi nỗi đau, nhưng giống như hầu hết các cơn đau, vì những thú vui được gọi là thú vui, hoặc tùy chọn từ chối nó, hoặc vào thời điểm nó tự xảy ra. Bị từ chối, bị từ chối.
             </p>
             <div class="address">
                 <ul>
@@ -98,30 +95,30 @@
                         <span class="address-logo">
                             <i class="fa fa-paper-plane"></i>
                         </span>
-                        <p>Address</p>
+                        <p>Địa chỉ</p>
                         <span class="saprater">:</span>
-                        <p>Jaipur, Rajasthan, India</p>
+                        <p>Toà E, UIT</p>
                     </li>
                     <li>
                         <span class="address-logo">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                         </span>
-                        <p>Phone No</p>
+                        <p>Số ĐT</p>
                         <span class="saprater">:</span>
-                        <p>+91 987-654-4321</p>
+                        <p>+12 345-678-2222</p>
                     </li>
                     <li>
                         <span class="address-logo">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </span>
-                        <p>Email ID</p>
+                        <p>Email</p>
                         <span class="saprater">:</span>
-                        <p>crowncoder@gmail.com</p>
+                        <p>uit@gmail.com</p>
                     </li>
                 </ul>
             </div>
             <div class="expertise">
-                <h3>My Expertise</h3>
+                <h3>Kinh Nghiệm</h3>
                 <ul>
                     <li>
                         <span class="expertise-logo">

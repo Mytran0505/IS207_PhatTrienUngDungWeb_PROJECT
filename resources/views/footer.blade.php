@@ -456,3 +456,58 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="/template/js/owl-carousel.js"></script>
 	<script src="/template/js/main.js"></script>
     <script src="/template/js/public.js"></script>
+
+    <script>
+        $('.search-ajax-result').hide();
+        $('.input-search-ajax').keyup(function() {
+        var _text = $(this).val();
+      if(_text!='')
+      {
+        $.ajax({
+          url: "{{route('ajax-search-product')}}?key="+ _text,
+          type: 'GET',
+          success: function(res)
+            {
+            var _html = '';
+                _html += '<h3 class="search-text">Kết quả tìm kiếm: </h3>';
+            for(var pro of res){
+                _html += '<div class="media">';
+                _html += '<div class="sub-media">';
+                _html += '<a class="pull-left" href="#">';
+                _html += '<img class="media-object" width="50" src="'+pro.image+'/item1.jpeg">'; 
+                _html += '</a>'; 
+                _html += '<div class="media-body">';
+                _html += '<h4 class="media-heading">';
+                _html += '<a class="limit-text-2" href="/san-pham/'+pro.id+'-'+pro.name+'.html">'+pro.name+'</a>';
+                _html += '</h4>';
+                _html += '<p class="limit-text-1">'+pro.description+'</p>';       
+                _html += '</div>';
+                _html += '</div>';
+            }
+            // $('.search-ajax-result').slice(0,3);
+            $('.search-ajax-result').show(3);
+            $('.search-ajax-result').html(_html)
+            }
+        });
+      }
+      else
+      {
+        $('.search-ajax-result').html('');
+        $('.search-ajax-result').hide();
+
+      }
+      
+        });
+        </script>
+        {{-- for (let i = 0; i < 5; i++) {
+              _html += '<div class="media">';
+                  _html += '<a class="pull-left" href="#">';
+                      _html +=
+                          '<img class="media-object" width="50" src="">'
+                      _html += ' </a>';
+                      _html += ' <div class="media-body">';
+                          _html += '<h4 class="media-heading"><a href="">Media heading</a></h4>';
+                          _html += '<p>Lorem ipsum dolor sit amet consectetur.</p>';
+                          _html += '</div>';
+                          _html += '</div>';
+                          } --}}

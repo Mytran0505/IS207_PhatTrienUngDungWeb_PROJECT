@@ -59,7 +59,7 @@
 	<!-- Banner -->
 	<div class="sec-banner bg0 p-t-80">
 		<div class="container">
-			<div class="row">
+			<div class="row p-t-50">
 				@foreach ($menu as $menu)
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
 					<!-- Block1 -->
@@ -203,28 +203,28 @@
 
 	<!-- Product -->
 	<section class="bg0 p-t-23 p-b-140">
-		<div class="container">
-			<div class="p-b-10">
-				<h3 class="ltext-103 cl5">
+		<div class="container p-t-10">
+			{{-- <div class="p-b-10">
+				<h3 class="ltext-103 cl5 tquan">
 					TỔNG QUAN SẢN PHẨM
 				</h3>
-			</div>
+			</div> --}}
 
 			<div class="flex-w flex-sb-m p-b-52">
-				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
+				<div class="flex-w flex-l-m filter-tope-group m-tb-10 d-center">
+					<p class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 " data-filter="*">
 						TẤT CẢ SẢN PHẨM
-					</button>
+					</p>
 				</div>
-				<div class="flex-w flex-c-m m-tb-10">
+				{{-- <div class="flex-w flex-c-m m-tb-10">
 					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
 						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
 						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
 						Lọc
 					</div>
-				</div>
+				</div> --}}
 				{{-- Lọc --}}
-				<div class="dis-none panel-filter w-full p-t-10">
+				{{-- <div class="dis-none panel-filter w-full p-t-10">
 					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
 						<div class="filter-col1 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
@@ -277,8 +277,8 @@
 								</li>
 							</ul>
 						</div>
-					</div>
-				</div>
+					</div> 
+				</div> --}}
 			</div>
 		<div id ="loadProduct">
 			@include('products.list')

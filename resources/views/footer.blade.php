@@ -137,7 +137,7 @@
 
             <p class="stext-107 cl6 txt-center">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">UITTEAM</a> &amp; distributed by <a href="" target="_blank">TeamWeb</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
             </p>
@@ -212,7 +212,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                         </h4>
 
                         <span class="mtext-106 cl2">                       
-                            500,000₫
+                            200,000₫
                         </span>
 
                         <p class="stext-102 cl3 p-t-23">
@@ -281,7 +281,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
                         <!--  -->
-                        <div class="flex-w flex-m p-l-100 p-t-40 respon7">
+                        <div class="flex-w flex-m p-l-100 p-t-40 respon7 ic-center-cart">
                             <div class="flex-m bor9 p-r-10 m-r-11">
                                 <a class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
                                     <i class="zmdi zmdi-favorite"></i>

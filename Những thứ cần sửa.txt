@@ -12,7 +12,12 @@ _Nút load more ngoài trang chủ chưa hoàn thành nên command lại sau là
 _Hướng dẫn filter ở vid 40 phút thứ 5
 _Các vùng pointer vẫn còn nhỏ nên khó tương tác(chưa làm)
 
-
+_verify
+_comment
+_mail
+_current time
+_Xem tất cả khuyến mãi
+_Mo rong email bang cach gui khuyen mai cho all user
 
 
 _Bấm nam ra nam nữ ra nữ

@@ -31,7 +31,7 @@ class OrderShipped extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Order Shipped',
+            subject: 'Bạn đã đặt hàng thành công ✔︎✔︎✔︎',
         );
     }
 

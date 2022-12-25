@@ -1534,19 +1534,18 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   color: rgba(0,0,0,0.3);
   position: absolute;
   opacity: 0;
-  
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-
   z-index: 200;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
+  
 }
 
 .wrap-slick1:hover .arrow-slick1 {
@@ -1560,11 +1559,16 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .next-slick1 {
   right: 50px;
   left: auto;
+
+  border-radius: 10px;
+  
 }
 
 .prev-slick1 {
   left: 50px;
   right: auto;
+  border-radius: 10px;
+  
 }
 
 @media (max-width: 991px) {
@@ -1748,9 +1752,17 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   background-color: rgba(0,0,0,0.9);
 }
 
-.prev-slick3 {left: 0px;}
-.next-slick3 {right: 0px;}
+.prev-slick3 {
+  left: 0px;
+  border-radius: 10px;}
+.next-slick3 {
+  right: 0px;
+  border-radius: 10px;}
 
+.ic-center-cart{
+  position: relative;
+  left: 7%;
+}
 /*---------------------------------------------*/
 .wrap-slick3-dots {
   width: 11.111111%;

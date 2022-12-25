@@ -10,29 +10,37 @@ body, .main-menu > li> a, .ltext-102{
 }
 .section-title {
 	text-align: center;
-	margin-bottom: 50px;
-	padding: 0 215px;
+    margin: 10px 0px;
+	padding-right: 3%;
 }
 .section-title h2 {
 	font-size: 30px;
-	margin-bottom: 0;
 	text-transform: capitalize;
 	position: relative;
-	color: #2c2d3f;
+	color: #fe2222;
 	font-weight: 700;
 	margin-bottom: 10px;
 	padding-bottom: 15px;
+    display: inline-block;
+    top: 3px;
 }
 .section-title h2::before {
 	position: absolute;
-	content: "";
-	height: 2px;
-	width: 50px;
-	background: #77ACF1;
-	left: 50%;
-	bottom: 0;
-	margin-left: -25px;
+    content: "";
+    height: 2px;
+    width: 42%;
+    background: #f1491e;
+    left: 36%;
+    margin-left: -25px;
+    bottom: 25px;
 }
+
+.section-title>h2>img{
+    height: 80px;
+    position: relative;
+    bottom: 28px;
+}
+
 .section-title p {
 	font-size: 14px;
 	color: #666;

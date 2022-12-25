@@ -96,10 +96,31 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<div class="section-title" style="margin-bottom: 0px;">
+					<div class="section-title">
+						
 						<h2 style="text-transform:none;">
-						<img style="height:45px" src="/template/images/icons/fire.gif" alt="">Giảm giá sốc
-						<img style="height:45px" src="/template/images/icons/fire.gif" alt=""></h2>
+							<img src="/template/images/icons/fire.gif" alt="">
+							Giảm giá sốc
+
+
+							<img src="/template/images/icons/fire.gif" alt="">
+						</h2>
+						<div class="countdown">
+							<img class="img-rotate-1" src="/template/images/FlashSale/item1.png" alt="IMG">
+							{{-- <img class="img-rotate-2" src="/template/images/FlashSale/item2.png" alt="IMG"> --}}
+							<div class="timer">
+							  <span id="days">Days</span>
+							</div>
+							<div class="timer">
+							  <span id="hours">Hours</span>
+							</div>
+							<div class="timer">
+							  <span id="minutes">Minutes</span>
+							</div>
+							<div class="timer">
+							  <span id="seconds">Seconds</span>
+							</div>
+						  </div>
 					</div>
 				</div>
 			</div>

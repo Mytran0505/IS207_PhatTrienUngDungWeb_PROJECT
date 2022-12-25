@@ -1975,7 +1975,55 @@ button.mfp-close {
 .swal-overlay--show-modal .swal-modal {
   border-radius: 30px;
 }
+/* ----------------------------COUNT DOWN----------------------------------- */
 
+.countdown{
+  /* width: 100vw;
+  height: 100vh; */
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.timer{
+  border: 2px solid #000000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  justify-content: center;
+  color: #fff;
+  margin-right: 3px;
+  background-color: #000;
+  /* -webkit-border-radius: 10px; */
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.timer span {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+  width: 35px;
+}
+
+.img-rotate-1{
+  margin-left: -155px;
+    position: absolute;
+    transform: rotate(-12deg);
+    margin-top: -41px;
+    height: 100px;
+}
+
+.img-rotate-2{
+  margin-left: -400px;
+    position: absolute;
+    transform: rotate(-1deg);
+    margin-top: 5px;
+    height: 40px;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ Filter ]*/

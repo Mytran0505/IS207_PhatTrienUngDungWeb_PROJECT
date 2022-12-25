@@ -1,7 +1,26 @@
 @extends('main')
  <!-- About Section Start From here -->
 @section('content')
-        
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+        <div class="load">Loading . . . </div>
+    </div>
         	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('/template/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">

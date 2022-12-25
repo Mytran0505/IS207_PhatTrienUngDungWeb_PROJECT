@@ -158,7 +158,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <div class="overlay-modal1 js-hide-modal1"></div>
 
     <div class="container">
-        <div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
+        <div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent b-r-20">
             <button class="how-pos3 hov3 trans-04 js-hide-modal1">
                 <img src="/template/images/icons/icon-close.png" alt="CLOSE">
             </button>
@@ -465,14 +465,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 _html += '</a>'; 
                 _html += '<div class="media-body">';
                 _html += '<h4 class="media-heading">';
-                _html += '<a class="limit-text-2" href="/san-pham/'+pro.id+'-'+pro.name+'.html">'+pro.name+'</a>';
+                _html += '<a class="limit-text-2-search" href="/san-pham/'+pro.id+'-'+pro.name+'.html">'+pro.name+'</a>';
                 _html += '</h4>';
-                _html += '<p class="limit-text-1">'+pro.description+'</p>';       
+                _html += '<p class="limit-text-1-search">'+pro.description+'</p>';       
                 _html += '</div>';
                 _html += '</div>';
             }
             // $('.search-ajax-result').slice(0,3);
-            $('.search-ajax-result').show(3);
+            $('.search-ajax-result').show(100);
             $('.search-ajax-result').html(_html)
             }
         });
@@ -501,7 +501,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 {{--------------COUNT DOWN--------------------- --}}
 <script>
-    var DateExpired = new Date("feb 2,2023 00:00:00").getTime();
+    var DateExpired = new Date("jan 22,2023 00:00:00").getTime();
     setInterval(function () {
       var CurrentDate = new Date().getTime();
       var DayRemaining = DateExpired - CurrentDate;

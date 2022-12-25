@@ -69,6 +69,7 @@ body, .main-menu > li> a, .ltext-102{
     overflow: hidden;
     cursor: pointer;
 }
+
 .single-product .product-img a {
     display: block;
     position: relative;
@@ -88,7 +89,7 @@ body, .main-menu > li> a, .ltext-102{
     display: inline-block;
     font-size: 11px;
     color: #fff;
-    right: 25px;
+    right: -8px;
     top: 0;
     padding: 1px 16px;
     font-weight: 700;
@@ -123,12 +124,20 @@ body, .main-menu > li> a, .ltext-102{
     margin-top: 20px;
 }
 .single-product .product-content h3 a {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     margin: 0;
 }
+
+.single-product .product-content h3 a:hover{
+    color: #717fe0;
+}
+
 .single-product .product-content .product-price {
     margin: 6px 0 0 0;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 18vw;
 }
 .slick-arrow {
     position: absolute;
@@ -152,10 +161,20 @@ body, .main-menu > li> a, .ltext-102{
 }
 
 .slick-prev {
-    left: 0;
+    left: -46px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .slick-next {
-    right: 0;
+    right: -46px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .single-product .product-content .product-price span.old {
     text-decoration: line-through;
@@ -163,7 +182,9 @@ body, .main-menu > li> a, .ltext-102{
     margin-right: 2px;
 }
 .single-product .product-content .product-price span {
-    font-size: 15px;
+
     font-weight: 500;
+    color: rgb(66, 66, 66);
+    font-size: 16px;
 }
 

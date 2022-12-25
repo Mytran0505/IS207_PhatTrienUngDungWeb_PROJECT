@@ -32,5 +32,5 @@ let loader = document.getElementById('loader');
 
 setTimeout(() => {
     loader.remove();
-  }, 1500);
+  }, 700); 
   window.onload = function(setTimeout){}

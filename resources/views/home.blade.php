@@ -109,16 +109,16 @@
 							<img class="img-rotate-1" src="/template/images/FlashSale/item1.png" alt="IMG">
 							{{-- <img class="img-rotate-2" src="/template/images/FlashSale/item2.png" alt="IMG"> --}}
 							<div class="timer">
-							  <span id="days">Days</span>
+							  <span id="days"></span>
 							</div>
 							<div class="timer">
-							  <span id="hours">Hours</span>
+							  <span id="hours"></span>
 							</div>
 							<div class="timer">
-							  <span id="minutes">Minutes</span>
+							  <span id="minutes"></span>
 							</div>
 							<div class="timer">
-							  <span id="seconds">Seconds</span>
+							  <span id="seconds"></span>
 							</div>
 						  </div>
 					</div>
@@ -129,9 +129,9 @@
 					<div class="banner-sales">
 						@foreach($products as $key => $product)
 						<div class="single-product">
-							<div class="product-img" style="width: 250px; height: 200px;">
+							<div class="product-img hov-img0 b-r-20 b-shadow">
 								<a href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name),'-'}}.html">
-									<img class="default-img" style="margin: auto; max-width: 250px; max-height: 200px; width: auto; height: auto;" src="{{ $product->image }}/item1.jpeg" alt="#">
+									<img class="default-img"  src="{{ $product->image }}/item1.jpeg" alt="#">
 									<span class="out-of-stock">GIẢM 10%</span>
 								</a>
 								<div class="button-head">
@@ -143,71 +143,14 @@
 								</div>
 							</div>
 							<div class="product-content">
-								<h3><a style="text-decoration:none; color:black;" href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name),'-'}}.html"><b style="font-size:14px">{{$product->name}}</b></a></h3>
-								<?php $avg_rating = 4?> 
-								@if($avg_rating >= 1)
-									<div class="star-wrapper" style="display: inline-block;">
-									<p style="display:inline-block; font-size:10px; margin-left:10px">{{round($avg_rating, 1)}}</p>	
-																@if($avg_rating > 4.5) <!-- 5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 4) <!-- 4.5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star-half-o s1" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 3.5) <!-- 4 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 3) <!-- 3.5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star-half-o s2" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 2.5) <!-- 3 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 2) <!-- 2.5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star-half-o s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 1.5) <!-- 2 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@elseif($avg_rating > 1) <!-- 1.5 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3"></a>
-																<a href="javascript:void(0)" class="fa fa-star-half-o s3" style="color:gold"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@else <!-- 1 sao -->
-																<a href="javascript:void(0)" class="fa fa-star s1"></a>
-																<a href="javascript:void(0)" class="fa fa-star s2"></a>
-																<a href="javascript:void(0)" class="fa fa-star s3"></a>
-																<a href="javascript:void(0)" class="fa fa-star s4"></a>
-																<a href="javascript:void(0)" class="fa fa-star s5" style="color:gold"></a>
-																@endif		
-																
-													</div>
-								@endif
-								<div class="product-price">
-									<span style="color:red; font-size:17px"><b>{{number_format($product->price_sale).' '.'₫'}}</b></span>
+								<h3>
+									<a class="limit-text-2" style="text-decoration:none;" href="/san-pham/{{ $product->id }}-{{ \Str::slug($product->name),'-'}}.html">
+										{{$product->name}}
+									</a>
+								</h3>
+								
+								<div class="product-price p-b-30">
+									<span style="color:red;"><b>{{number_format($product->price_sale).' '.'₫'}}</b></span>
 									<br>
 									<span class="old">{{number_format($product->price_sale + ($product->price_sale * 0.1)).' '.'₫'}}</span>
 								</div>

@@ -9,6 +9,26 @@
 @endsection
 
 @section('content')
+	<div id="loader">
+		<div class="loader-inner">
+			<div class="loader-line-wrap">
+				<div class="loader-line"></div>
+			</div>
+			<div class="loader-line-wrap">
+				<div class="loader-line"></div>
+			</div>
+			<div class="loader-line-wrap">
+				<div class="loader-line"></div>
+			</div>
+			<div class="loader-line-wrap">
+				<div class="loader-line"></div>
+			</div>
+			<div class="loader-line-wrap">
+				<div class="loader-line"></div>
+			</div>
+		</div>
+		<div class="load">Loading . . . </div>
+	</div>
 <div class="bg0 m-t-23 p-b-140 p-t-80">
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">

@@ -1,6 +1,26 @@
 @extends('main')
 
 @section('content')
+<div id="loader">
+	<div class="loader-inner">
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+	</div>
+	<div class="load">Loading . . . </div>
+</div>
 <form action="" class="bg0 p-t-130 p-b-85" method="post">
 		<div class="container">
 			@include('admin.alert')

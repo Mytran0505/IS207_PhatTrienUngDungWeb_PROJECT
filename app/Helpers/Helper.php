@@ -2,6 +2,7 @@
 
 
 namespace App\Helpers;
+
 use Illuminate\Support\Str;
 
 class Helper {
@@ -46,6 +47,9 @@ class Helper {
         if($end_date < $today){
             return '<span class = "btn btn-danger btn-sm"> <i class="fas fa-times"></i> </span>';
         }
+        // if($end_date >= $today) {
+        //     return '<span class = "btn btn-success btn-sm"> <i class="fas fa-check"></i> </span>';
+        // }
         return $active == 0 ? '<span class = "btn btn-danger btn-sm"> <i class="fas fa-times"></i> </span>' 
         : '<span class = "btn btn-success btn-sm"> <i class="fas fa-check"></i> </span>';
     }

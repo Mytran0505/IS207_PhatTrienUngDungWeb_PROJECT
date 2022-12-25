@@ -18,13 +18,11 @@
         @else
             @if (count($product) > 0)
             <div class="header-cart-content p-l-1 flex-w js-pscroll">
-                <!-- @php $sumPriceCart = 0; @endphp -->
                 <ul class="header-cart-wrapitem w-full cart-left">
                     
                         <!-- @foreach($product as $key => $product)
                             @php 
-                                $price = \App\Helpers\Helper::price($product->original_price, $product->price_sale); 
-                                $sumPriceCart += $product->price_sale != 0 ? $product->price_sale : $product->original_price;
+                                $price = \App\Helpers\Helper::price($product->original_price, $product->price_sale);
                             @endphp -->
                             <!-- Kiem tra gia giam != 0 thi lay gia giam con = 0 thi lay gia goc -->
                             <!-- Kiem tra gia ban != 0 thi lay gia ban con = 0 thi lay gia mua -->

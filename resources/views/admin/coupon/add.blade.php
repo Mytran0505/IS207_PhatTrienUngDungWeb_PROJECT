@@ -31,18 +31,23 @@
                     <div class="form-group">
                         <label>Danh mục</label>
                         <select class="form-control" name="menu_id">
+                            <option value="">Chọn danh mục</option>
                             @foreach($menus as $menu)
                                 <option value="{{ $menu->id }}">{{ $menu->name }}</option>
                             @endforeach
                         </select>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Sản phẩm</label>
-                        <select class="form-control" name="product_id">
-                            <option value=""></option>
-                        </select>
+                        <input class="form-control" name="product_id" list = "sanpham" placeholder="Chọn sản phẩm">
+                        <datalist id="sanpham">
+                            @foreach ($products as $product)
+                                    <option value="{{ $product->id }}">{{ $product->name }}</option>
+                            @endforeach
+                        </datalist>
                     </div>
                 </div>
             </div>

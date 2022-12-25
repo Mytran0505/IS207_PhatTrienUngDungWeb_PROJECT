@@ -5,12 +5,17 @@ namespace App\Http\Services\Coupon;
 
 use App\Models\Coupon;
 use App\Models\Menu;
+use App\Models\Product;
 use Illuminate\Support\Facades\Session;
 
 class CouponService {
     public function getMenu()
     {
-        return Menu::where('active', 1)->get();
+        return Menu::with('products')->where('active', 1)->get();
+    }
+
+    public function getProduct() {
+        return Product::where('active', 1)->get();
     }
 
     protected function isValidDate($request) {
@@ -23,6 +28,10 @@ class CouponService {
 
     public function get() {
         return Coupon::with('menu')->orderByDesc('id')->get();
+    }
+
+    public function getCoupon() {
+        return Coupon::with('menu')->with('product')->where('active', 1)->where('status', 'Còn hạn')->get();
     }
 
     public function insert($request) {
@@ -56,4 +65,6 @@ class CouponService {
         }
         return true;
     }
+
+    
 }

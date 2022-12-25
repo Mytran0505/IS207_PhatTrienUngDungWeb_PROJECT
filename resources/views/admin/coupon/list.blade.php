@@ -9,6 +9,7 @@
             <th>Loại khuyến mãi</th>
             <th>Số tiền</th>
             <th>Danh mục</th>
+            <th>Sản phẩm</th>
             <th>Kích hoạt</th>
             <th>Ngày bắt đầu</th>
             <th>Ngày kết thúc</th>
@@ -23,7 +24,10 @@
                 <td>{{ $coupon->name }}</td>
                 <td>{{ $coupon->type }}</td>
                 <td>{{ number_format($coupon->number, 0, '', '.') }}</td>
-                <td>{{ $coupon->menu->name }}</td>
+                <?php if($coupon->menu_id) { ?>
+                <td>{{ $coupon->menu->name }}</td> <?php } else {?> <td></td> <?php } ?>
+                <?php if($coupon->product_id) { ?>
+                <td>{{ $coupon->product->name }}</td> <?php } else {?> <td></td> <?php } ?>
                 <td>{!! \App\Helpers\Helper::activeDate($coupon->active, $coupon->end_date, $today) !!}</td>
                 <td>{{ $coupon->start_date }}</td>
                 <td>{{ $coupon->end_date }}</td>

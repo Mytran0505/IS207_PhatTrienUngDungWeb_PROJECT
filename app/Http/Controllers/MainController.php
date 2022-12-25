@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\Coupon\CouponService;
 use Illuminate\Http\Request;
 
 use App\Http\Services\Slider\SliderService;
@@ -13,11 +14,12 @@ class MainController extends Controller
     protected $menu;
     protected $product;
     public function __construct(SliderService $slider, MenuService $menu,
-    ProductService $product)
+    ProductService $product, CouponService $coupon)
     {
         $this->slider = $slider;
         $this->menu = $menu;
         $this->product = $product;
+        $this->coupon = $coupon;
     }
 
     public function index() {
@@ -25,7 +27,8 @@ class MainController extends Controller
             'title' => 'Sportwearshop - Cửa hàng thể thao',
             'slider' => $this->slider->show(),
             'menu' => $this->menu->show(),
-            'products' => $this->product->get()
+            'products' => $this->product->get(),
+            'coupons' => $this->coupon->getCoupon()
         ]);
     }
 

@@ -415,7 +415,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         $('.js-addcart-detail-quick').each(function(){
 			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
 			$(this).on('click', function(){
-				swal("Đã thêm sản phẩm vào giỏ hàng", "Bạn có thể tiếp tục mua sắm", "success");
+				// swal("Đã thêm sản phẩm vào giỏ hàng", "Bạn có thể tiếp tục mua sắm", "success");
+                swal({
+                        title: "Đã thêm sản phẩm vào giỏ hàng",
+                        text: "Bạn có thể mua giỏ hàng tiếp hoặc tới giỏ hàng để tiến hành thanh toán",
+                        icon: "success",
+                        buttons: ["Tiếp tục mua hàng", "Xem giỏ hàng"]
+                    }).then(function(isConfirm) {
+                        if(isConfirm){
+                            window.location ="{{url('/carts')}}";
+                        }
+                        else {
+                            window.location = window.location.href;
+                        }
+                    });
 			});
 		});
 	</script>

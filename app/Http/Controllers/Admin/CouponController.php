@@ -29,6 +29,7 @@ class CouponController extends Controller
         return view('admin.coupon.add', [
             'title' => 'Thêm chương trình khuyến mãi',
             'menus' => $this->couponService->getMenu(),
+            'products' => $this->couponService->getProduct()
         ]);
     }
 
@@ -41,7 +42,8 @@ class CouponController extends Controller
         return view('admin.coupon.edit', [
             'title' => 'Chỉnh sửa khuyến mãi',
             'coupon' => $coupon,
-            'menus' => $this->couponService->getMenu()
+            'menus' => $this->couponService->getMenu(),
+            'products' => $this->couponService->getProduct()
         ]);
     }
 

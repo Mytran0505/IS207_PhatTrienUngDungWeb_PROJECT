@@ -179,9 +179,9 @@ body, .main-menu > li> a, .ltext-102{
 .single-product .product-content .product-price span.old {
     text-decoration: line-through;
     opacity: .6;
+    margin-right: 38px;
 }
 .single-product .product-content .product-price span {
-
     font-weight: 500;
     color: rgb(66, 66, 66);
     font-size: 16px;

@@ -31,7 +31,7 @@ class CouponService {
     }
 
     public function getCoupon() {
-        return Coupon::with('menu')->with('product')->where('active', 1)->where('status', 'Còn hạn')->get();
+        return Coupon::with('menu')->with('product')->orderByDesc('id')->where('active', 1)->where('status', 'Còn hạn')->get();
     }
 
     public function insert($request) {

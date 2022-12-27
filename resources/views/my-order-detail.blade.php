@@ -36,7 +36,7 @@
             $CustomerId = Session::get('customerId');
             $phone = Session::get('phone');
             $address = Session::get('address');
-			$name = Session::get('name');
+			$name = Session::get('customerName');
             $avt = "default-user-icon.png";
 	?>	
  
@@ -114,9 +114,9 @@
 								<tr>
 									<td><img style="margin: auto; max-width: 60px; max-height: 60px; width: auto; height: auto; " src="{{$item->product->image}}/item1.jpeg" alt="IMG"></td>
 									<td><a href="/san-pham/{{ $item->product_id }}-{{ \Str::slug($item->product->name),'-'}}.html" style="text-decoration:none; font-weight:bold">{{$item->product->name}}<br></a>
-									<td>{{number_format($item->product->original_price, 0, " ", ".").' ₫'}}</td>
+									<td>{{number_format($item->unit_price, 0, " ", ".").' ₫'}}</td>
 									<td>x{{$item->amount}}</td>
-									<td style="text-align: right;">{{number_format($item->original_price * $item->amount, 0, " ", ".").' ₫'}}</td>
+									<td style="text-align: right;">{{number_format($item->unit_price * $item->amount, 0, " ", ".").' ₫'}}</td>
 								</tr>
 								@endforeach
 								<tr>

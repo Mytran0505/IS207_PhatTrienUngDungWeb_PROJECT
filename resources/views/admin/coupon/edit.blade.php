@@ -41,10 +41,10 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Sản phẩm</label>
-                        <input class="form-control" name="product_id" list = "sanpham" placeholder="Chọn sản phẩm">
+                        <input class="form-control" name="product_id" list = "sanpham" placeholder="Chọn sản phẩm" value="{{ $coupon->product_id ? $coupon->product_id : '' }}">
                         <datalist id="sanpham">
                             @foreach ($products as $product)
-                                    <option value="{{ $product->id }}"{{ $coupon->product_id == $product->id ? 'selected' : '' }}>{{ $product->name }}</option>
+                                    <option value="{{ $product->id }}">{{ $product->name }}</option>
                             @endforeach
                         </datalist>
                     </div>

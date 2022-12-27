@@ -80,7 +80,7 @@ class CartService{
             return [];
 
         $productId = array_keys($carts);
-        return Product::select('id', 'name', 'original_price', 'price_sale', 'image')
+        return Product::select('id', 'name', 'menu_id', 'original_price', 'price_sale', 'image')
             ->where('active', 1)
             ->whereIn('id', $productId)
             ->get();
@@ -172,8 +172,8 @@ class CartService{
             $data[] = [
                 'id' => $bill_id->id,
                 'product_id' => $product->id,
-                // 'pty' => $carts[$product->id],
-                'amount' => $carts[$product->id]
+                'amount' => $carts[$product->id],
+                'unit_price' => $product->price_sale
             ];
         }
         

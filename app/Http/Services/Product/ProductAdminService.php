@@ -16,12 +16,12 @@ class ProductAdminService {
 
     protected function isValidPrice($request) {
         if($request->input('original_price') !== 0 && $request->input('price_sale') !== 0
-            && $request->input('price_sale') >= $request->input('original_price')){
-                Session::flash('error', 'Giá giảm phải nhỏ hơn giá gốc');
+            && $request->input('original_price') >= $request->input('price_sale')){
+                Session::flash('error', 'Giá vốn phải nhỏ hơn giá bán');
                 return false;
         }
         if($request->input('price_sale') !== 0 && (int)$request->input('original_price') == 0) {
-            Session::flash('error', 'Vui lòng nhập giá gốc');
+            Session::flash('error', 'Vui lòng nhập giá vốn');
             return false;
         }
         return true;

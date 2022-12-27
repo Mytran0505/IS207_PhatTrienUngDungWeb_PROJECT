@@ -46,9 +46,25 @@
 								<tbody>
 								@if (count($products)!=0)
 									@foreach($products as $key => $product)
-
 										@php
 										$price = $product->price_sale != 0 ? $product->price_sale : $product->original_price;
+										if(count($coupons) > 0){
+											foreach ($coupons as $key => $coupon){
+												if($coupon->menu_id){
+													if($product->menu_id == $coupon->menu_id){
+														$price = $product->price_sale - ($product->price_sale * ($coupon->number/100));
+													}
+												}
+												else{
+													if($product->id == $coupon->product_id){
+														$price = $product->price_sale - ($coupon->product->price_sale * ($coupon->number/100));
+													}
+												}
+											}	
+										}
+										else{
+											$price = $product->price_sale != 0 ? $product->price_sale : $product->original_price;
+										}
 										$priceEnd = $price * $carts[$product->id];
 										$total += $priceEnd;
 										@endphp
@@ -125,7 +141,7 @@
 										$cusAddress = Session::get('address');
 									@endphp
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="name" placeholder="Tên Khách Hàng" value="{{ $CustomerId ? Session::get('name') : ''}}">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="name" placeholder="Tên Khách Hàng" value="{{ $CustomerId ? Session::get('customerName') : ''}}">
 									</div>
 
 									<div class="bor8 bg0 m-b-12">
@@ -159,6 +175,23 @@
 								<input type="hidden" class="mtext-110 cl2" name="total" value="{{ $total }}">
 									{{number_format($total, 0, '', '.')}}₫
 							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" style="background-color: #333;"><h4 style="color: white;"><b>Chọn hình thức thanh toán</b></h4></div>
+									<div class="panel-body" style="font-size: 12px;">
+										<div class="form-group cheque">
+											<div class="ps-radio">
+											<input type="radio"  id="rdo01" name="payment" value="Thanh toán khi giao hàng" checked>
+											<label for="rdo01"><img src="/template/images//icons/thanh-toan-khi-nhan-hang.PNG" alt="#">Thanh toán khi giao hàng</label>
+											</div>
+										</div>
+										<div class="form-group paypal">
+											<div class="ps-radio ps-radio--inline">
+											<input type="radio" data-toggle="modal" data-target="#exampleModal" name="payment" id="rdo02" value="Chuyển khoản online">
+											<label for="rdo02"><img style="max-height: 40px; max-width: 40px; width: auto; height: auto;" src="/template/images/icons/thanh-toan-online.PNG" alt="#">Chuyển khoản online</label>
+											</div>
+										</div>
+									</div>
+							</div>
 						</div>
 						<?php
 						$CustomerId= Session::get('customerId');
@@ -178,6 +211,39 @@
 					</div>
 				</div>
 			</div>
+			<section class="shop-services section home pt-100 pb-100">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- Start Single Service -->
+							<div class="single-service">
+								<i class="fa fa-refresh"></i>
+								<h4>Miễn phí đổi trả</h4>
+								<p>Trong vòng 30 ngày</p>
+							</div>
+							<!-- End Single Service -->
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- Start Single Service -->
+							<div class="single-service">
+								<i class="fa fa-lock"></i>
+								<h4>Bảo mật tuyệt đối</h4>
+								<p>100% thanh toán an toàn</p>
+							</div>
+							<!-- End Single Service -->
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- Start Single Service -->
+							<div class="single-service">
+								<i class="fa fa-tag"></i>
+								<h4>Giá tốt nhất</h4>
+								<p>Quà tặng và ưu đãi hấp dẫn</p>
+							</div>
+							<!-- End Single Service -->
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 	</form>
 @endsection

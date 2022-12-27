@@ -169,11 +169,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                         <div class="wrap-slick3 flex-sb flex-w">
                             <div class="wrap-slick3-dots"></div>
                             <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
-
+                            {{-- img main --}}
                             <div class="slick3 gallery-lb">
                                 <div class="item-slick3" data-thumb="/template/images/product-collection17/item1.jpeg">
-                                    <div class="wrap-pic-w pos-relative">
-                                        <img src="/template/images/product-collection17/item1.jpeg" alt="IMG-PRODUCT">
+                                    <div class="wrap-pic-w pos-relative" id="quick-img1">
+                                        
 
                                         <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/template/images/product-collection17/item1.jpeg">
                                             <i class="fa fa-expand"></i>
@@ -182,8 +182,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 </div>
 
                                 <div class="item-slick3" data-thumb="/template/images/product-collection17/item2.jpeg">
-                                    <div class="wrap-pic-w pos-relative">
-                                        <img src="/template/images/product-collection17/item2.jpeg" alt="IMG-PRODUCT">
+                                    <div class="wrap-pic-w pos-relative" id="quick-img2">
+                                        {{-- <img src="/template/images/product-collection17/item2.jpeg" alt="IMG-PRODUCT"> --}}
 
                                         <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/template/images/product-collection17/item1.jpeg">
                                             <i class="fa fa-expand"></i>
@@ -192,8 +192,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 </div>
 
                                 <div class="item-slick3" data-thumb="/template/images/product-collection17/item3.jpeg">
-                                    <div class="wrap-pic-w pos-relative">
-                                        <img src="/template/images/product-collection17/item3.jpeg" alt="IMG-PRODUCT">
+                                    <div class="wrap-pic-w pos-relative" id="quick-img3">
+                                        {{-- <img src="/template/images/product-collection17/item3.jpeg" alt="IMG-PRODUCT"> --}}
 
                                         <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/template/images/product-collection17/item3.jpeg">
                                             <i class="fa fa-expand"></i>
@@ -207,26 +207,26 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 
                 <div class="col-md-6 col-lg-5 p-b-30">
                     <div class="p-r-50 p-t-5 p-lr-0-lg">
-                        <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                        <h4 class="mtext-105 cl2 js-name-detail p-b-14" id="quick-name">
                             Quần short chạy bộ Kiprun Light cho nam - Đen
                         </h4>
 
-                        <span class="mtext-106 cl2">                       
+                        <span class="mtext-106 cl2" id="quick-price">                       
                             200,000₫
                         </span>
 
-                        <p class="stext-102 cl3 p-t-23">
+                        <p class="stext-102 cl3 p-t-23" id="quick-desc">
                             Quần short chạy bộ Kiprun Light
                         </p>
                         
                         <!--  -->
                         <div class="p-t-33">
-                            {{--<div class="flex-w flex-r-m p-b-10">
+                            <div class="flex-w flex-r-m p-b-10">
                                 <div class="size-203 flex-c-m respon6">
                                     Size
                                 </div>
 
-                                 <div class="size-204 respon6-next">
+                                <div class="size-204 respon6-next">
                                     <div class="rs1-select2 bor8 bg0">
                                         <select class="js-select2" name="time">
                                             <option>Choose an option</option>
@@ -240,7 +240,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 </div>
                             </div>
 
-                            <div class="flex-w flex-r-m p-b-10">
+                            {{-- <div class="flex-w flex-r-m p-b-10">
                                 <div class="size-203 flex-c-m respon6">
                                     Color
                                 </div>
@@ -272,7 +272,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                         </div>
                                     </div>
                                     <input type="hidden" name="product_id">
-                                    <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail-quick">
+                                    <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
                                         Thêm vào giỏ hàng
                                     </button>
                                 </div>
@@ -299,6 +299,36 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <a  class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
                                 <i class="fa fa-google-plus"></i>
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" style="top: 15%">
+        <div class="modal-content" style="border-radius: 10px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
+            </div>
+            <div class="modal-body" style="margin: 8px">
+                <div class="row no-gutters" style="margin-top: -30px">
+                    <div class="col-lg-12 offset-lg-1 col-12">
+                        <h4 style="margin-top:50px;font-size:14px; font-weight:500; color:orange; display:block; margin-bottom:15px;">Sportwearshop</h4>
+                        <h3 style="font-size:30px;color:#333; text-align:center;">Chuyển khoản online<h3>
+                        <div style="text-align:center; background-color: #fbfbfb; border-radius: 8px; padding:20px;margin-bottom:20px">
+                            <p>Quý khách vui lòng chuyển khoản với nội dung ghi rõ<br>
+                            <b>Tên & Số Điện Thoại người</b> nhận hàng:<br>
+                            Ví dụ: <b>A THANH 0988888888</b></p>
+                        </div>
+                        <b style="font-size:18px;">Chuyển qua ngân hàng</b>
+                        <div style="border: 2px solid #fbfbfb; padding: 10px; border-radius:10px;margin-top:10px">
+                            <p style="line-height: 3;">
+                            <b>Vietcombank - Ngân Hàng Ngoại Thương Việt Nam</b> <br>
+                            Chủ tài khoản: NGUYEN THI MY TRAN <br>
+                            Số tài khoản: <b>00110020520322</b> <br>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -409,6 +439,32 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     });
                 }
             });
+        });
+
+        $('.js-show-modal1').on('click',function(e){
+            e.preventDefault();
+            var product_id = $(this).data('id_product');
+            var _token = $('input[name="_token"]').val();
+            $.ajax({
+                url: "{{url('/quickview')}}",
+                method: "POST",
+                dataType: "JSON",
+                data: {product_id:product_id, _token:_token},
+                success: function(data) {
+                    $('#quick-img1').html(data.product_image1);
+                    $('#quick-img2').html(data.product_image2);
+                    $('#quick-img3').html(data.product_image3);
+                    $('#quick-name').html(data.product_name);
+                    $('#quick-desc').html(data.product_desc);
+                    $('#quick-price').html(data.product_price);
+                    $('.js-modal1').addClass('show-modal1');
+                }
+            });
+            // $('.js-modal1').addClass('show-modal1');
+        });
+
+        $('.js-hide-modal1').on('click',function(){
+            $('.js-modal1').removeClass('show-modal1');
         });
         
 

@@ -95,15 +95,64 @@
 						<h4 class="mtext-105 cl2 js-name-detail p-b-14">
 							{{$title}}
 						</h4>
-
-						<span class="mtext-106 cl2">
+						<?php if(count($coupons) > 0) { ?>
+							@php
+								$price = \App\Helpers\Helper::price($product->original_price, $product->price_sale);
+								foreach($coupons as $key => $coupon){
+									if($coupon->menu_id){
+										if($product->menu_id == $coupon->menu_id){
+											$price = number_format($product->price_sale - ($product->price_sale * ($coupon->number/100)));
+										}
+									}
+									else{
+										if($product->id == $coupon->product_id){
+											$price = number_format($product->price_sale - ($coupon->product->price_sale * ($coupon->number/100)));
+										}
+									}
+								}
+							@endphp
+							<div class="product-price priceList">
+								<span style="color:#000; font-size: 18px;">{{$price}}₫</span>
+								@foreach ($coupons as $key => $coupon)
+									@if($coupon->menu_id)
+										@if ($product->menu_id == $coupon->menu_id)
+											<span class="old">{{number_format($product->price_sale).' '.'₫'}}</span>
+										@endif
+									@endif
+									@if ($coupon->product_id)
+										@if ($product->id == $coupon->product_id)
+											<span class="old">{{number_format($product->price_sale).' '.'₫'}}</span>
+										@endif
+									@endif
+								@endforeach
+							</div>
+							<?php } 
+						else {?>
+							<span class="stext-sub-105 cl13">
 								{!! \App\Helpers\Helper::price($product->original_price,$product->price_sale)!!}₫
-						</span>
-
+							</span>
+						<?php } ?>
 						<p class="stext-102 cl3 p-t-23">
 							{{$product->description}}	
 						</p>
-						
+						<div class="flex-w flex-r-m p-b-10 m-t-20 m-l-22">
+							<div class="size-203 flex-c-m respon6" style="font-size: 14px">
+								Size
+							</div>
+
+							<div class="size-204 respon6-next">
+								<div class="rs1-select2 bor8 bg0">
+									<select class="js-select2" name="time">
+										<option>Choose an option</option>
+										<option>Size S</option>
+										<option>Size M</option>
+										<option>Size L</option>
+										<option>Size XL</option>
+									</select>
+									<div class="dropDownSelect2"></div>
+								</div>
+							</div>
+						</div>
 							<div class="flex-w flex-r-m p-b-10">
 								<div class="size-204 flex-w flex-m respon6-next">
 									<form>

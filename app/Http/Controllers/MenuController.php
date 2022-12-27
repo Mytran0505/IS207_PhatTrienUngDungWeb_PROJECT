@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\Coupon\CouponService;
 use Illuminate\Http\Request;
 
 use App\Http\Services\Menu\MenuService;

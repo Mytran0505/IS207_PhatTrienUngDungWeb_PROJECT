@@ -30,14 +30,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="menu">Giá Gốc</label>
+                        <label for="menu">Giá Vốn</label>
                         <input type="number" name="original_price" value="{{ $product->original_price }}"  class="form-control" >
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="menu">Giá Giảm</label>
+                        <label for="menu">Giá Bán</label>
                         <input type="number" name="price_sale" value="{{ $product->price_sale }}"  class="form-control" >
                     </div>
                 </div>

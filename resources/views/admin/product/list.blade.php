@@ -7,8 +7,8 @@
             <th style="width: 50px">ID</th>
             <th>Tên Sản Phẩm</th>
             <th>Danh Mục</th>
-            <th>Giá Gốc</th>
-            <th>Giá Khuyến Mãi</th>
+            <th>Giá Vốn</th>
+            <th>Giá Bán</th>
             <th>Active</th>
             <th>Update</th>
             <th style="width: 100px">&nbsp;</th>

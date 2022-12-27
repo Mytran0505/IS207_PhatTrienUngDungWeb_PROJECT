@@ -26,7 +26,7 @@
 
             @foreach($cthds as $key => $cthd)
                 @php
-                $total_money = $cthd->amount * $cthd->product->price_sale;
+                $total_money = $cthd->amount * $cthd->unit_price;
                 $total += $total_money;
                 @endphp
             <tr>
@@ -36,7 +36,7 @@
                     </div>
                 </td>
                 <td class="column-2">{{ $cthd->product->name }}</td>
-                <td class="column-3">{{ number_format($cthd->product->price_sale, 0, '', '.') }}</td>
+                <td class="column-3">{{ number_format($cthd->unit_price, 0, '', '.') }}</td>
                 <td class="column-4">{{ $cthd->amount }}</td>
                 <td class="column-5">{{ number_format($total_money, 0, '', '.') }}</td>
             </tr>

@@ -112,5 +112,8 @@ Route::post('register-checkout', [App\Http\Controllers\CartController::class, 'r
 Route::get('/contact.html', [App\Http\Controllers\ContactController::class, 'contactus']);
 Route::get('/danh-muc/contact.html', [App\Http\Controllers\ContactController::class, 'contactus']);
 
+Route::post('/quickview', [App\Http\Controllers\ProductController::class, 'quickview']);
+
+
 
 

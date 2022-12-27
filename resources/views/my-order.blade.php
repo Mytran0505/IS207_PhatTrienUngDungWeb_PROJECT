@@ -29,7 +29,7 @@
 	<?php   
             $CustomerId = Session::get('customerId');
             $avt = "user.png";
-			$name = Session::get('name');
+			$name = Session::get('customerName');
 	?>	
  
 	<!-- Start Contact -->

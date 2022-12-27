@@ -176,14 +176,96 @@ body, .main-menu > li> a, .ltext-102{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-.single-product .product-content .product-price span.old {
+.product-price span.old {
     text-decoration: line-through;
     opacity: .6;
     margin-right: 38px;
 }
-.single-product .product-content .product-price span {
+.product-price span {
     font-weight: 500;
     color: rgb(66, 66, 66);
     font-size: 16px;
+}
+.priceList {
+    margin: 6px 0 0 0;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 18vw;
+}
+.shop-services.home {
+    padding: 60px 0;
+    background: #fff;
+}
+.shop-services .single-service {
+    position: relative;
+    padding-left: 65px;
+}
+.shop-services .single-service i {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #333;
+    background: transparent;
+    border-radius: 100%;
+    display: block;
+    font-size: 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.panel {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+.panel-default {
+    border-color: #ddd;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.panel-body {
+    padding: 15px;
+}
+.ps-radio label {
+    position: relative;
+    padding-left: 30px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    color: #737373;
+    font-weight: 500;
+    cursor: pointer;
+}
+.ps-radio {
+    position: relative;
+    display: flex;
+}
+.ps-radio label:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    height: 16px;
+    width: 16px;
+    z-index: 10;
+    background-color: #fff;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+.ps-radio--inline {
+    display: flex;
+    margin-right: 20px;
 }
 

@@ -36,11 +36,28 @@
                                     <a href="#" class="limit-text-2 header-cart-item-name m-b-10 hov-cl1 trans-04 ">
                                         {{$product->name}}
                                     </a>
-
-                                    <span class="header-cart-item-info">
-                                        {{$price}}₫
-                                        <input class="quantity-cart" value="x{{ $carts[$product->id] }}" disabled>
-                                    </span>
+                                    <?php if(count($coupons) > 0) { ?>
+                                        @foreach ($coupons as $key => $coupon)
+                                            @if($coupon->menu_id)
+                                                @if($product->menu_id == $coupon->menu_id)
+                                                    <?php $price = number_format($product->price_sale - ($product->price_sale * ($coupon->number/100))) ?>
+                                                @endif
+                                            @else
+                                                @if($product->id == $coupon->product_id)
+                                                    <?php $price = number_format($product->price_sale - ($coupon->product->price_sale * ($coupon->number/100))) ?>
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                        <div class="product-price p-b-30 priceList">
+                                            <span style="color:#888;">{{ $price }}₫</span>
+                                        </div>
+                                        <?php } 
+                                        else {?>
+                                            <span class="header-cart-item-info">
+                                                {{$price}}₫
+                                                <input class="quantity-cart" value="x{{ $carts[$product->id] }}" disabled>
+                                            </span>
+                                    <?php } ?>
                                 </div></li>
                         <!-- @endforeach -->
                 </ul>

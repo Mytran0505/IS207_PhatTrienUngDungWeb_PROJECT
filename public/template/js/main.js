@@ -268,26 +268,11 @@
     
     /*==================================================================
     [ Show modal1 ]*/
-    $('.js-show-modal1').on('click',function(e){
-        e.preventDefault();
-        $('.js-modal1').addClass('show-modal1');
-        $(".js-show-modal1").attr("data-product");
-    });
     // $('.js-show-modal1').on('click',function(e){
-    //     var product = $(this).data('product');
-    //     $.ajax({
-    //         url: "{{url('/quickview')}}",
-    //         method: "GET",
-    //         data: {product:product},
-    //         success: function(data) {
-
-    //         }
-    //     });
+    //     e.preventDefault();
+    //     $('.js-modal1').addClass('show-modal1');
     // });
-
-    $('.js-hide-modal1').on('click',function(){
-        $('.js-modal1').removeClass('show-modal1');
-    });
+   
 
 
 

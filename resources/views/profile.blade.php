@@ -24,7 +24,7 @@
     <?php   
             $CustomerId = Session::get('customerId');
             $avt = "user.png";
-            $name = Session::get('name');
+            $name = Session::get('customerName');
 	?>												
 	<!-- Start Contact -->
 	<div class="row gutters-sm pt-20 pl-60 pr-80 pb-80">

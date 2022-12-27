@@ -3,6 +3,7 @@
 namespace App\Http\View\Composers;
 
 use App\Models\Menu;
+use App\Models\Coupon;
 use Illuminate\View\View;
  
 class MenuComposer

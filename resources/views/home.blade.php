@@ -127,9 +127,9 @@
 			<div class="row">
 				<div class="col-12" style="background-color: white;border-radius: 30px">
 					<div class="banner-sales">
-						@foreach($products as $key => $product)
-								@foreach($coupons as $key => $coupon)
-									@if($coupon->menu_id)
+						@foreach($coupons as $key => $coupon)
+							@if($coupon->menu_id)
+								@foreach($products as $key => $product)
 										@if($product->menu_id == $coupon->menu_id)
 											<div class="single-product">
 												<div class="product-img hov-img0 b-r-20 b-shadow">
@@ -146,42 +146,40 @@
 													</h3>
 													
 													<div class="product-price p-b-30">
-														<span style="color:red;"><b>{{number_format($product->price_sale).' '.'₫'}}</b></span>
+														<span style="color:red;"><b>{{number_format($product->price_sale - ($product->price_sale * ($coupon->number/100))).' '.'₫'}}</b></span>
 														<br>
-														<span class="old">{{number_format($product->price_sale + ($product->price_sale * ($coupon->number/100))).' '.'₫'}}</span>
+														<span class="old">{{number_format($product->price_sale).' '.'₫'}}</span>
 													</div>
 												</div>
 											</div>
 											<input type="hidden" value="{{ $coupon->end_date }}" id="end_date">
 								<!-- End Single Product -->
 										@endif
-									@else
-									<div class="single-product">
-										<div class="product-img hov-img0 b-r-20 b-shadow">
-											<a href="/san-pham/{{ $coupon->product->id }}-{{ \Str::slug($coupon->product->name),'-'}}.html">
-												<img class="default-img"  src="{{ $coupon->product->image }}/item1.jpeg" alt="#">
-												<span class="out-of-stock">GIẢM {{ $coupon->number }}%</span>
-											</a>
-										</div>
-										<div class="product-content">
-											<h3>
-												<a class="limit-text-2" style="text-decoration:none;" href="/san-pham/{{ $coupon->product->id }}-{{ \Str::slug($coupon->product->name),'-'}}.html">
-													{{$coupon->product->name}}
-												</a>
-											</h3>
-											
-											<div class="product-price p-b-30">
-												<span style="color:red;"><b>{{number_format($coupon->product->price_sale).' '.'₫'}}</b></span>
-												<br>
-												<span class="old">{{number_format($coupon->product->price_sale + ($coupon->product->price_sale * ($coupon->number/100))).' '.'₫'}}</span>
-											</div>
-										</div>
+								@endforeach
+							@else
+							<div class="single-product">
+								<div class="product-img hov-img0 b-r-20 b-shadow">
+									<a href="/san-pham/{{ $coupon->product->id }}-{{ \Str::slug($coupon->product->name),'-'}}.html">
+										<img class="default-img"  src="{{ $coupon->product->image }}/item1.jpeg" alt="#">
+										<span class="out-of-stock">GIẢM {{ $coupon->number }}%</span>
+									</a>
+								</div>
+								<div class="product-content">
+									<h3>
+										<a class="limit-text-2" style="text-decoration:none;" href="/san-pham/{{ $coupon->product->id }}-{{ \Str::slug($coupon->product->name),'-'}}.html">
+											{{$coupon->product->name}}
+										</a>
+									</h3>
+									
+									<div class="product-price p-b-30">
+										<span style="color:red;"><b>{{number_format($coupon->product->price_sale - ($coupon->product->price_sale * ($coupon->number/100))).' '.'₫'}}</b></span>
+										<br>
+										<span class="old">{{number_format($coupon->product->price_sale ).' '.'₫'}}</span>
 									</div>
-									<input type="hidden" value="{{ $coupon->end_date }}" id="end_date">
-									@endif
-							@endforeach
-							
-							
+								</div>
+							</div>
+							<input type="hidden" value="{{ $coupon->end_date }}" id="end_date">
+							@endif
 						@endforeach
 					</div>
 				</div>

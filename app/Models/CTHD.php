@@ -12,7 +12,8 @@ class CTHD extends Model
     protected $fillable = [
         'id',
         'product_id',
-        'amount'
+        'amount',
+        'unit_price'
     ];
 
     public function product() {

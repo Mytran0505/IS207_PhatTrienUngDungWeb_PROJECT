@@ -20,7 +20,7 @@ class CouponController extends Controller
     public function index() {
         return view('admin.coupon.list', [
             'title' => 'Danh sách chương trình khuyến mãi',
-            'coupons' => $this->couponService->get(),
+            'coupon' => $this->couponService->get(),
             'today' => Carbon::now('Asia/Ho_Chi_Minh')->format('Y-m-d')
         ]);
     }

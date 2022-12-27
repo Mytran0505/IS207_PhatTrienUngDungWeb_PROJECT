@@ -133,11 +133,11 @@ class OrderController extends Controller
                     <td>'. $ct->product->id .'</td>
                     <td>'. $ct->product->name .'</td>
                     <td>'. $ct->amount .'</td>
-                    <td>'. $ct->product->price_sale .'</td>
-                    <td>'. $ct->product->price_sale * $ct->amount .'</td>
+                    <td>'. $ct->unit_price .'</td>
+                    <td>'. $ct->unit_price * $ct->amount .'</td>
                 </tr>
             ';
-            $total += $ct->product->price_sale * $ct->amount;
+            $total += $ct->unit_price * $ct->amount;
         }
 
         $output .= '

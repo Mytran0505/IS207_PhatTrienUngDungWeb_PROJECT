@@ -44,6 +44,9 @@ class OrderShipped extends Mailable
     {
         return new Content(
             view: 'mail.success',
+            with: [
+                'title' => 'Xác nhận đặt hàng',
+            ],
         );
     }
 

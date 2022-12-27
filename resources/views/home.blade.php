@@ -189,7 +189,7 @@
 
 
 	<!-- Product -->
-	<section class="bg0 p-t-23 p-b-140">
+	<section class="bg0 p-t-23">
 		<div class="container p-t-10">
 			{{-- <div class="p-b-10">
 				<h3 class="ltext-103 cl5 tquan">
@@ -273,10 +273,47 @@
 		<!-- Load more -->
 			<div class="flex-c-m flex-w w-full p-t-45" id ="button-loadMore">
 				<input type = "hidden" value ="1" id ="page">
-				<a onclick="loadMore()" class="loadmore b-r-15">
+				<a class="b-r-15 loadmore" href="/all-product.html" class="loadmore b-r-15">
 					Xem thêm
 				</a>
 			</div>
+		</div>
+	</section>
+
+	<!-- Blog -->
+	<div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
+		<h3 class="ltext-106 cl5 txt-center">
+			Blog
+		</h3>
+	</div>
+	<section class="sec-relate-product bg0 p-t-45 p-b-105">
+		<div class="container">
+			<!-- Slide2 -->
+			<div class="row isotope-grid">
+				@foreach ($blogs as $key => $blog)
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+					<!-- Block2 -->
+					<div class="block2">
+						<div class="block2-pic hov-img0 b-r-20 b-shadow">
+							<a href="{{ route('home.blogDetail', ['blog'=>$blog->id, 'slug' =>Str::slug($blog->name) ]) }}">
+								<img height="200" src="{{ $blog->image }}" alt="{{ $blog->name }}">
+							</a>
+						</div>
+			
+						<div class="block2-txt flex-w flex-t p-t-14">
+							<div class="block2-txt-child3 flex-col-l ">
+								<a href="{{ route('home.blogDetail', ['blog'=>$blog->id, 'slug' =>Str::slug($blog->name) ]) }}" 
+									class="cl14 hov-cl1 trans-04 js-name-b2 p-b-4 limit-text-2">
+									{{ $blog->name }}
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				@endforeach
+			</div>
+			
+			
 		</div>
 	</section>
 @endsection

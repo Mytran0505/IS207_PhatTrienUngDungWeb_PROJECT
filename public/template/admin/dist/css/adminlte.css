@@ -35032,7 +35032,10 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .login-page,
 .register-page {
-  background-image: linear-gradient(to right top,#FFA6B7,#1E2AD2);
+  background-image: 
+        /* linear-gradient(to right top,#FFA6B795,#1E2AD295), */
+        url(/template/images/Logo/backgr.jpeg);
+        background-size: 100%;
   -ms-flex-align: center;
   align-items: center;
   background-color: #e9ecef;

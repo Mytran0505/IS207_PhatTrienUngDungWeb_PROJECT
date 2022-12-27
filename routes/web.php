@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\SliderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AjaxLoginController;
 
 Route::get('admin/users/login', [App\Http\Controllers\Admin\Users\LoginController::class, 'index']) -> name('login');
 Route::post('/admin/users/login/store', [App\Http\Controllers\Admin\Users\LoginController::class, 'store']);
@@ -111,9 +112,21 @@ Route::post('register-checkout', [App\Http\Controllers\CartController::class, 'r
 
 Route::get('/contact.html', [App\Http\Controllers\ContactController::class, 'contactus']);
 Route::get('/danh-muc/contact.html', [App\Http\Controllers\ContactController::class, 'contactus']);
+Route::get('/blog-detail/contact.html', [App\Http\Controllers\ContactController::class, 'contactus']);
+
+Route::get('/all-product.html', [App\Http\Controllers\AllProductController::class, 'index']);
 
 Route::post('/quickview', [App\Http\Controllers\ProductController::class, 'quickview']);
 
 
 
+// Blog
+Route::get('blog-detail/{blog}-{slug}', [App\Http\Controllers\MainController::class, 'blogDetail'])->name('home.blogDetail');
+
+// Quick-login
+Route::group(['prefix'=>'ajax'],function(){
+Route::post('/login', [App\Http\Controllers\AjaxLoginController::class, 'login'])->name('ajax.login');
+Route::post('/comment/{blog_id}', [App\Http\Controllers\AjaxLoginController::class, 'comment'])->name('ajax.comment');
+Route::get('/logout', [App\Http\Controllers\AjaxLoginController::class, 'logout'])->name('ajax.logout');
+});
 

@@ -24,11 +24,11 @@ class LoginController extends Controller
         ]);
         $customer = Customer::where('email', $request->input('email'))->where('password', $request->input('password'))->first();
         if($customer){
+            FacadesSession::put('customerId', $customer->id);
             FacadesSession::put('email', $customer->email);
             FacadesSession::put('customerName', $customer->name);
             FacadesSession::put('phone', $customer->phone);
             FacadesSession::put('address', $customer->address);
-            FacadesSession::put('customerId', $customer->id);
             return redirect('/');
         }
         else{
@@ -66,7 +66,7 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect()->back();
     }
 
     public function profile($customerId) {

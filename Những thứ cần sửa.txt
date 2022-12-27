@@ -1,38 +1,24 @@
-_Animation: admin
 _Load more(trang mới)
-_Search: đẩy ra ngang hàng
 _Đổi chủ đề(slide)
-_Delete sản phẩm trong giỏ hàng(dấu xóa trên góc phải) (làm rồi nhưng đang sai bấm xoá nhưng nhảy về trang chủ set mềm là nhảy về trang hiện tại)
-_gửi mail khi mua hàng
-_Đưa chuột vô hình ảnh sản phẩm ra hình ảnh khác
-_Reset những thông tin đã bấm trc đó khi đã ra ngoài
-_Tạo link cho các logo .
 _Làm link() (nút next back) video 40
 _Nút load more ngoài trang chủ chưa hoàn thành nên command lại sau làm tiếp..
 _Hướng dẫn filter ở vid 40 phút thứ 5
 _Các vùng pointer vẫn còn nhỏ nên khó tương tác(chưa làm)
-
-_verify
+_background admin
 _comment
-_mail
 _current time
 _Xem tất cả khuyến mãi
-_Mo rong email bang cach gui khuyen mai cho all user
 
-
-_Bấm nam ra nam nữ ra nữ
-
-
-
-
-_Chay duoc do an tren yt lay khuyen mai
 
 _ logo trên tab
 _ lam content mail
 _xem lai phan tro xuong cua nam nu
 
-_lam flash sales
-_quick view
 _ size color áo quần
 _ làm giao diện email gửi khách hàng
-_ làm lại giao diện flash sales
+_ làm lại giao diện flash sales(bam nut tat ca ra khuyen mai flash sale)
+
+
+_ note lại những thứ muốn show
+_ lọc sp lọc tiền
+

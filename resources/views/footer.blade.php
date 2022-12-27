@@ -574,6 +574,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         var end_date = $('#end_date').val();
         
         var DateExpired = new Date(end_date.toString()).getTime();
+
         setInterval(function () {
         var CurrentDate = new Date().getTime();
         var DayRemaining = DateExpired - CurrentDate;

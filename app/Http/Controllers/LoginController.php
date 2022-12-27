@@ -24,9 +24,9 @@ class LoginController extends Controller
         ]);
         $customer = Customer::where('email', $request->input('email'))->where('password', $request->input('password'))->first();
         if($customer){
-            FacadesSession::put('customerId', $customer->id);
             FacadesSession::put('email', $customer->email);
             FacadesSession::put('customerName', $customer->name);
+            FacadesSession::put('customerId', $customer->id);
             FacadesSession::put('phone', $customer->phone);
             FacadesSession::put('address', $customer->address);
             return redirect('/');

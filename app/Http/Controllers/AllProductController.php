@@ -18,7 +18,7 @@ class AllProductController extends Controller
         $productsMore = $this->productService->more($id);
         return view('allpro', [
             'title' => 'Tất cả sản phẩm',
-            'products' => $productsMore     
+            'products' => $productsMore 
         ]);
     }
 

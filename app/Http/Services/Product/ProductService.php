@@ -4,7 +4,7 @@ namespace App\Http\Services\Product;
 
 use App\Models\Product;
 class ProductService {
-    const LIMIT =8;
+    const LIMIT =18;
     public function get($page = null){
         return Product::select('id', 'name', 'menu_id', 'price_sale', 'original_price', 'image')
         ->orderByDesc('id')

@@ -50,6 +50,7 @@
                                         @endforeach
                                         <div class="product-price p-b-30 priceList">
                                             <span style="color:#888;">{{ $price }}₫</span>
+                                            <input class="quantity-cart" value="x{{ $carts[$product->id] }}" disabled>
                                         </div>
                                         <?php } 
                                         else {?>

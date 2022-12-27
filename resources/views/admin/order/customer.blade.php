@@ -22,9 +22,8 @@
                     <a class="btn btn-primary btn-sm" href="/admin/orders/view/{{ $order->id }}">
                         <i class="fas fa-eye"></i>
                     </a>
-                    <a href="#" class="btn btn-danger btn-sm"
-                       onclick="removeRow({{ $order->id }}, '/admin/orders/destroy')">
-                        <i class="fas fa-trash"></i>
+                    <a class="btn btn-primary btn-sm" href="/admin/orders/edit/{{ $order->id }}">
+                        <i class="fas fa-edit"></i>
                     </a>
                 </td>
             </tr>

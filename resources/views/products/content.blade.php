@@ -139,19 +139,38 @@
 							<div class="size-203 flex-c-m respon6" style="font-size: 14px">
 								Size
 							</div>
-
-							<div class="size-204 respon6-next">
-								<div class="rs1-select2 bor8 bg0">
-									<select class="js-select2" name="time">
-										<option>Choose an option</option>
-										<option>Size S</option>
-										<option>Size M</option>
-										<option>Size L</option>
-										<option>Size XL</option>
-									</select>
-									<div class="dropDownSelect2"></div>
+							<?php if($product->menu_id == 5) { ?>
+								<div class="size-204 respon6-next">
+									<div class="rs1-select2 bor8 bg0">
+										<select class="js-select2" name="time">
+											<option>Choose an option</option>
+											<option>35</option>
+											<option>36</option>
+											<option>37</option>
+											<option>38</option>
+											<option>39</option>
+											<option>40</option>
+											<option>41</option>
+											<option>42</option>
+											<option>43</option>
+										</select>
+										<div class="dropDownSelect2"></div>
+									</div>
 								</div>
-							</div>
+							<?php } else { ?>
+								<div class="size-204 respon6-next">
+									<div class="rs1-select2 bor8 bg0">
+										<select class="js-select2" name="time">
+											<option>Choose an option</option>
+											<option>Size S</option>
+											<option>Size M</option>
+											<option>Size L</option>
+											<option>Size XL</option>
+										</select>
+										<div class="dropDownSelect2"></div>
+									</div>
+								</div>
+								<?php } ?>
 						</div>
 							<div class="flex-w flex-r-m p-b-10">
 								<div class="size-204 flex-w flex-m respon6-next">
@@ -179,7 +198,6 @@
 											<button type="button" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" data-id_product = "{{ $product->id }}">
 												Thêm vào giỏ hàng
 											</button>
-										
 										@endif
 									</form>
 								</div>

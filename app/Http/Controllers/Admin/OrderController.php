@@ -46,6 +46,21 @@ class OrderController extends Controller
         ]);
     }
 
+    public function showUpdate(Bill_khachhang $order) {
+        return view('admin.order.edit', [
+            'title' => 'Cập nhật trạng thái đơn hàng',
+            'order' => $order,
+        ]);
+    }
+
+    public function update(Request $request, Bill_khachhang $order) {
+        $result = $this->order->update($request, $order);
+        if($result) {
+            return redirect('/admin/orders');
+        }
+        return redirect()->back();
+    }
+
     public function printOrder($checkout_code) {
         $pdf = App::make('dompdf.wrapper');
         $pdf->loadHTML($this->print_order_convert($checkout_code));

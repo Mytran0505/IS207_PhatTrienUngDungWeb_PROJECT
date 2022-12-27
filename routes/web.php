@@ -66,6 +66,8 @@ Route::middleware(['auth']) -> group(function (){
         //Cart
         Route::get('orders', [OrderController::class, 'index']);
         Route::get('orders/view/{order}', [OrderController::class, 'show']);
+        Route::get('orders/edit/{order}', [OrderController::class, 'showUpdate']);
+        Route::post('orders/edit/{order}', [OrderController::class, 'update']);
         Route::get('print-order/{checkout_code}', [OrderController::class, 'printOrder']);
 
         //Customer

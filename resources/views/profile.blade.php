@@ -104,7 +104,7 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="form-group">
-                                    <input name="email" type="email" placeholder="{{$cus->email}}" class="input-profile">
+                                    <input name="email" type="email" placeholder="{{$cus->email}}" value="{{$cus->email}}" class="input-profile">
                                 </div>	
                             </div>
                         </div>

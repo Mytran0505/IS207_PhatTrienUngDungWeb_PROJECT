@@ -24,7 +24,7 @@ class LoginController extends Controller
         ]);
         $customer = Customer::where('email', $request->input('email'))->where('password', $request->input('password'))->first();
         if($customer){
-            FacadesSession::put('email', $customer->email);
+            FacadesSession::put('customerEmail', $customer->email);
             FacadesSession::put('customerName', $customer->name);
             FacadesSession::put('customerId', $customer->id);
             FacadesSession::put('phone', $customer->phone);
@@ -94,7 +94,7 @@ class LoginController extends Controller
             'title' => 'Chi tiết đơn hàng',
             'order' => Bill_khachhang::where('id', $orderId)->first(),
             'cthds' => CTHD::with(['product' => function($query) {
-                    $query->select('id', 'name', 'image', 'original_price', 'price_sale');}])->where('id', $orderId)->get()
+                    $query->select('id', 'name','menu_id', 'image', 'original_price', 'price_sale');}])->where('id', $orderId)->get()
         ]);
     }
 }

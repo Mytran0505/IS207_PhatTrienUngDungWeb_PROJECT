@@ -150,7 +150,31 @@
 									</td>
 									<td style="text-align: right;">
 										<p>{{number_format($order->total_money, 0, " ", ".").' ₫'}}</p>
-										<p>-0 ₫</p>
+                                        
+                                        @php
+										$price_coupon = 0;
+										if(count($coupons) > 0){
+                                            foreach($cthds as $key => $item){
+                                                foreach ($coupons as $key => $coupon){
+                                                    if($coupon->menu_id){
+                                                        if($item->product->menu_id == $coupon->menu_id){
+                                                            $price_coupon += $item->product->price_sale * ($coupon->number/100);
+                                                        }
+                                                    }
+                                                    else{
+                                                        if($item->product_id == $coupon->product_id){
+                                                            $price_coupon += $coupon->product->price_sale * ($coupon->number/100);
+                                                        }
+                                                    }
+                                                }	
+                                            }
+										}
+										else{
+											$price_coupon = 0;
+										}
+										@endphp
+										<p>-{{ number_format($price_coupon, 0, " ", ".")}} ₫</p>
+
 										<p style="color: red; font-size: 20px">{{number_format($order->total_money, 0, " ", ".").' ₫'}}</p>
 									</td>
 								</tr>

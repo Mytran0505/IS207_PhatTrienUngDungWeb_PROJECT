@@ -166,7 +166,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             <div class="row">
                 <div class="col-md-6 col-lg-7 p-b-30">
                     <div class="p-l-25 p-r-30 p-lr-0-lg">
-                        <div class="wrap-slick3 flex-sb flex-w">
+                        <div class="wrap-slick3 flex-sb flex-w" id="quick-img-thumb">
                             <div class="wrap-slick3-dots"></div>
                             <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
                             {{-- img main --}}
@@ -258,23 +258,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                     </div>
                                 </div>
                             </div> --}}
-                            <div class="flex-w flex-r-m p-b-10">
-                                <div class="size-204 flex-w flex-m respon6-next">
-                                    <div class="wrap-num-product-in-cart flex-w m-r-20 m-tb-10" style="left: 7%;">
-                                        <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-                                            <i class="fs-16 zmdi zmdi-minus"></i>
-                                        </div>
+                            <div class="flex-w flex-r-m p-b-10" >
+                                <div class="size-204 flex-w flex-m respon6-next" >
+                                    <form>
+                                        @csrf
+                                        <div class="wrap-num-product-in-cart flex-w m-r-20 m-tb-10" style="left: 7%;" id="quick-add-cart">
 
-                                        <input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
-
-                                        <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-                                            <i class="fs-16 zmdi zmdi-plus"></i>
                                         </div>
-                                    </div>
-                                    <input type="hidden" name="product_id">
-                                    <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-                                        Thêm vào giỏ hàng
-                                    </button>
+                                        <button id="quick-btn" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail-quick">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </form>
                                 </div>
                             </div>	
                         </div>
@@ -440,11 +434,30 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 }
             });
         });
+        $('.js-addcart-detail-quick').each(function(){
+            
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+			$(this).on('click', function(e){
+                e.preventDefault();
+				// swal("Đã thêm sản phẩm vào giỏ hàng", "Bạn có thể tiếp tục mua sắm", "success");
+                swal({
+                        title: "Đã thêm sản phẩm vào giỏ hàng",
+                        text: "Bạn có thể mua giỏ hàng tiếp hoặc tới giỏ hàng để tiến hành thanh toán",
+                        icon: "success",
+                        buttons: ["Tiếp tục mua hàng", "Xem giỏ hàng"]
+                    }).then(function(isConfirm) {
+                        if(isConfirm){
+                            window.location ="{{url('/carts')}}";
+                        }
+                    });
+			});
+		});
 
         $('.js-show-modal1').on('click',function(e){
             e.preventDefault();
             var product_id = $(this).data('id_product');
             var _token = $('input[name="_token"]').val();
+            // $('#quick-btn').attr("data-id_product", product_id)
             $.ajax({
                 url: "{{url('/quickview')}}",
                 method: "POST",
@@ -457,6 +470,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     $('#quick-name').html(data.product_name);
                     $('#quick-desc').html(data.product_desc);
                     $('#quick-price').html(data.product_price);
+                    $('#quick-add-cart').html(data.add_cart);
                     $('.js-modal1').addClass('show-modal1');
                 }
             });
@@ -468,25 +482,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         });
         
 
-        $('.js-addcart-detail-quick').each(function(){
-			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
-			$(this).on('click', function(){
-				// swal("Đã thêm sản phẩm vào giỏ hàng", "Bạn có thể tiếp tục mua sắm", "success");
-                swal({
-                        title: "Đã thêm sản phẩm vào giỏ hàng",
-                        text: "Bạn có thể mua giỏ hàng tiếp hoặc tới giỏ hàng để tiến hành thanh toán",
-                        icon: "success",
-                        buttons: ["Tiếp tục mua hàng", "Xem giỏ hàng"]
-                    }).then(function(isConfirm) {
-                        if(isConfirm){
-                            window.location ="{{url('/carts')}}";
-                        }
-                        else {
-                            window.location = window.location.href;
-                        }
-                    });
-			});
-		});
+        
 	</script>
 <!--===============================================================================================-->
 	<script src="/template/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>

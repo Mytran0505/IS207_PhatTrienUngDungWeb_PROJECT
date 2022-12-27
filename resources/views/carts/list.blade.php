@@ -113,7 +113,6 @@
 						<div class="flex-w flex-sb-m bor15 p-t-18 p-b-15 p-lr-40 p-lr-15-sm">
 							<div class="flex-w flex-m m-r-20 m-tb-5">
 								<input class="stext-104 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Mã khuyến mãi">
-									
 								<div class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
 									Áp dụng
 								</div>
@@ -149,7 +148,7 @@
 									</div>
 									
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="email" placeholder="Email Liên Hệ" value="{{ $CustomerId ? Session::get('email') : ''}}">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="email" placeholder="Email Liên Hệ" value="{{ $CustomerId ? Session::get('customerEmail') : ''}}">
 									</div>
 
 									<div class="bor8 bg0 m-b-12">

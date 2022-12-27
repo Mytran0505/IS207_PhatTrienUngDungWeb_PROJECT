@@ -28,10 +28,6 @@
                     <a class="btn btn-primary btn-sm" href="/admin/customers/view/{{ $customer->id }}">
                         <i class="fas fa-eye"></i>
                     </a>
-                    <a href="#" class="btn btn-danger btn-sm"
-                       onclick="removeRow({{ $customer->id }}, '/admin/customers/destroy')">
-                        <i class="fas fa-trash"></i>
-                    </a>
                 </td>
             </tr>
             @endforeach

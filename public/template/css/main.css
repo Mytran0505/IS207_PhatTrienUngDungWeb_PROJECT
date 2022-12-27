@@ -794,7 +794,6 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 
-
 /*---------------------------------------------*/
 .btn-hide-modal-search {
   position: absolute;
@@ -2169,6 +2168,7 @@ button.mfp-close {
   position: relative;
   right: 5px;
 }
+
 
 /* Icon-Login */
 /* .transition-primary:hover {
@@ -3938,11 +3938,14 @@ input.num-product::-webkit-inner-spin-button {
 .flex-w .loadmore{
   padding: 10px 30px;
   border-radius: 60px;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
 }
 
 .flex-w .loadmore:hover{
   background-color: #717fe0;
   cursor: pointer;
+  color: #fff;
 }
 
 

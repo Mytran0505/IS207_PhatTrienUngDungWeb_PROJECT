@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="/template/images/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="/template/images/Logo/UIT_logo.jpeg"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/template/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->

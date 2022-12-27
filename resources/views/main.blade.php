@@ -5,7 +5,7 @@
 	@include('head')
 </head>
 <body> 
-	
+
 	<!-- class="animsition"-->
 	<!-- Header -->
 	@include('header')

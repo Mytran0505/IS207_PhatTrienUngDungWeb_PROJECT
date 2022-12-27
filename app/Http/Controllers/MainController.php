@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Services\Slider\SliderService;
 use App\Http\Services\Menu\MenuService;
 use App\Http\Services\Product\ProductService;
+use App\Models\Blog;
+
 class MainController extends Controller
 {
     protected $slider;
@@ -23,12 +25,15 @@ class MainController extends Controller
     }
 
     public function index() {
+        $blogs = Blog::newBlog()->get();
+        // dd($blogs);
         return view('home', [
             'title' => 'Sportwearshop - Cửa hàng thể thao',
             'slider' => $this->slider->show(),
             'menu' => $this->menu->show(),
             'products' => $this->product->get(),
-            'coupons' => $this->coupon->getCoupon()
+            'coupons' => $this->coupon->getCoupon(),
+            'blogs' => $blogs
         ]);
     }
 
@@ -44,6 +49,17 @@ class MainController extends Controller
         return response()->json([
             'html' => ''
         ]);
+    }
+
+    public function blogDetail($blog){
+        // dd($blog);
+        $resultBlog = Blog::where('status',1)->where('id',$blog)->get();
+        return view('blog-detail',[
+            'title' => 'Blog',
+            'blogs' => $resultBlog,
+            compact('blog')
+            ]
+        );
     }
     
 }

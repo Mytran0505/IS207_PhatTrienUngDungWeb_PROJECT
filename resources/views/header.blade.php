@@ -48,9 +48,9 @@
                         {{-- <i class="zmdi zmdi-sign-in logo-sc"></i>  --}}
                         <div class="dropdown">
                             <div class="nut_dropdown">
-                                <a href="/login">
+                                <a class="login_a" href="/login">
                                     <i class="zmdi zmdi-account-circle p-1" title="Đăng Nhập"></i>
-                                    {{-- <i class="fa fa-user-circle-o"  title="Đăng Nhập"></i> --}}
+                                   
                                 </a>
                             </div>
                             <div class="noidung_dropdown">
